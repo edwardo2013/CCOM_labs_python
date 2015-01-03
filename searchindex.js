@@ -1,1 +1,1 @@
-Search.setIndex({envversion:42,terms:{all:0},objtypes:{},objnames:{},filenames:["index"],titles:["This Is A New Project"],objects:{},titleterms:{turtl:0,section:0,random:0,project:0,thi:0,"new":0}})
+Search.setIndex({envversion:42,terms:{all:0,bla:0,algo:2},objtypes:{},objnames:{},filenames:["index","LABS/Week1","ejemplo"],titles:["CCOM LABS","EJEMPLO","Primer LAB"],objects:{},titleterms:{turtl:0,python:0,introdccion:[],section:0,random:[],ejemplo:1,lab:[0,2],project:[],introduccion:0,thi:[],"new":[],ccom:0,primer:2}})
