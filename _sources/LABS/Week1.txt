@@ -1,3 +1,13 @@
-=====
+=======
 EJEMPLO
-=====
+=======
+
+.. activecode:: myexample
+
+   a = "Edwardo"
+   
+   for i in a:
+       print i
+
+
+Ya
