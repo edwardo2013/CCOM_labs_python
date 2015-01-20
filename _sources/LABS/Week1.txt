@@ -4,10 +4,20 @@ EJEMPLO
 
 .. activecode:: myexample
 
-   a = "Edwardo"
+	a = "Edwardo"
    
-   for i in a:
-       print i
+	for i in a:
+		print i
 
 
 Ya
+
+
+.. codelens:: secondexample
+
+	fruit = ["apple","orange","banana","cherry"]
+	numlist = [6,7]
+	newlist = fruit + numlist
+	zeros = [0] * 4
+	zeros[1] = fruit
+	zeros[1][2] = numlist

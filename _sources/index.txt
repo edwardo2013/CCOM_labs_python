@@ -47,5 +47,11 @@ Turtles
        t.forward(100)
        t.right(90)
 
+.. code-block:: python
+
+   import sys
+   a = "Edw"
+
+bla
 
 That is all bla!
