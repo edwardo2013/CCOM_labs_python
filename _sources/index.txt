@@ -14,14 +14,15 @@ CCOM LABS
    (e.g. "DataStructures/queues.rst").
 
 SECTION 1: Introduccion a Python
-:::::::::::::::::::::::::::
+::::::::::::::::::::::::::::::::
 
 .. toctree::
 
     ejemplo.rst
+    quiz.rst
 
 SECTION 2: Los LABS
-::::::::::::::::::::::::::
+:::::::::::::::::::
 
 .. toctree::
     :maxdepth: 2
