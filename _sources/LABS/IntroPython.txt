@@ -93,15 +93,15 @@ Los tipos de datos nativos de Python que hemos utilizado hasta ahora son los ``i
     print (L2)                       # imprime la lista con los 3 elementos
     print (L2[0])                    # Imprime el primer elemento de L2
 
-La primera instrucción guarda el string ``Edwardo`` en la variable ``un_string``. Luego, se declara una lista vacía. La tercera línea es importante: L2 contiene, tres palabras, en la primera posición contiene ``Colo``, en la segunda ``Arce`` y en la tercera lo que tiene ``un_string``. La ultima instrucción, imprime el primer elemento de L2. Es importante ver que se empieza a contar posiciones desde 0 `No` desde 1. 
+La primera instrucción guarda el string ``Edwardo`` en la variable ``un_string``. Luego, se declara una lista vacía. La tercera línea es importante: ``L2`` contiene, tres elementos, en la primera posición contiene ``-1``, en la segunda ``10.3`` y en la tercera lo que tiene guardado la variable ``un_string``. La ultima instrucción, imprime el primer elemento de L2. Es importante ver que, al igua lque otros lenguajes, en Python se empieza a contar posiciones desde 0 y no desde 1. 
 
 
 El Lab: Información de Contacto
 -------------------------------
 
-Para practicar lo aprendido, usted desarrollara un programa donde guardara la informacion de contacto de una persona: Su Nombre, Apellido, edad, telefono y su email. Ademas, determinara si es mayor de edad. Siga las siguientes instrucciones:
+Para practicar lo aprendido, usted desarrollará un programa donde guardara la información de contacto de una persona: su nombre, apellido, edad, teléfono y su email. Además, determinará si es mayor de edad. Siga las siguientes instrucciones:
 
-    1. Pida al usuario su nombre y guardelo en una variable. Haga lo mismo para el apellido, edad, telefono y email de la persona.
+    1. Pida al usuario su nombre y guardelo en una variable. Haga lo mismo para el apellido, edad, teléfono y email de la persona.
     2. Cree una lista ``L``, que contendrá la informacion del punto 1.
     3. Despliege un mensaje por cada elemento de la lista. Por ejemplo, para el nombre debe desplegar: Su nombre es: El_nombre_insertado.
     4. Reste ``18`` a la edad e imprima este valor para ver si la persona es mayor de edad (si aparece un numero negativo en la pantalla no lo es).
@@ -111,6 +111,6 @@ Para practicar lo aprendido, usted desarrollara un programa donde guardara la in
     # Utilice este espacio para programar su laboratorio 
     
 Luego de terminar su lab, haga copy/paste de su código y envielo a la dirreción 
-de correo del profesor y en Tutor: ``rafaeljcolorado@gmail.com`` y ``edwardo.rivera@upr.edu``.
+de correo del profesor y el Tutor: ``rafaeljcolorado@gmail.com`` y ``edwardo.rivera@upr.edu``.
 
 **Fecha de Entrega:** Jueves 5 de febrero del 2015, antes de las 11:59pm.               
