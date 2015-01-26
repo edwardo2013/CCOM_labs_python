@@ -75,9 +75,9 @@ Nuestro lenguaje provee maneras muy fáciles para manejar datos de entrada y sal
     # Luego de haber corrido el programa, escriba código debajo 
     # de estos comentarios para que practique. Use print para ver
     # su código, por ejemplo (borre los # siguientes):
-    # a = 14
-    # print (a*2.5)
-    # print (a, 10)
+    #a = 14
+    #print (a*2.5)
+    #print (a, 10)
 
 Se debe tener mucho cuidado usando ``input()`` ya que por defecto siempre guarda un ``string`` (cadena de caracteres, como su nombre). Si se quiere guardar un número se debe utilizar la palabra ``int()`` la cual convierte un ``string`` o un número real a solo su parte entera. En el siguiente ejemplo, la primera línea muestra como hacer esto. Siga las instrucciones en el bloque de código:      
 
@@ -89,8 +89,8 @@ Se debe tener mucho cuidado usando ``input()`` ya que por defecto siempre guarda
     # Luego de haber corrido el programa, comente las primeras dos líneas
     # de código y descomente las siguientes dos. Ya que no se convierte en
     # entero y se pretende sumar un string y un int, esto nos da un error. 
-    # a = input("Ingrese su numero favorito")
-    # y = a + 3
+    #a = input("Ingrese su numero favorito")
+    #y = a + 3
 
 Algunos Tipos de Datos
 ----------------------
