@@ -2,7 +2,7 @@
 Lab 01: Introducción a Python
 =============================
 
-En clase se va a utilizar el lenguaje de programación **Python** a lo largo del semestre para aprender a programar e introducir conceptos básicos de las Ciencias de Cómputos. Este laboratorio tiene como propósito instruir al estudiante a la práctica de este lenguaje.	 
+En clase se va a utilizar el lenguaje de programación **Python** a lo largo del semestre para aprender a programar e introducir conceptos básicos de las Ciencias de Cómputos. Este laboratorio tiene como propósito instruir al estudiante a la práctica de este lenguaje. Al final del lab, el estudiante tendrá una consola de Python para codificar su laboratorio.	 
 
 Objetivos
 ---------
@@ -42,7 +42,7 @@ Python puede utilizarse como una calculadora, con las operaciones de suma, resta
     >> 2**3   # 2 a la 3, devuelve 8
     8
     
-Note que la división de enteros solo devuelve la parte entera del cociente. Esto tiene que ver con los tipos de datos en Python (no se preocupe por ahora). También, se pueden escribir comentarios. Un `comentario` es algo que ignora el programa, se utiliza para legibilidad y explicar el código mas a fondo. En Python, un comentario se escribe usando ``#``.    
+Note que la división de enteros solo devuelve la parte entera del cociente. Esto tiene que ver con los tipos de datos en Python (no se preocupe por ahora). También, se pueden escribir comentarios. Un **comentario** es algo que ignora el programa, se utiliza para legibilidad y explicar el código mas a fondo. En Python, un comentario se escribe usando ``#``.    
 
 Para guardar un dato en un programa, utilizamos el concepto de una variable. Una **variable** es un nombre o identificador único en el programa el cual es guardado en la memoria (primaria) de la computadora. Es importante recalcar que para usar una variable, su nombre:
 
@@ -65,7 +65,7 @@ Ahora, vea el siguiente código:
 En la primera instrucción, la variable ``a`` contiene el entero ``10``. 
 Luego, la variable ``b`` contiene ``20``.  Finalmente, la variable ``a`` contiene la suma de ``a`` y ``b``, ``30``. Note que el **operador de asignación**, ``=`` asigna un valor a una variable.
      
-Nuestro lenguaje provee maneras muy fáciles para manejar datos de entrada y salida. La palabra ``input()`` pide al usuario datos. La palabra ``print()`` se utiliza para imprimir a la pantalla algún mensaje o dato. Mire el siguiente código y haga click en **"Run"** para que vea el resultado del programa, el cual pide su nombre, lo guarda en la variable ``su_nombre`` y lo imprime en la pantalla. Luego, practique lo aprendido aquí:         
+Nuestro lenguaje provee maneras muy fáciles para manejar datos de entrada y salida. La palabra ``input()`` pide al usuario datos. La palabra ``print()`` se utiliza para imprimir a la pantalla algún mensaje o dato. Mire el siguiente código y haga click en *"Run"* para que vea el resultado del programa, el cual pide su nombre, lo guarda en la variable ``su_nombre`` y lo imprime en la pantalla. Luego, practique lo aprendido aquí:         
 
 .. activecode:: Input_Output
 
@@ -79,9 +79,9 @@ Nuestro lenguaje provee maneras muy fáciles para manejar datos de entrada y sal
     # print (a*2.5)
     # print (a, 10)
 
-Se debe tener mucho cuidado usando ``input()`` ya que por defecto siempre guarda un ``string`` (cadena de caracteres, como su nombre). Si se quiere guardar un número se debe utilizar la palabra ``int()`` la cual convierte un ``string`` o un número real a solo su parte entera. En el siguiente ejemplo, la primera línea muestra como hacer esto:      
+Se debe tener mucho cuidado usando ``input()`` ya que por defecto siempre guarda un ``string`` (cadena de caracteres, como su nombre). Si se quiere guardar un número se debe utilizar la palabra ``int()`` la cual convierte un ``string`` o un número real a solo su parte entera. En el siguiente ejemplo, la primera línea muestra como hacer esto. Siga las instrucciones en el bloque de código:      
 
-.. activecode:: Ejemplo_int()
+.. activecode:: Ejemplo_int
 
     num_parte_entera = int(input("Ingrese su numero favorito"))
     print("La parte entera es", num_parte_entera)
@@ -128,4 +128,8 @@ Use el siguiente espacio para codificar su laboratorio:
 Luego de terminar su lab, haga copy/paste de su código y envielo a la dirreción 
 de correo electrónico del profesor y el Tutor: ``rafaeljcolorado@gmail.com`` y ``edwardo.rivera@upr.edu``.
 
-**Fecha de Entrega:** Jueves 5 de febrero del 2015, antes de las 11:59pm.               
+**Fecha de Entrega:** Jueves 5 de febrero del 2015, antes de las 11:59pm.
+
+**Científico del día**: *Ada Lovelace*. Se le considera como el primer programador del mundo. Hizo el primer algoritmo
+para la maquina mecanica analytica de Charles Babbage, aun sin esta ser construida. Un lenguaje de programacion, *Ada*, lleva su nombre.
+Puede leer mas en `Wikipedia <en.wikipedia.org/wiki/Ada_Lovelace>`_. 

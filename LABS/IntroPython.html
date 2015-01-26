@@ -287,7 +287,7 @@
   
   <div class="section" id="lab-01-introduccion-a-python">
 <h1>Lab 01: Introducción a Python<a class="headerlink" href="#lab-01-introduccion-a-python" title="Permalink to this headline">¶</a></h1>
-<p>En clase se va a utilizar el lenguaje de programación <strong>Python</strong> a lo largo del semestre para aprender a programar e introducir conceptos básicos de las Ciencias de Cómputos. Este laboratorio tiene como propósito instruir al estudiante a la práctica de este lenguaje.</p>
+<p>En clase se va a utilizar el lenguaje de programación <strong>Python</strong> a lo largo del semestre para aprender a programar e introducir conceptos básicos de las Ciencias de Cómputos. Este laboratorio tiene como propósito instruir al estudiante a la práctica de este lenguaje. Al final del lab, el estudiante tendrá una consola de Python para codificar su laboratorio.</p>
 <div class="section" id="objetivos">
 <h2>Objetivos<a class="headerlink" href="#objetivos" title="Permalink to this headline">¶</a></h2>
 <p>En este laboratorio los estudiantes:</p>
@@ -330,7 +330,7 @@
 <span class="mi">8</span>
 </pre></div>
 </div>
-<p>Note que la división de enteros solo devuelve la parte entera del cociente. Esto tiene que ver con los tipos de datos en Python (no se preocupe por ahora). También, se pueden escribir comentarios. Un <cite>comentario</cite> es algo que ignora el programa, se utiliza para legibilidad y explicar el código mas a fondo. En Python, un comentario se escribe usando <tt class="docutils literal"><span class="pre">#</span></tt>.</p>
+<p>Note que la división de enteros solo devuelve la parte entera del cociente. Esto tiene que ver con los tipos de datos en Python (no se preocupe por ahora). También, se pueden escribir comentarios. Un <strong>comentario</strong> es algo que ignora el programa, se utiliza para legibilidad y explicar el código mas a fondo. En Python, un comentario se escribe usando <tt class="docutils literal"><span class="pre">#</span></tt>.</p>
 <p>Para guardar un dato en un programa, utilizamos el concepto de una variable. Una <strong>variable</strong> es un nombre o identificador único en el programa el cual es guardado en la memoria (primaria) de la computadora. Es importante recalcar que para usar una variable, su nombre:</p>
 <blockquote>
 <div><ol class="arabic simple">
@@ -351,7 +351,7 @@
 </div>
 <p>En la primera instrucción, la variable <tt class="docutils literal"><span class="pre">a</span></tt> contiene el entero <tt class="docutils literal"><span class="pre">10</span></tt>.
 Luego, la variable <tt class="docutils literal"><span class="pre">b</span></tt> contiene <tt class="docutils literal"><span class="pre">20</span></tt>.  Finalmente, la variable <tt class="docutils literal"><span class="pre">a</span></tt> contiene la suma de <tt class="docutils literal"><span class="pre">a</span></tt> y <tt class="docutils literal"><span class="pre">b</span></tt>, <tt class="docutils literal"><span class="pre">30</span></tt>. Note que el <strong>operador de asignación</strong>, <tt class="docutils literal"><span class="pre">=</span></tt> asigna un valor a una variable.</p>
-<p>Nuestro lenguaje provee maneras muy fáciles para manejar datos de entrada y salida. La palabra <tt class="docutils literal"><span class="pre">input()</span></tt> pide al usuario datos. La palabra <tt class="docutils literal"><span class="pre">print()</span></tt> se utiliza para imprimir a la pantalla algún mensaje o dato. Mire el siguiente código y haga click en <strong>&#8220;Run&#8221;</strong> para que vea el resultado del programa, el cual pide su nombre, lo guarda en la variable <tt class="docutils literal"><span class="pre">su_nombre</span></tt> y lo imprime en la pantalla. Luego, practique lo aprendido aquí:</p>
+<p>Nuestro lenguaje provee maneras muy fáciles para manejar datos de entrada y salida. La palabra <tt class="docutils literal"><span class="pre">input()</span></tt> pide al usuario datos. La palabra <tt class="docutils literal"><span class="pre">print()</span></tt> se utiliza para imprimir a la pantalla algún mensaje o dato. Mire el siguiente código y haga click en <em>&#8220;Run&#8221;</em> para que vea el resultado del programa, el cual pide su nombre, lo guarda en la variable <tt class="docutils literal"><span class="pre">su_nombre</span></tt> y lo imprime en la pantalla. Luego, practique lo aprendido aquí:</p>
 
 <div id="Input_Output" lang="python" >
 
@@ -400,13 +400,13 @@ if ('block' == 'none') {
 
 </div>
 
-<p>Se debe tener mucho cuidado usando <tt class="docutils literal"><span class="pre">input()</span></tt> ya que por defecto siempre guarda un <tt class="docutils literal"><span class="pre">string</span></tt> (cadena de caracteres, como su nombre). Si se quiere guardar un número se debe utilizar la palabra <tt class="docutils literal"><span class="pre">int()</span></tt> la cual convierte un <tt class="docutils literal"><span class="pre">string</span></tt> o un número real a solo su parte entera. En el siguiente ejemplo, la primera línea muestra como hacer esto:</p>
+<p>Se debe tener mucho cuidado usando <tt class="docutils literal"><span class="pre">input()</span></tt> ya que por defecto siempre guarda un <tt class="docutils literal"><span class="pre">string</span></tt> (cadena de caracteres, como su nombre). Si se quiere guardar un número se debe utilizar la palabra <tt class="docutils literal"><span class="pre">int()</span></tt> la cual convierte un <tt class="docutils literal"><span class="pre">string</span></tt> o un número real a solo su parte entera. En el siguiente ejemplo, la primera línea muestra como hacer esto. Siga las instrucciones en el bloque de código:</p>
 
-<div id="Ejemplo_int()" lang="python" >
+<div id="Ejemplo_int" lang="python" >
 
 <br/>
-<div id="Ejemplo_int()_code_div" style="display: block">
-<textarea cols="50" rows="12" id="Ejemplo_int()_code" class="active_code", prefixcode="undefined" lang="python">
+<div id="Ejemplo_int_code_div" style="display: block">
+<textarea cols="50" rows="12" id="Ejemplo_int_code" class="active_code", prefixcode="undefined" lang="python">
 num_parte_entera = int(input("Ingrese su numero favorito"))
 print("La parte entera es", num_parte_entera)
 
@@ -417,31 +417,31 @@ print("La parte entera es", num_parte_entera)
 # y = a + 3
 </textarea>
 </div>
-<p class="ac_caption"><span class="ac_caption_text"> (Ejemplo_int())</span> </p>
+<p class="ac_caption"><span class="ac_caption_text"> (Ejemplo_int)</span> </p>
 
-<button class='btn btn-success' id="Ejemplo_int()_runb" onclick="runit('Ejemplo_int()',this, undefined);">Run</button>
+<button class='btn btn-success' id="Ejemplo_int_runb" onclick="runit('Ejemplo_int',this, undefined);">Run</button>
 
 <div id="cont"></div>
 
-<button class="ac_opt btn btn-default" style="display: inline-block" id="Ejemplo_int()_saveb" onclick="saveEditor('Ejemplo_int()');">Save</button>
-<button class="ac_opt btn btn-default" style="display: inline-block" id="Ejemplo_int()_loadb" onclick="requestCode('Ejemplo_int()');">Load</button>
+<button class="ac_opt btn btn-default" style="display: inline-block" id="Ejemplo_int_saveb" onclick="saveEditor('Ejemplo_int');">Save</button>
+<button class="ac_opt btn btn-default" style="display: inline-block" id="Ejemplo_int_loadb" onclick="requestCode('Ejemplo_int');">Load</button>
 
 <script>
 if ('block' == 'none') {
     // a hack to preserve the inline-block display style. Toggle() will use display: block
     // (instead of inline-block) if the previous display style was 'none'
-    $('#Ejemplo_int()_saveb').toggle();
-    $('#Ejemplo_int()_loadb').toggle();
+    $('#Ejemplo_int_saveb').toggle();
+    $('#Ejemplo_int_loadb').toggle();
 }
 </script>
 
 
 <div style="text-align: center">
-<canvas id="Ejemplo_int()_canvas" class="ac-canvas" height="400" width="400" style="border-style: solid; display: none; text-align: center"></canvas>
+<canvas id="Ejemplo_int_canvas" class="ac-canvas" height="400" width="400" style="border-style: solid; display: none; text-align: center"></canvas>
 </div>
-<pre id="Ejemplo_int()_suffix" style="display:none">
+<pre id="Ejemplo_int_suffix" style="display:none">
 </pre>
-<pre id="Ejemplo_int()_pre" class="active_out">
+<pre id="Ejemplo_int_pre" class="active_out">
 
 </pre>
 
@@ -543,6 +543,9 @@ if ('block' == 'none') {
 <p>Luego de terminar su lab, haga copy/paste de su código y envielo a la dirreción
 de correo electrónico del profesor y el Tutor: <tt class="docutils literal"><span class="pre">rafaeljcolorado&#64;gmail.com</span></tt> y <tt class="docutils literal"><span class="pre">edwardo.rivera&#64;upr.edu</span></tt>.</p>
 <p><strong>Fecha de Entrega:</strong> Jueves 5 de febrero del 2015, antes de las 11:59pm.</p>
+<p><strong>Científico del día</strong>: <em>Ada Lovelace</em>. Se le considera como el primer programador del mundo. Hizo el primer algoritmo
+para la maquina mecanica analytica de Charles Babbage, aun sin esta ser construida. Un lenguaje de programacion, <em>Ada</em>, lleva su nombre.
+Puede leer mas en <a class="reference external" href="en.wikipedia.org/wiki/Ada_Lovelace">Wikipedia</a>.</p>
 </div>
 </div>
 
