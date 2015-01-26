@@ -351,7 +351,7 @@
 </div>
 <p>En la primera instrucción, la variable <tt class="docutils literal"><span class="pre">a</span></tt> contiene el entero <tt class="docutils literal"><span class="pre">10</span></tt>.
 Luego, la variable <tt class="docutils literal"><span class="pre">b</span></tt> contiene <tt class="docutils literal"><span class="pre">20</span></tt>.  Finalmente, la variable <tt class="docutils literal"><span class="pre">a</span></tt> contiene la suma de <tt class="docutils literal"><span class="pre">a</span></tt> y <tt class="docutils literal"><span class="pre">b</span></tt>, <tt class="docutils literal"><span class="pre">30</span></tt>. Note que el <strong>operador de asignación</strong>, <tt class="docutils literal"><span class="pre">=</span></tt> asigna un valor a una variable.</p>
-<p>Nuestro lenguaje provee maneras muy fáciles para manejar datos de entrada y salida. La palabra <tt class="docutils literal"><span class="pre">input</span></tt> pide al usuario datos. La palabra <tt class="docutils literal"><span class="pre">print</span></tt> se utiliza para imprimir a la pantalla algún mensaje o dato. Mire el siguiente código y haga click en &#8220;Run&#8221; para que vea el siguiente código, el cual pide su nombre, lo guarda en la variable <tt class="docutils literal"><span class="pre">su_nombre</span></tt> y lo imprime en la pantalla. Luego, practique lo aprendido aquí:</p>
+<p>Nuestro lenguaje provee maneras muy fáciles para manejar datos de entrada y salida. La palabra <tt class="docutils literal"><span class="pre">input()</span></tt> pide al usuario datos. La palabra <tt class="docutils literal"><span class="pre">print()</span></tt> se utiliza para imprimir a la pantalla algún mensaje o dato. Mire el siguiente código y haga click en <strong>&#8220;Run&#8221;</strong> para que vea el resultado del programa, el cual pide su nombre, lo guarda en la variable <tt class="docutils literal"><span class="pre">su_nombre</span></tt> y lo imprime en la pantalla. Luego, practique lo aprendido aquí:</p>
 
 <div id="Input_Output" lang="python" >
 
@@ -400,10 +400,58 @@ if ('block' == 'none') {
 
 </div>
 
+<p>Se debe tener mucho cuidado usando <tt class="docutils literal"><span class="pre">input()</span></tt> ya que por defecto siempre guarda un <tt class="docutils literal"><span class="pre">string</span></tt> (cadena de caracteres, como su nombre). Si se quiere guardar un número se debe utilizar la palabra <tt class="docutils literal"><span class="pre">int()</span></tt> la cual convierte un <tt class="docutils literal"><span class="pre">string</span></tt> o un número real a solo su parte entera. En el siguiente ejemplo, la primera línea muestra como hacer esto:</p>
+
+<div id="Ejemplo_int()" lang="python" >
+
+<br/>
+<div id="Ejemplo_int()_code_div" style="display: block">
+<textarea cols="50" rows="12" id="Ejemplo_int()_code" class="active_code", prefixcode="undefined" lang="python">
+num_parte_entera = int(input("Ingrese su numero favorito"))
+print("La parte entera es", num_parte_entera)
+
+# Luego de haber corrido el programa, comente las primeras dos líneas
+# de código y descomente las siguientes dos. Ya que no se convierte en
+# entero y se pretende sumar un string y un int, esto nos da un error.
+# a = input("Ingrese su numero favorito")
+# y = a + 3
+</textarea>
+</div>
+<p class="ac_caption"><span class="ac_caption_text"> (Ejemplo_int())</span> </p>
+
+<button class='btn btn-success' id="Ejemplo_int()_runb" onclick="runit('Ejemplo_int()',this, undefined);">Run</button>
+
+<div id="cont"></div>
+
+<button class="ac_opt btn btn-default" style="display: inline-block" id="Ejemplo_int()_saveb" onclick="saveEditor('Ejemplo_int()');">Save</button>
+<button class="ac_opt btn btn-default" style="display: inline-block" id="Ejemplo_int()_loadb" onclick="requestCode('Ejemplo_int()');">Load</button>
+
+<script>
+if ('block' == 'none') {
+    // a hack to preserve the inline-block display style. Toggle() will use display: block
+    // (instead of inline-block) if the previous display style was 'none'
+    $('#Ejemplo_int()_saveb').toggle();
+    $('#Ejemplo_int()_loadb').toggle();
+}
+</script>
+
+
+<div style="text-align: center">
+<canvas id="Ejemplo_int()_canvas" class="ac-canvas" height="400" width="400" style="border-style: solid; display: none; text-align: center"></canvas>
+</div>
+<pre id="Ejemplo_int()_suffix" style="display:none">
+</pre>
+<pre id="Ejemplo_int()_pre" class="active_out">
+
+</pre>
+
+
+</div>
+
 </div>
 <div class="section" id="algunos-tipos-de-datos">
 <h2>Algunos Tipos de Datos<a class="headerlink" href="#algunos-tipos-de-datos" title="Permalink to this headline">¶</a></h2>
-<p>Los tipos de datos nativos de Python que hemos utilizado hasta ahora son los <tt class="docutils literal"><span class="pre">int</span></tt>, que son enteros como el número 5 y los <tt class="docutils literal"><span class="pre">floats</span></tt>, los cuales son números decimales, como el 2.456. Otro tipo de dato en Python que usamos fue una cadena de caracteres, mejor conocido como <tt class="docutils literal"><span class="pre">string</span></tt>. En el codigo anterior, la variable <tt class="docutils literal"><span class="pre">su_nombre</span></tt> guarda un string si se le proveen letras. Otro tipo de de dato (no nativo) es una Lista. Una <strong>Lista</strong>, es un objeto que contiene multiples datos. Por ahora, piense en una lista como una pedazo de memoria (una variable) que puede tener varios datos asociados a ella. Estudie el siguiente código:</p>
+<p>Los tipos de datos nativos de Python que hemos utilizado hasta ahora son los <tt class="docutils literal"><span class="pre">int</span></tt>, que son enteros como el número 5 y los <tt class="docutils literal"><span class="pre">floats</span></tt>, los cuales son números reales, como el 2.456. Otro tipo de dato en Python que usamos fue una cadena de caracteres, mejor conocido como <tt class="docutils literal"><span class="pre">string</span></tt>. En el código anterior, la variable <tt class="docutils literal"><span class="pre">su_nombre</span></tt> guarda un string si se le proveen letras. Otro tipo de de dato (no nativo) es una Lista. Una <strong>Lista</strong>, es un objeto que contiene multiples datos. Por ahora, piense en una lista como una pedazo de memoria (una variable) que puede tener varios datos asociados a ella. Estudie el siguiente código:</p>
 
 <div id="Listas_y_strings"></div>
 <p class="cl_caption"><span class="cl_caption_text"> (Listas_y_strings)</span> </p>
@@ -438,19 +486,20 @@ $(window).resize(function() {
     Listas_y_strings_vis.redrawConnectors();
 });
 </script>
-<p>La primera instrucción guarda el string <tt class="docutils literal"><span class="pre">Edwardo</span></tt> en la variable <tt class="docutils literal"><span class="pre">un_string</span></tt>. Luego, se declara una lista vacía. La tercera línea es importante: <tt class="docutils literal"><span class="pre">L2</span></tt> contiene, tres elementos, en la primera posición contiene <tt class="docutils literal"><span class="pre">-1</span></tt>, en la segunda <tt class="docutils literal"><span class="pre">10.3</span></tt> y en la tercera lo que tiene guardado la variable <tt class="docutils literal"><span class="pre">un_string</span></tt>. La ultima instrucción, imprime el primer elemento de L2. Es importante ver que, al igua lque otros lenguajes, en Python se empieza a contar posiciones desde 0 y no desde 1.</p>
+<p>La primera instrucción guarda el string <tt class="docutils literal"><span class="pre">Arce</span></tt> en la variable <tt class="docutils literal"><span class="pre">un_string</span></tt>. Luego, se declara una lista vacía. La tercera línea es importante: <tt class="docutils literal"><span class="pre">L2</span></tt> contiene, tres elementos, en la primera posición contiene <tt class="docutils literal"><span class="pre">-1</span></tt>, en la segunda <tt class="docutils literal"><span class="pre">10.3</span></tt> y en la tercera lo que tiene guardado la variable <tt class="docutils literal"><span class="pre">un_string</span></tt>. La ultima instrucción, imprime el primer elemento de L2. Es importante ver que, al igual que otros lenguajes, en Python se empieza a contar posiciones desde 0 y no desde 1.</p>
 </div>
 <div class="section" id="el-lab-informacion-de-contacto">
 <h2>El Lab: Información de Contacto<a class="headerlink" href="#el-lab-informacion-de-contacto" title="Permalink to this headline">¶</a></h2>
-<p>Para practicar lo aprendido, usted desarrollará un programa donde guardara la información de contacto de una persona: su nombre, apellido, edad, teléfono y su email. Además, determinará si es mayor de edad. Siga las siguientes instrucciones:</p>
+<p>Para practicar lo aprendido, usted desarrollará un programa donde guardara la información de contacto de una persona: su nombre, apellido, edad, teléfono y su email. Además, determinará si es mayor de edad usando una fórmula sencilla. Siga las siguientes instrucciones:</p>
 <blockquote>
 <div><ol class="arabic simple">
 <li>Pida al usuario su nombre y guardelo en una variable. Haga lo mismo para el apellido, edad, teléfono y email de la persona.</li>
-<li>Cree una lista <tt class="docutils literal"><span class="pre">L</span></tt>, que contendrá la informacion del punto 1.</li>
-<li>Despliege un mensaje por cada elemento de la lista. Por ejemplo, para el nombre debe desplegar: Su nombre es: El_nombre_insertado.</li>
-<li>Reste <tt class="docutils literal"><span class="pre">18</span></tt> a la edad e imprima este valor para ver si la persona es mayor de edad (si aparece un numero negativo en la pantalla no lo es).</li>
+<li>Cree una lista <tt class="docutils literal"><span class="pre">Contacto</span></tt>, que contendrá la información del punto 1.</li>
+<li>Despliege un mensaje por cada elemento de la lista. Por ejemplo, para el nombre debe desplegar, <tt class="docutils literal"><span class="pre">Su</span> <span class="pre">nombre</span> <span class="pre">es:</span> <span class="pre">El_nombre_insertado</span></tt>.</li>
+<li>Finalmente, reste <tt class="docutils literal"><span class="pre">18</span></tt> a la edad e imprima este valor (Si aparece un número negativo en la pantalla no es mayor de edad). Se puede hacer en una línea!</li>
 </ol>
 </div></blockquote>
+<p>Use el siguiente espacio para codificar su laboratorio:</p>
 
 <div id="Lab_1" lang="python" >
 
@@ -492,7 +541,7 @@ if ('block' == 'none') {
 </div>
 
 <p>Luego de terminar su lab, haga copy/paste de su código y envielo a la dirreción
-de correo del profesor y el Tutor: <tt class="docutils literal"><span class="pre">rafaeljcolorado&#64;gmail.com</span></tt> y <tt class="docutils literal"><span class="pre">edwardo.rivera&#64;upr.edu</span></tt>.</p>
+de correo electrónico del profesor y el Tutor: <tt class="docutils literal"><span class="pre">rafaeljcolorado&#64;gmail.com</span></tt> y <tt class="docutils literal"><span class="pre">edwardo.rivera&#64;upr.edu</span></tt>.</p>
 <p><strong>Fecha de Entrega:</strong> Jueves 5 de febrero del 2015, antes de las 11:59pm.</p>
 </div>
 </div>

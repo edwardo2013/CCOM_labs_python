@@ -65,7 +65,7 @@ Ahora, vea el siguiente código:
 En la primera instrucción, la variable ``a`` contiene el entero ``10``. 
 Luego, la variable ``b`` contiene ``20``.  Finalmente, la variable ``a`` contiene la suma de ``a`` y ``b``, ``30``. Note que el **operador de asignación**, ``=`` asigna un valor a una variable.
      
-Nuestro lenguaje provee maneras muy fáciles para manejar datos de entrada y salida. La palabra ``input`` pide al usuario datos. La palabra ``print`` se utiliza para imprimir a la pantalla algún mensaje o dato. Mire el siguiente código y haga click en "Run" para que vea el siguiente código, el cual pide su nombre, lo guarda en la variable ``su_nombre`` y lo imprime en la pantalla. Luego, practique lo aprendido aquí:         
+Nuestro lenguaje provee maneras muy fáciles para manejar datos de entrada y salida. La palabra ``input()`` pide al usuario datos. La palabra ``print()`` se utiliza para imprimir a la pantalla algún mensaje o dato. Mire el siguiente código y haga click en **"Run"** para que vea el resultado del programa, el cual pide su nombre, lo guarda en la variable ``su_nombre`` y lo imprime en la pantalla. Luego, practique lo aprendido aquí:         
 
 .. activecode:: Input_Output
 
@@ -79,10 +79,23 @@ Nuestro lenguaje provee maneras muy fáciles para manejar datos de entrada y sal
     # print (a*2.5)
     # print (a, 10)
 
+Se debe tener mucho cuidado usando ``input()`` ya que por defecto siempre guarda un ``string`` (cadena de caracteres, como su nombre). Si se quiere guardar un número se debe utilizar la palabra ``int()`` la cual convierte un ``string`` o un número real a solo su parte entera. En el siguiente ejemplo, la primera línea muestra como hacer esto:      
+
+.. activecode:: Ejemplo_int()
+
+    num_parte_entera = int(input("Ingrese su numero favorito"))
+    print("La parte entera es", num_parte_entera)
+    
+    # Luego de haber corrido el programa, comente las primeras dos líneas
+    # de código y descomente las siguientes dos. Ya que no se convierte en
+    # entero y se pretende sumar un string y un int, esto nos da un error. 
+    # a = input("Ingrese su numero favorito")
+    # y = a + 3
+
 Algunos Tipos de Datos
 ----------------------
 
-Los tipos de datos nativos de Python que hemos utilizado hasta ahora son los ``int``, que son enteros como el número 5 y los ``floats``, los cuales son números decimales, como el 2.456. Otro tipo de dato en Python que usamos fue una cadena de caracteres, mejor conocido como ``string``. En el codigo anterior, la variable ``su_nombre`` guarda un string si se le proveen letras. Otro tipo de de dato (no nativo) es una Lista. Una **Lista**, es un objeto que contiene multiples datos. Por ahora, piense en una lista como una pedazo de memoria (una variable) que puede tener varios datos asociados a ella. Estudie el siguiente código:
+Los tipos de datos nativos de Python que hemos utilizado hasta ahora son los ``int``, que son enteros como el número 5 y los ``floats``, los cuales son números reales, como el 2.456. Otro tipo de dato en Python que usamos fue una cadena de caracteres, mejor conocido como ``string``. En el código anterior, la variable ``su_nombre`` guarda un string si se le proveen letras. Otro tipo de de dato (no nativo) es una Lista. Una **Lista**, es un objeto que contiene multiples datos. Por ahora, piense en una lista como una pedazo de memoria (una variable) que puede tener varios datos asociados a ella. Estudie el siguiente código:
 
 .. codelens:: Listas_y_strings
 
@@ -93,24 +106,26 @@ Los tipos de datos nativos de Python que hemos utilizado hasta ahora son los ``i
     print (L2)                       # imprime la lista con los 3 elementos
     print (L2[0])                    # Imprime el primer elemento de L2
 
-La primera instrucción guarda el string ``Edwardo`` en la variable ``un_string``. Luego, se declara una lista vacía. La tercera línea es importante: ``L2`` contiene, tres elementos, en la primera posición contiene ``-1``, en la segunda ``10.3`` y en la tercera lo que tiene guardado la variable ``un_string``. La ultima instrucción, imprime el primer elemento de L2. Es importante ver que, al igua lque otros lenguajes, en Python se empieza a contar posiciones desde 0 y no desde 1. 
+La primera instrucción guarda el string ``Arce`` en la variable ``un_string``. Luego, se declara una lista vacía. La tercera línea es importante: ``L2`` contiene, tres elementos, en la primera posición contiene ``-1``, en la segunda ``10.3`` y en la tercera lo que tiene guardado la variable ``un_string``. La ultima instrucción, imprime el primer elemento de L2. Es importante ver que, al igual que otros lenguajes, en Python se empieza a contar posiciones desde 0 y no desde 1. 
 
 
 El Lab: Información de Contacto
 -------------------------------
 
-Para practicar lo aprendido, usted desarrollará un programa donde guardara la información de contacto de una persona: su nombre, apellido, edad, teléfono y su email. Además, determinará si es mayor de edad. Siga las siguientes instrucciones:
+Para practicar lo aprendido, usted desarrollará un programa donde guardara la información de contacto de una persona: su nombre, apellido, edad, teléfono y su email. Además, determinará si es mayor de edad usando una fórmula sencilla. Siga las siguientes instrucciones:
 
     1. Pida al usuario su nombre y guardelo en una variable. Haga lo mismo para el apellido, edad, teléfono y email de la persona.
-    2. Cree una lista ``L``, que contendrá la informacion del punto 1.
-    3. Despliege un mensaje por cada elemento de la lista. Por ejemplo, para el nombre debe desplegar: Su nombre es: El_nombre_insertado.
-    4. Reste ``18`` a la edad e imprima este valor para ver si la persona es mayor de edad (si aparece un numero negativo en la pantalla no lo es).
+    2. Cree una lista ``Contacto``, que contendrá la información del punto 1.
+    3. Despliege un mensaje por cada elemento de la lista. Por ejemplo, para el nombre debe desplegar, ``Su nombre es: El_nombre_insertado``.
+    4. Finalmente, reste ``18`` a la edad e imprima este valor (Si aparece un número negativo en la pantalla no es mayor de edad). Se puede hacer en una línea!
 
+Use el siguiente espacio para codificar su laboratorio:
+ 
 .. activecode:: Lab_1
     
     # Utilice este espacio para programar su laboratorio 
     
 Luego de terminar su lab, haga copy/paste de su código y envielo a la dirreción 
-de correo del profesor y el Tutor: ``rafaeljcolorado@gmail.com`` y ``edwardo.rivera@upr.edu``.
+de correo electrónico del profesor y el Tutor: ``rafaeljcolorado@gmail.com`` y ``edwardo.rivera@upr.edu``.
 
 **Fecha de Entrega:** Jueves 5 de febrero del 2015, antes de las 11:59pm.               
