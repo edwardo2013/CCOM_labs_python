@@ -400,19 +400,22 @@ if ('block' == 'none') {
 
 </div>
 
-<p>Se debe tener mucho cuidado usando <tt class="docutils literal"><span class="pre">input()</span></tt> ya que por defecto siempre guarda un <tt class="docutils literal"><span class="pre">string</span></tt> (cadena de caracteres, como su nombre). Si se quiere guardar un número se debe utilizar la palabra <tt class="docutils literal"><span class="pre">int()</span></tt> la cual convierte un <tt class="docutils literal"><span class="pre">string</span></tt> o un número real a solo su parte entera. En el siguiente ejemplo, la primera línea muestra como hacer esto. Siga las instrucciones en el bloque de código:</p>
+<p>Se debe tener mucho cuidado usando <tt class="docutils literal"><span class="pre">input()</span></tt> ya que por defecto siempre guarda un <tt class="docutils literal"><span class="pre">string</span></tt> (cadena de caracteres, como su nombre). Si se quiere guardar un número se debe utilizar la palabra <tt class="docutils literal"><span class="pre">int()</span></tt> la cual convierte un <tt class="docutils literal"><span class="pre">string</span></tt> a un número entero. En el siguiente ejemplo, la primera línea muestra como hacer esto. Siga las instrucciones en el bloque de código:</p>
 
 <div id="Ejemplo_int" lang="python" >
 
 <br/>
 <div id="Ejemplo_int_code_div" style="display: block">
 <textarea cols="50" rows="12" id="Ejemplo_int_code" class="active_code", prefixcode="undefined" lang="python">
-num_parte_entera = int(input("Ingrese su numero favorito"))
-print("La parte entera es", num_parte_entera)
+num_entero = int(input("Ingrese su numero favorito"))
+print("El numero guardado como un entero es", num_entero)
+y = num_entero + 5
+print ("El entero sumandole 5 es", y)
 
-# Luego de haber corrido el programa, comente las primeras dos líneas
+# Luego de haber corrido el programa, comente las primeras cuatro líneas
 # de código y descomente las siguientes dos. Ya que no se convierte en
-# entero y se pretende sumar un string y un int, esto nos da un error.
+# un entero y se pretende sumar un string y un int, esto nos da un error.
+# Nota: Debe poner las instrucciones completamente pegadas a la izquierda.
 #a = input("Ingrese su numero favorito")
 #y = a + 3
 </textarea>
