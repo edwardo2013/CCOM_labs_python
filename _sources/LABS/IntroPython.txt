@@ -1,0 +1,112 @@
+=============================
+Lab 01: Introducción a Python
+=============================
+
+En clase se va a utilizar el lenguaje de programación **Python** a lo largo del semestre para aprender a programar e introducir conceptos básicos de las Ciencias de Cómputos. Este laboratorio tiene como propósito instruir al estudiante a la práctica de este lenguaje.	 
+
+Objetivos
+---------
+En este laboratorio los estudiantes:
+
+* Se familiarizarán con Python y la estructura de los laboratorios
+* Aprenderán el significado de una variable y el operador de asignación
+* Aprenderán sobre Datos de Entrada (Input) y Salida (Output) en Python
+* Conoceran algunos de los tipos de datos en Python:
+
+    * enteros
+    * floats
+    * strings
+    * Listas
+
+
+Python es un lenguaje de programación de alto nivel, diseñado para la legibilidad de código y aprendizaje. Aunque no es necesario para el curso, se puede descargar y encontrar mas información del mismo `aquí <https://www.python.org/>`_. Empezemos!
+
+Jugando con Python
+------------------
+Python puede utilizarse como una calculadora, con las operaciones de suma, resta, multiplicación y división. Por ejemplo:
+
+.. code-block:: python
+
+    >> 5 + 3  # devuelve 8
+    8
+    >> 5 * -2 # devuelve -10 
+    -10
+    >> 3 - 5  # devuelve -2
+    -2
+    >> 5/2    # devuelve 2, el cociente (solo la parte entera)
+    2
+    >> 5/2.0  # devuelve 2.5, el cociente
+    2.5
+    >> 5 - 2.5 * 10
+    -20
+    >> 2**3   # 2 a la 3, devuelve 8
+    8
+    
+Note que la división de enteros solo devuelve la parte entera del cociente. Esto tiene que ver con los tipos de datos en Python (no se preocupe por ahora). También, se pueden escribir comentarios. Un `comentario` es algo que ignora el programa, se utiliza para legibilidad y explicar el código mas a fondo. En Python, un comentario se escribe usando ``#``.    
+
+Para guardar un dato en un programa, utilizamos el concepto de una variable. Una **variable** es un nombre o identificador único en el programa el cual es guardado en la memoria (primaria) de la computadora. Es importante recalcar que para usar una variable, su nombre:
+
+    1. Solo debe contener números, letras y "underscore".
+    2. No puede empezar con un número.
+    3. No puede contener espacios.
+    4. No puede ser una palabra reservada (un "keyword").
+    
+Ahora, vea el siguiente código:
+
+.. code-block:: python
+
+    >> a = 10     # el operador de asignación es =
+    >> b = a + 10 # b contiene 20
+    >> b
+    20
+    >> a = a + b  # a contiene 30
+    30
+    
+En la primera instrucción, la variable ``a`` contiene el entero ``10``. 
+Luego, la variable ``b`` contiene ``20``.  Finalmente, la variable ``a`` contiene la suma de ``a`` y ``b``, ``30``. Note que el **operador de asignación**, ``=`` asigna un valor a una variable.
+     
+Nuestro lenguaje provee maneras muy fáciles para manejar datos de entrada y salida. La palabra ``input`` pide al usuario datos. La palabra ``print`` se utiliza para imprimir a la pantalla algún mensaje o dato. Mire el siguiente código y haga click en "Run" para que vea el siguiente código, el cual pide su nombre, lo guarda en la variable ``su_nombre`` y lo imprime en la pantalla. Luego, practique lo aprendido aquí:         
+
+.. activecode:: Input_Output
+
+    su_nombre = input("Ingrese su nombre, luego presione Enter")
+    print("Su nombre es", su_nombre)
+    
+    # Luego de haber corrido el programa, escriba código debajo 
+    # de estos comentarios para que practique. Use print para ver
+    # su código, por ejemplo (borre los # siguientes):
+    # a = 14
+    # print (a*2.5)
+    # print (a, 10)
+
+Algunos Tipos de Datos
+----------------------
+
+Los tipos de datos nativos de Python que hemos utilizado hasta ahora son los ``int``, que son enteros como el número 5 y los ``floats``, los cuales son números decimales, como el 2.456. Otro tipo de dato en Python que usamos fue una cadena de caracteres, mejor conocido como ``string``. En el codigo anterior, la variable ``su_nombre`` guarda un string si se le proveen letras. Otro tipo de de dato (no nativo) es una Lista. Una **Lista**, es un objeto que contiene multiples datos. Por ahora, piense en una lista como una pedazo de memoria (una variable) que puede tener varios datos asociados a ella. Estudie el siguiente código:
+
+.. codelens:: codelens_question
+
+    un_string = "Arce"               # Un string, empiezan y terminan con quotes
+    L1 = []                          # Una lista vacía (se usan corchetes)
+    L2 = [-1,10.3,un_string]         # Una lista con 3 elementos 
+    print (L1)                       # Imprime la lista vacia
+    print (L2)                       # imprime la lista con los 3 elementos
+    print (L2[0])                    # Imprime el primer elemento de L2
+
+La primera instrucción guarda el string ``Edwardo`` en la variable ``un_string``. Luego, se declara una lista vacía. La tercera línea es importante: L2 contiene, tres palabras, en la primera posición contiene ``Colo``, en la segunda ``Arce`` y en la tercera lo que tiene ``un_string``. La ultima instrucción, imprime el primer elemento de L2. Es importante ver que se empieza a contar posiciones desde 0 `No` desde 1. 
+
+
+El Lab: Información de Contacto
+-------------------------------
+
+Para practicar lo aprendido, usted desarrollara un programa donde guardara la informacion de contacto de una persona: Su Nombre, Apellido, edad, telefono y su email. Ademas, determinara si es mayor de edad. Siga las siguientes instrucciones:
+
+    1. Pida al usuario su nombre y guardelo en una variable. Haga lo mismo para el apellido, edad, telefono y email de la persona.
+    2. Cree una lista ``L``, que contendrá la informacion del punto 1.
+    3. Despliege un mensaje por cada elemento de la lista. Por ejemplo, para el nombre debe desplegar: Su nombre es: El_nombre_insertado.
+    4. Reste ``18`` a la edad e imprima este valor para ver si la persona es mayor de edad (si aparece un numero negativo en la pantalla no lo es).
+
+Luego de terminar su lab, haga copy/paste de su código y envielo a la dirreción 
+de correo del profesor y en Tutor: ``rafaeljcolorado@gmail.com`` y ``edwardo.rivera@upr.edu``.
+
+**Fecha de Entrega:** Jueves 5 de febrero del 2015, antes de las 11:59pm.               

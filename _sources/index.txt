@@ -13,46 +13,11 @@ CCOM LABS
 .. Sources can also be included from subfolders of this directory.
    (e.g. "DataStructures/queues.rst").
 
-SECTION 1: Introduccion a Python
-::::::::::::::::::::::::::::::::
+Introducción a Python
+::::::::::::::::::::::
 
 .. toctree::
+    bienvenidos.rst
+    antesempezar.rst
+    LABS/IntroPython.rst
 
-    ejemplo.rst
-    quiz.rst
-
-SECTION 2: Los LABS
-:::::::::::::::::::
-
-.. toctree::
-    :maxdepth: 2
-
-    LABS/Week1.rst
-
-
-.. activecode:: example1
-
-   print 'hello world!'
-   
-   
-   
-Turtles
--------
-
-.. activecode:: example2
-
-   import turtle
-   t = turtle.Turtle()
-   
-   for i in range(4):
-       t.forward(100)
-       t.right(90)
-
-.. code-block:: python
-
-   import sys
-   a = "Edw"
-
-bla
-
-That is all bla!

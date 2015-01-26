@@ -10,7 +10,7 @@ EJEMPLO
 		print i
 
 
-Ya
+Ya f
 
 
 .. codelens:: secondexample

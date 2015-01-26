@@ -5,7 +5,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>EJEMPLO &mdash; &lt;CCOM 3030 Python Labs&gt;</title>
+    <title>Lab 01: Introducción a Python &mdash; &lt;CCOM 3030 Python Labs&gt;</title>
     
     <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -73,7 +73,6 @@
     <script type="text/javascript" src="../_static/processing-1.4.1.min.js"></script>
     <script type="text/javascript" src="../_static/jquery.hotkey.js"></script>
     <link rel="top" title="&lt;CCOM 3030 Python Labs&gt;" href="../index.html" />
-    <link rel="prev" title="Introduccion a Python" href="IntroPython.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
@@ -240,7 +239,13 @@
           <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
   <ul class="dropdown-menu localtoc"><ul>
-<li><a class="reference internal" href="#">EJEMPLO</a></li>
+<li><a class="reference internal" href="#">Lab 01: Introducción a Python</a><ul>
+<li><a class="reference internal" href="#objetivos">Objetivos</a></li>
+<li><a class="reference internal" href="#jugando-con-python">Jugando con Python</a></li>
+<li><a class="reference internal" href="#algunos-tipos-de-datos">Algunos Tipos de Datos</a></li>
+<li><a class="reference internal" href="#el-lab-informacion-de-contacto">El Lab: Información de Contacto</a></li>
+</ul>
+</li>
 </ul>
 </ul>
 </li>
@@ -248,14 +253,6 @@
         
         
           
-  <li id="relations-prev" title="Previous Chapter - Introduccion a Python" data-toggle="tooltip">
-    <a href="IntroPython.html" >
-      <i class='glyphicon glyphicon-backward' style='opacity:0.9;'></i>
-    </a>
-  </li>
-  
-    <li class="divider-vertical"></li>
-  
 
 <script type="text/javascript">
   opts = {'placement':'bottom',
@@ -279,74 +276,147 @@
 
 <div class="container">
   
-  <div class="section" id="ejemplo">
-<h1>EJEMPLO<a class="headerlink" href="#ejemplo" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="lab-01-introduccion-a-python">
+<h1>Lab 01: Introducción a Python<a class="headerlink" href="#lab-01-introduccion-a-python" title="Permalink to this headline">¶</a></h1>
+<p>En clase se va a utilizar el lenguaje de programación <strong>Python</strong> a lo largo del semestre para aprender a programar e introducir conceptos básicos de las Ciencias de Cómputos. Este laboratorio tiene como propósito instruir al estudiante a la práctica de este lenguaje.</p>
+<div class="section" id="objetivos">
+<h2>Objetivos<a class="headerlink" href="#objetivos" title="Permalink to this headline">¶</a></h2>
+<p>En este laboratorio los estudiantes:</p>
+<ul>
+<li><p class="first">Se familiarizarán con Python y la estructura de los laboratorios</p>
+</li>
+<li><p class="first">Aprenderán el significado de una variable y el operador de asignación</p>
+</li>
+<li><p class="first">Aprenderán sobre Datos de Entrada (Input) y Salida (Output) en Python</p>
+</li>
+<li><p class="first">Conoceran algunos de los tipos de datos en Python:</p>
+<blockquote>
+<div><ul class="simple">
+<li>enteros</li>
+<li>floats</li>
+<li>strings</li>
+<li>Listas</li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+<p>Python es un lenguaje de programación de alto nivel, diseñado para la legibilidad de código y aprendizaje. Aunque no es necesario para el curso, se puede descargar y encontrar mas información del mismo <a class="reference external" href="https://www.python.org/">aquí</a>. Empezemos!</p>
+</div>
+<div class="section" id="jugando-con-python">
+<h2>Jugando con Python<a class="headerlink" href="#jugando-con-python" title="Permalink to this headline">¶</a></h2>
+<p>Python puede utilizarse como una calculadora, con las operaciones de suma, resta, multiplicación y división. Por ejemplo:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="o">&gt;&gt;</span> <span class="mi">5</span> <span class="o">+</span> <span class="mi">3</span>  <span class="c"># devuelve 8</span>
+<span class="mi">8</span>
+<span class="o">&gt;&gt;</span> <span class="mi">5</span> <span class="o">*</span> <span class="o">-</span><span class="mi">2</span> <span class="c"># devuelve -10</span>
+<span class="o">-</span><span class="mi">10</span>
+<span class="o">&gt;&gt;</span> <span class="mi">3</span> <span class="o">-</span> <span class="mi">5</span>  <span class="c"># devuelve -2</span>
+<span class="o">-</span><span class="mi">2</span>
+<span class="o">&gt;&gt;</span> <span class="mi">5</span><span class="o">/</span><span class="mi">2</span>    <span class="c"># devuelve 2, el cociente (solo la parte entera)</span>
+<span class="mi">2</span>
+<span class="o">&gt;&gt;</span> <span class="mi">5</span><span class="o">/</span><span class="mf">2.0</span>  <span class="c"># devuelve 2.5, el cociente</span>
+<span class="mf">2.5</span>
+<span class="o">&gt;&gt;</span> <span class="mi">5</span> <span class="o">-</span> <span class="mf">2.5</span> <span class="o">*</span> <span class="mi">10</span>
+<span class="o">-</span><span class="mi">20</span>
+<span class="o">&gt;&gt;</span> <span class="mi">2</span><span class="o">**</span><span class="mi">3</span>   <span class="c"># 2 a la 3, devuelve 8</span>
+<span class="mi">8</span>
+</pre></div>
+</div>
+<p>Note que la división de enteros solo devuelve la parte entera del cociente. Esto tiene que ver con los tipos de datos en Python (no se preocupe por ahora). También, se pueden escribir comentarios. Un <cite>comentario</cite> es algo que ignora el programa, se utiliza para legibilidad y explicar el código mas a fondo. En Python, un comentario se escribe usando <tt class="docutils literal"><span class="pre">#</span></tt>.</p>
+<p>Para guardar un dato en un programa, utilizamos el concepto de una variable. Una <strong>variable</strong> es un nombre o identificador único en el programa el cual es guardado en la memoria (primaria) de la computadora. Es importante recalcar que para usar una variable, su nombre:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li>Solo debe contener números, letras y &#8220;underscore&#8221;.</li>
+<li>No puede empezar con un número.</li>
+<li>No puede contener espacios.</li>
+<li>No puede ser una palabra reservada (un &#8220;keyword&#8221;).</li>
+</ol>
+</div></blockquote>
+<p>Ahora, vea el siguiente código:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="o">&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">10</span>     <span class="c"># el operador de asignación es =</span>
+<span class="o">&gt;&gt;</span> <span class="n">b</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="mi">10</span> <span class="c"># b contiene 20</span>
+<span class="o">&gt;&gt;</span> <span class="n">b</span>
+<span class="mi">20</span>
+<span class="o">&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>  <span class="c"># a contiene 30</span>
+<span class="mi">30</span>
+</pre></div>
+</div>
+<p>En la primera instrucción, la variable <tt class="docutils literal"><span class="pre">a</span></tt> contiene el entero <tt class="docutils literal"><span class="pre">10</span></tt>.
+Luego, la variable <tt class="docutils literal"><span class="pre">b</span></tt> contiene <tt class="docutils literal"><span class="pre">20</span></tt>.  Finalmente, la variable <tt class="docutils literal"><span class="pre">a</span></tt> contiene la suma de <tt class="docutils literal"><span class="pre">a</span></tt> y <tt class="docutils literal"><span class="pre">b</span></tt>, <tt class="docutils literal"><span class="pre">30</span></tt>. Note que el <strong>operador de asignación</strong>, <tt class="docutils literal"><span class="pre">=</span></tt> asigna un valor a una variable.</p>
+<p>Nuestro lenguaje provee maneras muy fáciles para manejar datos de entrada y salida. La palabra <tt class="docutils literal"><span class="pre">input</span></tt> pide al usuario datos. La palabra <tt class="docutils literal"><span class="pre">print</span></tt> se utiliza para imprimir a la pantalla algún mensaje o dato. Mire el siguiente código y haga click en &#8220;Run&#8221; para que vea el siguiente código, el cual pide su nombre, lo guarda en la variable <tt class="docutils literal"><span class="pre">su_nombre</span></tt> y lo imprime en la pantalla. Luego, practique lo aprendido aquí:</p>
 
-<div id="myexample" lang="python" >
+<div id="Input_Output" lang="python" >
 
 <br/>
-<div id="myexample_code_div" style="display: block">
-<textarea cols="50" rows="12" id="myexample_code" class="active_code", prefixcode="undefined" lang="python">
-a = "Edwardo"
+<div id="Input_Output_code_div" style="display: block">
+<textarea cols="50" rows="12" id="Input_Output_code" class="active_code", prefixcode="undefined" lang="python">
+su_nombre = input("Ingrese su nombre, luego presione Enter")
+print("Su nombre es", su_nombre)
 
-for i in a:
-        print i
+# Luego de haber corrido el programa, escriba código debajo
+# de estos comentarios para que practique. Use print para ver
+# su código, por ejemplo (borre los # siguientes):
+# a = 14
+# print (a*2.5)
+# print (a, 10)
 </textarea>
 </div>
-<p class="ac_caption"><span class="ac_caption_text"> (myexample)</span> </p>
+<p class="ac_caption"><span class="ac_caption_text"> (Input_Output)</span> </p>
 
-<button class='btn btn-success' id="myexample_runb" onclick="runit('myexample',this, undefined);">Run</button>
+<button class='btn btn-success' id="Input_Output_runb" onclick="runit('Input_Output',this, undefined);">Run</button>
 
 <div id="cont"></div>
 
-<button class="ac_opt btn btn-default" style="display: inline-block" id="myexample_saveb" onclick="saveEditor('myexample');">Save</button>
-<button class="ac_opt btn btn-default" style="display: inline-block" id="myexample_loadb" onclick="requestCode('myexample');">Load</button>
+<button class="ac_opt btn btn-default" style="display: inline-block" id="Input_Output_saveb" onclick="saveEditor('Input_Output');">Save</button>
+<button class="ac_opt btn btn-default" style="display: inline-block" id="Input_Output_loadb" onclick="requestCode('Input_Output');">Load</button>
 
 <script>
 if ('block' == 'none') {
     // a hack to preserve the inline-block display style. Toggle() will use display: block
     // (instead of inline-block) if the previous display style was 'none'
-    $('#myexample_saveb').toggle();
-    $('#myexample_loadb').toggle();
+    $('#Input_Output_saveb').toggle();
+    $('#Input_Output_loadb').toggle();
 }
 </script>
 
 
 <div style="text-align: center">
-<canvas id="myexample_canvas" class="ac-canvas" height="400" width="400" style="border-style: solid; display: none; text-align: center"></canvas>
+<canvas id="Input_Output_canvas" class="ac-canvas" height="400" width="400" style="border-style: solid; display: none; text-align: center"></canvas>
 </div>
-<pre id="myexample_suffix" style="display:none">
+<pre id="Input_Output_suffix" style="display:none">
 </pre>
-<pre id="myexample_pre" class="active_out">
+<pre id="Input_Output_pre" class="active_out">
 
 </pre>
 
 
 </div>
 
-<p>Ya f</p>
+</div>
+<div class="section" id="algunos-tipos-de-datos">
+<h2>Algunos Tipos de Datos<a class="headerlink" href="#algunos-tipos-de-datos" title="Permalink to this headline">¶</a></h2>
+<p>Los tipos de datos nativos de Python que hemos utilizado hasta ahora son los <tt class="docutils literal"><span class="pre">int</span></tt>, que son enteros como el número 5 y los <tt class="docutils literal"><span class="pre">floats</span></tt>, los cuales son números decimales, como el 2.456. Otro tipo de dato en Python que usamos fue una cadena de caracteres, mejor conocido como <tt class="docutils literal"><span class="pre">string</span></tt>. En el codigo anterior, la variable <tt class="docutils literal"><span class="pre">su_nombre</span></tt> guarda un string si se le proveen letras. Otro tipo de de dato (no nativo) es una Lista. Una <strong>Lista</strong>, es un objeto que contiene multiples datos. Por ahora, piense en una lista como una pedazo de memoria (una variable) que puede tener varios datos asociados a ella. Estudie el siguiente código:</p>
 
-<div id="secondexample"></div>
-<p class="cl_caption"><span class="cl_caption_text"> (secondexample)</span> </p>
+<div id="codelens_question"></div>
+<p class="cl_caption"><span class="cl_caption_text"> (codelens_question)</span> </p>
 <script type="text/javascript">
-var secondexample_trace = {"code": "fruit = [\"apple\",\"orange\",\"banana\",\"cherry\"]\nnumlist = [6,7]\nnewlist = fruit + numlist\nzeros = [0] * 4\nzeros[1] = fruit\nzeros[1][2] = numlist", "trace": [{"ordered_globals": [], "stdout": "", "func_name": "<module>", "stack_to_render": [], "globals": {}, "heap": {}, "line": 1, "event": "step_line"}, {"ordered_globals": ["fruit"], "stdout": "", "func_name": "<module>", "stack_to_render": [], "globals": {"fruit": ["REF", 1]}, "heap": {"1": ["LIST", "apple", "orange", "banana", "cherry"]}, "line": 2, "event": "step_line"}, {"ordered_globals": ["fruit", "numlist"], "stdout": "", "func_name": "<module>", "stack_to_render": [], "globals": {"fruit": ["REF", 1], "numlist": ["REF", 2]}, "heap": {"1": ["LIST", "apple", "orange", "banana", "cherry"], "2": ["LIST", 6, 7]}, "line": 3, "event": "step_line"}, {"ordered_globals": ["fruit", "numlist", "newlist"], "stdout": "", "func_name": "<module>", "stack_to_render": [], "globals": {"newlist": ["REF", 3], "fruit": ["REF", 1], "numlist": ["REF", 2]}, "heap": {"1": ["LIST", "apple", "orange", "banana", "cherry"], "2": ["LIST", 6, 7], "3": ["LIST", "apple", "orange", "banana", "cherry", 6, 7]}, "line": 4, "event": "step_line"}, {"ordered_globals": ["fruit", "numlist", "newlist", "zeros"], "stdout": "", "func_name": "<module>", "stack_to_render": [], "globals": {"newlist": ["REF", 3], "fruit": ["REF", 1], "zeros": ["REF", 4], "numlist": ["REF", 2]}, "heap": {"1": ["LIST", "apple", "orange", "banana", "cherry"], "2": ["LIST", 6, 7], "3": ["LIST", "apple", "orange", "banana", "cherry", 6, 7], "4": ["LIST", 0, 0, 0, 0]}, "line": 5, "event": "step_line"}, {"ordered_globals": ["fruit", "numlist", "newlist", "zeros"], "stdout": "", "func_name": "<module>", "stack_to_render": [], "globals": {"newlist": ["REF", 3], "fruit": ["REF", 1], "zeros": ["REF", 4], "numlist": ["REF", 2]}, "heap": {"1": ["LIST", "apple", "orange", "banana", "cherry"], "2": ["LIST", 6, 7], "3": ["LIST", "apple", "orange", "banana", "cherry", 6, 7], "4": ["LIST", 0, ["REF", 1], 0, 0]}, "line": 6, "event": "step_line"}, {"ordered_globals": ["fruit", "numlist", "newlist", "zeros"], "stdout": "", "func_name": "<module>", "stack_to_render": [], "globals": {"newlist": ["REF", 3], "fruit": ["REF", 1], "zeros": ["REF", 4], "numlist": ["REF", 2]}, "heap": {"1": ["LIST", "apple", "orange", ["REF", 2], "cherry"], "2": ["LIST", 6, 7], "3": ["LIST", "apple", "orange", "banana", "cherry", 6, 7], "4": ["LIST", 0, ["REF", 1], 0, 0]}, "line": 6, "event": "return"}]};
-var secondexample_vis;
+var codelens_question_trace = {"code": "un_string = \"Arce\"               # Un string, empiezan y terminan con quotes\nL1 = []                          # Una lista vac\u00eda (se usan corchetes)\nL2 = [-1,10.3,un_string]         # Una lista con 3 elementos\nprint (L1)                       # Imprime la lista vacia\nprint (L2)                       # imprime la lista con los 3 elementos\nprint (L2[0])                    # Imprime el primer elemento de L2", "trace": [{"ordered_globals": [], "stdout": "", "func_name": "<module>", "stack_to_render": [], "globals": {}, "heap": {}, "line": 1, "event": "step_line"}, {"ordered_globals": ["un_string"], "stdout": "", "func_name": "<module>", "stack_to_render": [], "globals": {"un_string": "Arce"}, "heap": {}, "line": 2, "event": "step_line"}, {"ordered_globals": ["un_string", "L1"], "stdout": "", "func_name": "<module>", "stack_to_render": [], "globals": {"un_string": "Arce", "L1": ["REF", 1]}, "heap": {"1": ["LIST"]}, "line": 3, "event": "step_line"}, {"ordered_globals": ["un_string", "L1", "L2"], "stdout": "", "func_name": "<module>", "stack_to_render": [], "globals": {"L2": ["REF", 2], "un_string": "Arce", "L1": ["REF", 1]}, "heap": {"1": ["LIST"], "2": ["LIST", -1, 10.3, "Arce"]}, "line": 4, "event": "step_line"}, {"ordered_globals": ["un_string", "L1", "L2"], "stdout": "[]\n", "func_name": "<module>", "stack_to_render": [], "globals": {"L2": ["REF", 2], "un_string": "Arce", "L1": ["REF", 1]}, "heap": {"1": ["LIST"], "2": ["LIST", -1, 10.3, "Arce"]}, "line": 5, "event": "step_line"}, {"ordered_globals": ["un_string", "L1", "L2"], "stdout": "[]\n[-1, 10.3, 'Arce']\n", "func_name": "<module>", "stack_to_render": [], "globals": {"L2": ["REF", 2], "un_string": "Arce", "L1": ["REF", 1]}, "heap": {"1": ["LIST"], "2": ["LIST", -1, 10.3, "Arce"]}, "line": 6, "event": "step_line"}, {"ordered_globals": ["un_string", "L1", "L2"], "stdout": "[]\n[-1, 10.3, 'Arce']\n-1\n", "func_name": "<module>", "stack_to_render": [], "globals": {"L2": ["REF", 2], "un_string": "Arce", "L1": ["REF", 1]}, "heap": {"1": ["LIST"], "2": ["LIST", -1, 10.3, "Arce"]}, "line": 6, "event": "return"}]};
+var codelens_question_vis;
 
 $(document).ready(function() {
-    secondexample_vis = new ExecutionVisualizer('secondexample',secondexample_trace,
+    codelens_question_vis = new ExecutionVisualizer('codelens_question',codelens_question_trace,
                                 {embeddedMode: true,
                                 verticalStack: true,
                                 heightChangeCallback: redrawAllVisualizerArrows,
                                 codeDivWidth: 500
                                 });
-    attachLoggers(secondexample_vis,'secondexample');
-    allVisualizers.push(secondexample_vis);
+    attachLoggers(codelens_question_vis,'codelens_question');
+    allVisualizers.push(codelens_question_vis);
 
 });
 
 $(document).ready(function() {
-    $("#secondexample_tracecheck").click(function() {
-        logBookEvent({'event':'codelens', 'act': 'check', 'div_id':'secondexample'});
+    $("#codelens_question_tracecheck").click(function() {
+        logBookEvent({'event':'codelens', 'act': 'check', 'div_id':'codelens_question'});
     });
 });
 
@@ -356,9 +426,26 @@ if (allVisualizers === undefined) {
 
 
 $(window).resize(function() {
-    secondexample_vis.redrawConnectors();
+    codelens_question_vis.redrawConnectors();
 });
 </script>
+<p>La primera instrucción guarda el string <tt class="docutils literal"><span class="pre">Edwardo</span></tt> en la variable <tt class="docutils literal"><span class="pre">un_string</span></tt>. Luego, se declara una lista vacía. La tercera línea es importante: L2 contiene, tres palabras, en la primera posición contiene <tt class="docutils literal"><span class="pre">Colo</span></tt>, en la segunda <tt class="docutils literal"><span class="pre">Arce</span></tt> y en la tercera lo que tiene <tt class="docutils literal"><span class="pre">un_string</span></tt>. La ultima instrucción, imprime el primer elemento de L2. Es importante ver que se empieza a contar posiciones desde 0 <cite>No</cite> desde 1.</p>
+</div>
+<div class="section" id="el-lab-informacion-de-contacto">
+<h2>El Lab: Información de Contacto<a class="headerlink" href="#el-lab-informacion-de-contacto" title="Permalink to this headline">¶</a></h2>
+<p>Para practicar lo aprendido, usted desarrollara un programa donde guardara la informacion de contacto de una persona: Su Nombre, Apellido, edad, telefono y su email. Ademas, determinara si es mayor de edad. Siga las siguientes instrucciones:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li>Pida al usuario su nombre y guardelo en una variable. Haga lo mismo para el apellido, edad, telefono y email de la persona.</li>
+<li>Cree una lista <tt class="docutils literal"><span class="pre">L</span></tt>, que contendrá la informacion del punto 1.</li>
+<li>Despliege un mensaje por cada elemento de la lista. Por ejemplo, para el nombre debe desplegar: Su nombre es: El_nombre_insertado.</li>
+<li>Reste <tt class="docutils literal"><span class="pre">18</span></tt> a la edad e imprima este valor para ver si la persona es mayor de edad (si aparece un numero negativo en la pantalla no lo es).</li>
+</ol>
+</div></blockquote>
+<p>Luego de terminar su lab, haga copy/paste de su código y envielo a la dirreción
+de correo del profesor y en Tutor: <tt class="docutils literal"><span class="pre">rafaeljcolorado&#64;gmail.com</span></tt> y <tt class="docutils literal"><span class="pre">edwardo.rivera&#64;upr.edu</span></tt>.</p>
+<p><strong>Fecha de Entrega:</strong> Jueves 5 de febrero del 2015, antes de las 11:59pm.</p>
+</div>
 </div>
 
 
