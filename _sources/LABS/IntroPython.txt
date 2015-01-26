@@ -135,4 +135,4 @@ de correo electrónico del profesor y el Tutor: ``rafaeljcolorado@gmail.com`` y 
 
 **Científico del día**: *Ada Lovelace*. Se le considera como el primer programador del mundo. Hizo el primer algoritmo
 para la maquina mecanica analytica de Charles Babbage, aun sin esta ser construida. Un lenguaje de programacion, *Ada*, lleva su nombre.
-Puede leer mas en `Wikipedia <en.wikipedia.org/wiki/Ada_Lovelace>`_. 
+Puede leer mas en `Wikipedia <http://en.wikipedia.org/wiki/Ada_Lovelace>`_. 
