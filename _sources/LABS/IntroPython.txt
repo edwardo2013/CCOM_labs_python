@@ -2,7 +2,7 @@
 Lab 01: Introducción a Python
 =============================
 
-En clase se va a utilizar el lenguaje de programación **Python** a lo largo del semestre para aprender a programar e introducir conceptos básicos de las Ciencias de Cómputos. Este laboratorio tiene como propósito instruir al estudiante a la práctica de este lenguaje. Al final del lab, el estudiante tendrá una consola de Python para codificar su laboratorio.	 
+En clase se va a utilizar el lenguaje de programación **Python** a lo largo del semestre para aprender a programar e introducir conceptos básicos de las Ciencias de Cómputos. Este laboratorio tiene como propósito instruir al estudiante a la práctica de este lenguaje. Al final del laboratorio, el estudiante tendrá una consola de Python para codificar su laboratorio. Favor de seguir las instrucciones paso por paso y no salte secciones.	 
 
 Objetivos
 ---------
@@ -11,15 +11,14 @@ En este laboratorio los estudiantes:
 * Se familiarizarán con Python y la estructura de los laboratorios
 * Aprenderán el significado de una variable y el operador de asignación
 * Aprenderán sobre Datos de Entrada (Input) y Salida (Output) en Python
-* Conoceran algunos de los tipos de datos en Python:
+* Conocerán algunos de los tipos de datos en Python:
 
     * enteros
     * floats
     * strings
     * Listas
 
-
-Python es un lenguaje de programación de alto nivel, diseñado para la legibilidad de código y aprendizaje. Aunque no es necesario para el curso, se puede descargar y encontrar mas información del mismo `aquí <https://www.python.org/>`_. Empezemos!
+Python es un lenguaje de programación de alto nivel, diseñado para la legibilidad de código y aprendizaje. Aunque no es necesario para el curso, se puede descargar y encontrar más información del mismo `aquí <https://www.python.org/>`_. Empezemos!
 
 Jugando con Python
 ------------------
@@ -33,11 +32,11 @@ Python puede utilizarse como una calculadora, con las operaciones de suma, resta
     -10
     >> 3 - 5  # devuelve -2
     -2
-    >> 5/2    # devuelve 2, el cociente (solo la parte entera)
-    2
-    >> 5/2.0  # devuelve 2.5, el cociente
+    >> 5/2    # devuelve 2.5, el cociente
     2.5
-    >> 5 - 2.5 * 10
+    >> 5//2.0  # devuelve 2.0, la parte entera del cociente
+    2
+    >> 5 - 2.5 * 10 # El orden de operaciones se mantiene
     -20
     >> 2**3   # 2 a la 3, devuelve 8
     8
@@ -60,6 +59,7 @@ Ahora, vea el siguiente código:
     >> b
     20
     >> a = a + b  # a contiene 30
+    >> a
     30
     
 En la primera instrucción, la variable ``a`` contiene el entero ``10``. 
@@ -98,7 +98,7 @@ Se debe tener mucho cuidado usando ``input()`` ya que por defecto siempre guarda
 Algunos Tipos de Datos
 ----------------------
 
-Los tipos de datos nativos de Python que hemos utilizado hasta ahora son los ``int``, que son enteros como el número 5 y los ``floats``, los cuales son números reales, como el 2.456. Otro tipo de dato en Python que usamos fue una cadena de caracteres, mejor conocido como ``string``. En el código anterior, la variable ``su_nombre`` guarda un string si se le proveen letras. Otro tipo de de dato (no nativo) es una Lista. Una **Lista**, es un objeto que contiene multiples datos. Por ahora, piense en una lista como una pedazo de memoria (una variable) que puede tener varios datos asociados a ella. Estudie el siguiente código:
+Los tipos de datos nativos de Python que hemos utilizado hasta ahora son los ``int``, que son enteros como el número 5 y los ``floats``, los cuales son números reales, como el 2.456. Otro tipo de dato en Python que usamos fue una cadena de caracteres, mejor conocido como ``string``. En el código anterior, la variable ``su_nombre`` guarda un string si se le proveen letras. Otro tipo de de dato (no nativo) es una Lista. Una **Lista**, es un objeto que contiene múltiples datos. Por ahora, piense en una lista como un pedazo de memoria (una variable) que puede tener varios datos asociados a ella. Estudie el siguiente código:
 
 .. codelens:: Listas_y_strings
 
@@ -109,30 +109,31 @@ Los tipos de datos nativos de Python que hemos utilizado hasta ahora son los ``i
     print (L2)                       # imprime la lista con los 3 elementos
     print (L2[0])                    # Imprime el primer elemento de L2
 
-La primera instrucción guarda el string ``Arce`` en la variable ``un_string``. Luego, se declara una lista vacía. La tercera línea es importante: ``L2`` contiene, tres elementos, en la primera posición contiene ``-1``, en la segunda ``10.3`` y en la tercera lo que tiene guardado la variable ``un_string``. La ultima instrucción, imprime el primer elemento de L2. Es importante ver que, al igual que otros lenguajes, en Python se empieza a contar posiciones desde 0 y no desde 1. 
+La primera instrucción guarda el string ``Arce`` en la variable ``un_string``. Luego, se declara una lista vacía. La tercera línea es importante: ``L2`` contiene tres elementos: en la primera posición contiene ``-1``, en la segunda ``10.3`` y en la tercera lo que tiene guardado la variable ``un_string``. La última instrucción, imprime el primer elemento de L2. Es importante ver que, al igual que otros lenguajes, en Python se empieza a contar posiciones desde 0 y no desde 1. ¿Qué imprimiría ``print(L2[1])``? Intentelo!
 
 
 El Lab: Información de Contacto
 -------------------------------
 
-Para practicar lo aprendido, usted desarrollará un programa donde guardara la información de contacto de una persona: su nombre, apellido, edad, teléfono y su email. Además, determinará si es mayor de edad usando una fórmula sencilla. Siga las siguientes instrucciones:
+Para practicar lo aprendido, usted desarrollará un programa donde guardará la información de contacto de una persona: su nombre, apellido, edad, teléfono y su email. Además, determinará si es mayor de edad usando una fórmula sencilla. Siga las siguientes instrucciones:
 
-    1. Pida al usuario su nombre y guardelo en una variable. Haga lo mismo para el apellido, edad, teléfono y email de la persona.
-    2. Cree una lista ``Contacto``, que contendrá la información del punto 1.
+    1. Pida al usuario su nombre y guárdelo en una variable. Haga lo mismo para el apellido, edad, teléfono y correo electrónico de la persona.
+    2. Cree una lista llamada ``Contacto``, que contendrá la información del punto 1.
     3. Despliege un mensaje por cada elemento de la lista. Por ejemplo, para el nombre debe desplegar, ``Su nombre es: El_nombre_insertado``.
     4. Finalmente, reste ``18`` a la edad e imprima este valor (Si aparece un número negativo en la pantalla no es mayor de edad). Se puede hacer en una línea!
 
+*Recuerde, debe imprimir a la pantalla los elementos contenidos en la lista, no las variables.* Repase la sección anterior para ver como accesar los elementos de una lista.  
+ 
 Use el siguiente espacio para codificar su laboratorio:
  
 .. activecode:: Lab_1
     
     # Utilice este espacio para programar su laboratorio 
     
-Luego de terminar su lab, haga copy/paste de su código y envielo a la dirreción 
-de correo electrónico del profesor y el Tutor: ``rafaeljcolorado@gmail.com`` y ``edwardo.rivera@upr.edu``.
+**Para Entregar**: Luego de terminar su laboratorio, haga "copy/paste" de su código en un file. Incluya su nombre (como un comentario) en la primera línea del file. Guarde el file con el nombre *lab1.py*. Ingrese a la clase registrada en `moodle <http://moodle.ccom.uprrp.edu/>`_ y haga "upload" de su file. Luego de entregar el lab, favor de llenar este `cuestionario <https://docs.google.com/a/upr.edu/forms/d/1KDHVw-4M0dkgGb4ABbqFy5ps2KmsagCLE1EbHNZo2_0/viewform>`_. De surgir alguna duda con respecto al lab, puede contactarme a mi correo electrónico: ``edwardo.rivera@upr.edu``.
 
-**Fecha de Entrega:** Jueves 5 de febrero del 2015, antes de las 11:59pm.
+**Fecha de Entrega:** Miércoles 4 de febrero del 2015, antes de las 11:55pm en moodle.
 
 **Científico del día**: *Ada Lovelace*. Se le considera como el primer programador del mundo. Hizo el primer algoritmo
-para la maquina mecanica analytica de Charles Babbage, aun sin esta ser construida. Un lenguaje de programacion, *Ada*, lleva su nombre.
-Puede leer mas en `Wikipedia <http://en.wikipedia.org/wiki/Ada_Lovelace>`_. 
+para la máquina mecánica analítica de Charles Babbage, aún sin haberse construído. Un lenguaje de programación, *Ada*, lleva su nombre.
+Puede leer más en `Wikipedia <http://en.wikipedia.org/wiki/Ada_Lovelace>`_. 

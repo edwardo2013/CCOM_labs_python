@@ -287,7 +287,7 @@
   
   <div class="section" id="lab-01-introduccion-a-python">
 <h1>Lab 01: Introducción a Python<a class="headerlink" href="#lab-01-introduccion-a-python" title="Permalink to this headline">¶</a></h1>
-<p>En clase se va a utilizar el lenguaje de programación <strong>Python</strong> a lo largo del semestre para aprender a programar e introducir conceptos básicos de las Ciencias de Cómputos. Este laboratorio tiene como propósito instruir al estudiante a la práctica de este lenguaje. Al final del lab, el estudiante tendrá una consola de Python para codificar su laboratorio.</p>
+<p>En clase se va a utilizar el lenguaje de programación <strong>Python</strong> a lo largo del semestre para aprender a programar e introducir conceptos básicos de las Ciencias de Cómputos. Este laboratorio tiene como propósito instruir al estudiante a la práctica de este lenguaje. Al final del laboratorio, el estudiante tendrá una consola de Python para codificar su laboratorio. Favor de seguir las instrucciones paso por paso y no salte secciones.</p>
 <div class="section" id="objetivos">
 <h2>Objetivos<a class="headerlink" href="#objetivos" title="Permalink to this headline">¶</a></h2>
 <p>En este laboratorio los estudiantes:</p>
@@ -298,7 +298,7 @@
 </li>
 <li><p class="first">Aprenderán sobre Datos de Entrada (Input) y Salida (Output) en Python</p>
 </li>
-<li><p class="first">Conoceran algunos de los tipos de datos en Python:</p>
+<li><p class="first">Conocerán algunos de los tipos de datos en Python:</p>
 <blockquote>
 <div><ul class="simple">
 <li>enteros</li>
@@ -309,7 +309,7 @@
 </div></blockquote>
 </li>
 </ul>
-<p>Python es un lenguaje de programación de alto nivel, diseñado para la legibilidad de código y aprendizaje. Aunque no es necesario para el curso, se puede descargar y encontrar mas información del mismo <a class="reference external" href="https://www.python.org/">aquí</a>. Empezemos!</p>
+<p>Python es un lenguaje de programación de alto nivel, diseñado para la legibilidad de código y aprendizaje. Aunque no es necesario para el curso, se puede descargar y encontrar más información del mismo <a class="reference external" href="https://www.python.org/">aquí</a>. Empezemos!</p>
 </div>
 <div class="section" id="jugando-con-python">
 <h2>Jugando con Python<a class="headerlink" href="#jugando-con-python" title="Permalink to this headline">¶</a></h2>
@@ -320,11 +320,11 @@
 <span class="o">-</span><span class="mi">10</span>
 <span class="o">&gt;&gt;</span> <span class="mi">3</span> <span class="o">-</span> <span class="mi">5</span>  <span class="c"># devuelve -2</span>
 <span class="o">-</span><span class="mi">2</span>
-<span class="o">&gt;&gt;</span> <span class="mi">5</span><span class="o">/</span><span class="mi">2</span>    <span class="c"># devuelve 2, el cociente (solo la parte entera)</span>
-<span class="mi">2</span>
-<span class="o">&gt;&gt;</span> <span class="mi">5</span><span class="o">/</span><span class="mf">2.0</span>  <span class="c"># devuelve 2.5, el cociente</span>
+<span class="o">&gt;&gt;</span> <span class="mi">5</span><span class="o">/</span><span class="mi">2</span>    <span class="c"># devuelve 2.5, el cociente</span>
 <span class="mf">2.5</span>
-<span class="o">&gt;&gt;</span> <span class="mi">5</span> <span class="o">-</span> <span class="mf">2.5</span> <span class="o">*</span> <span class="mi">10</span>
+<span class="o">&gt;&gt;</span> <span class="mi">5</span><span class="o">//</span><span class="mf">2.0</span>  <span class="c"># devuelve 2.0, la parte entera del cociente</span>
+<span class="mi">2</span>
+<span class="o">&gt;&gt;</span> <span class="mi">5</span> <span class="o">-</span> <span class="mf">2.5</span> <span class="o">*</span> <span class="mi">10</span> <span class="c"># El orden de operaciones se mantiene</span>
 <span class="o">-</span><span class="mi">20</span>
 <span class="o">&gt;&gt;</span> <span class="mi">2</span><span class="o">**</span><span class="mi">3</span>   <span class="c"># 2 a la 3, devuelve 8</span>
 <span class="mi">8</span>
@@ -346,6 +346,7 @@
 <span class="o">&gt;&gt;</span> <span class="n">b</span>
 <span class="mi">20</span>
 <span class="o">&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>  <span class="c"># a contiene 30</span>
+<span class="o">&gt;&gt;</span> <span class="n">a</span>
 <span class="mi">30</span>
 </pre></div>
 </div>
@@ -454,7 +455,7 @@ if ('block' == 'none') {
 </div>
 <div class="section" id="algunos-tipos-de-datos">
 <h2>Algunos Tipos de Datos<a class="headerlink" href="#algunos-tipos-de-datos" title="Permalink to this headline">¶</a></h2>
-<p>Los tipos de datos nativos de Python que hemos utilizado hasta ahora son los <tt class="docutils literal"><span class="pre">int</span></tt>, que son enteros como el número 5 y los <tt class="docutils literal"><span class="pre">floats</span></tt>, los cuales son números reales, como el 2.456. Otro tipo de dato en Python que usamos fue una cadena de caracteres, mejor conocido como <tt class="docutils literal"><span class="pre">string</span></tt>. En el código anterior, la variable <tt class="docutils literal"><span class="pre">su_nombre</span></tt> guarda un string si se le proveen letras. Otro tipo de de dato (no nativo) es una Lista. Una <strong>Lista</strong>, es un objeto que contiene multiples datos. Por ahora, piense en una lista como una pedazo de memoria (una variable) que puede tener varios datos asociados a ella. Estudie el siguiente código:</p>
+<p>Los tipos de datos nativos de Python que hemos utilizado hasta ahora son los <tt class="docutils literal"><span class="pre">int</span></tt>, que son enteros como el número 5 y los <tt class="docutils literal"><span class="pre">floats</span></tt>, los cuales son números reales, como el 2.456. Otro tipo de dato en Python que usamos fue una cadena de caracteres, mejor conocido como <tt class="docutils literal"><span class="pre">string</span></tt>. En el código anterior, la variable <tt class="docutils literal"><span class="pre">su_nombre</span></tt> guarda un string si se le proveen letras. Otro tipo de de dato (no nativo) es una Lista. Una <strong>Lista</strong>, es un objeto que contiene múltiples datos. Por ahora, piense en una lista como un pedazo de memoria (una variable) que puede tener varios datos asociados a ella. Estudie el siguiente código:</p>
 
 <div id="Listas_y_strings"></div>
 <p class="cl_caption"><span class="cl_caption_text"> (Listas_y_strings)</span> </p>
@@ -489,19 +490,20 @@ $(window).resize(function() {
     Listas_y_strings_vis.redrawConnectors();
 });
 </script>
-<p>La primera instrucción guarda el string <tt class="docutils literal"><span class="pre">Arce</span></tt> en la variable <tt class="docutils literal"><span class="pre">un_string</span></tt>. Luego, se declara una lista vacía. La tercera línea es importante: <tt class="docutils literal"><span class="pre">L2</span></tt> contiene, tres elementos, en la primera posición contiene <tt class="docutils literal"><span class="pre">-1</span></tt>, en la segunda <tt class="docutils literal"><span class="pre">10.3</span></tt> y en la tercera lo que tiene guardado la variable <tt class="docutils literal"><span class="pre">un_string</span></tt>. La ultima instrucción, imprime el primer elemento de L2. Es importante ver que, al igual que otros lenguajes, en Python se empieza a contar posiciones desde 0 y no desde 1.</p>
+<p>La primera instrucción guarda el string <tt class="docutils literal"><span class="pre">Arce</span></tt> en la variable <tt class="docutils literal"><span class="pre">un_string</span></tt>. Luego, se declara una lista vacía. La tercera línea es importante: <tt class="docutils literal"><span class="pre">L2</span></tt> contiene tres elementos: en la primera posición contiene <tt class="docutils literal"><span class="pre">-1</span></tt>, en la segunda <tt class="docutils literal"><span class="pre">10.3</span></tt> y en la tercera lo que tiene guardado la variable <tt class="docutils literal"><span class="pre">un_string</span></tt>. La última instrucción, imprime el primer elemento de L2. Es importante ver que, al igual que otros lenguajes, en Python se empieza a contar posiciones desde 0 y no desde 1. ¿Qué imprimiría <tt class="docutils literal"><span class="pre">print(L2[1])</span></tt>? Intentelo!</p>
 </div>
 <div class="section" id="el-lab-informacion-de-contacto">
 <h2>El Lab: Información de Contacto<a class="headerlink" href="#el-lab-informacion-de-contacto" title="Permalink to this headline">¶</a></h2>
-<p>Para practicar lo aprendido, usted desarrollará un programa donde guardara la información de contacto de una persona: su nombre, apellido, edad, teléfono y su email. Además, determinará si es mayor de edad usando una fórmula sencilla. Siga las siguientes instrucciones:</p>
+<p>Para practicar lo aprendido, usted desarrollará un programa donde guardará la información de contacto de una persona: su nombre, apellido, edad, teléfono y su email. Además, determinará si es mayor de edad usando una fórmula sencilla. Siga las siguientes instrucciones:</p>
 <blockquote>
 <div><ol class="arabic simple">
-<li>Pida al usuario su nombre y guardelo en una variable. Haga lo mismo para el apellido, edad, teléfono y email de la persona.</li>
-<li>Cree una lista <tt class="docutils literal"><span class="pre">Contacto</span></tt>, que contendrá la información del punto 1.</li>
+<li>Pida al usuario su nombre y guárdelo en una variable. Haga lo mismo para el apellido, edad, teléfono y correo electrónico de la persona.</li>
+<li>Cree una lista llamada <tt class="docutils literal"><span class="pre">Contacto</span></tt>, que contendrá la información del punto 1.</li>
 <li>Despliege un mensaje por cada elemento de la lista. Por ejemplo, para el nombre debe desplegar, <tt class="docutils literal"><span class="pre">Su</span> <span class="pre">nombre</span> <span class="pre">es:</span> <span class="pre">El_nombre_insertado</span></tt>.</li>
 <li>Finalmente, reste <tt class="docutils literal"><span class="pre">18</span></tt> a la edad e imprima este valor (Si aparece un número negativo en la pantalla no es mayor de edad). Se puede hacer en una línea!</li>
 </ol>
 </div></blockquote>
+<p><em>Recuerde, debe imprimir a la pantalla los elementos contenidos en la lista, no las variables.</em> Repase la sección anterior para ver como accesar los elementos de una lista.</p>
 <p>Use el siguiente espacio para codificar su laboratorio:</p>
 
 <div id="Lab_1" lang="python" >
@@ -543,12 +545,11 @@ if ('block' == 'none') {
 
 </div>
 
-<p>Luego de terminar su lab, haga copy/paste de su código y envielo a la dirreción
-de correo electrónico del profesor y el Tutor: <tt class="docutils literal"><span class="pre">rafaeljcolorado&#64;gmail.com</span></tt> y <tt class="docutils literal"><span class="pre">edwardo.rivera&#64;upr.edu</span></tt>.</p>
-<p><strong>Fecha de Entrega:</strong> Jueves 5 de febrero del 2015, antes de las 11:59pm.</p>
+<p><strong>Para Entregar</strong>: Luego de terminar su laboratorio, haga &#8220;copy/paste&#8221; de su código en un file. Incluya su nombre (como un comentario) en la primera línea del file. Guarde el file con el nombre <em>lab1.py</em>. Ingrese a la clase registrada en <a class="reference external" href="http://moodle.ccom.uprrp.edu/">moodle</a> y haga &#8220;upload&#8221; de su file. Luego de entregar el lab, favor de llenar este <a class="reference external" href="https://docs.google.com/a/upr.edu/forms/d/1KDHVw-4M0dkgGb4ABbqFy5ps2KmsagCLE1EbHNZo2_0/viewform">cuestionario</a>. De surgir alguna duda con respecto al lab, puede contactarme a mi correo electrónico: <tt class="docutils literal"><span class="pre">edwardo.rivera&#64;upr.edu</span></tt>.</p>
+<p><strong>Fecha de Entrega:</strong> Miércoles 4 de febrero del 2015, antes de las 11:55pm en moodle.</p>
 <p><strong>Científico del día</strong>: <em>Ada Lovelace</em>. Se le considera como el primer programador del mundo. Hizo el primer algoritmo
-para la maquina mecanica analytica de Charles Babbage, aun sin esta ser construida. Un lenguaje de programacion, <em>Ada</em>, lleva su nombre.
-Puede leer mas en <a class="reference external" href="http://en.wikipedia.org/wiki/Ada_Lovelace">Wikipedia</a>.</p>
+para la máquina mecánica analítica de Charles Babbage, aún sin haberse construído. Un lenguaje de programación, <em>Ada</em>, lleva su nombre.
+Puede leer más en <a class="reference external" href="http://en.wikipedia.org/wiki/Ada_Lovelace">Wikipedia</a>.</p>
 </div>
 </div>
 

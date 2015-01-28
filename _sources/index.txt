@@ -17,6 +17,7 @@ Introducción a Python
 ::::::::::::::::::::::
 
 .. toctree::
+  
     bienvenidos.rst
     antesempezar.rst
     LABS/IntroPython.rst
