@@ -2,10 +2,10 @@
 Lab 01: Introducción a Python
 =============================
 
-En clase se va a utilizar el lenguaje de programación **Python** a lo largo del semestre para aprender a programar e introducir conceptos básicos de las Ciencias de Cómputos. Este laboratorio tiene como propósito instruir al estudiante a la práctica de este lenguaje. Al final del laboratorio, el estudiante tendrá una consola de Python para codificar su laboratorio. Favor de seguir las instrucciones paso por paso y no salte secciones.	 
+En clase se va a utilizar el lenguaje de programación **Python** a lo largo del semestre para aprender a programar e introducir conceptos básicos de las Ciencias de Cómputos. Este laboratorio tiene como propósito instruir al estudiante a la práctica de este lenguaje. Al final del laboratorio, el estudiante tendrá una consola de Python para codificar su laboratorio. Favor de seguir las instrucciones paso por paso y favor de no saltar secciones.	 
 
-Objetivos
----------
+**Objetivos**
+
 En este laboratorio los estudiantes:
 
 * Se familiarizarán con Python y la estructura de los laboratorios
@@ -20,8 +20,9 @@ En este laboratorio los estudiantes:
 
 Python es un lenguaje de programación de alto nivel, diseñado para la legibilidad de código y aprendizaje. Aunque no es necesario para el curso, se puede descargar y encontrar más información del mismo `aquí <https://www.python.org/>`_. Empezemos!
 
-Jugando con Python
-------------------
+
+**Jugando con Python**
+
 Python puede utilizarse como una calculadora, con las operaciones de suma, resta, multiplicación y división. Por ejemplo:
 
 .. code-block:: python
@@ -95,8 +96,8 @@ Se debe tener mucho cuidado usando ``input()`` ya que por defecto siempre guarda
     #a = input("Ingrese su numero favorito")
     #y = a + 3
 
-Algunos Tipos de Datos
-----------------------
+
+**Algunos Tipos de Datos**
 
 Los tipos de datos nativos de Python que hemos utilizado hasta ahora son los ``int``, que son enteros como el número 5 y los ``floats``, los cuales son números reales, como el 2.456. Otro tipo de dato en Python que usamos fue una cadena de caracteres, mejor conocido como ``string``. En el código anterior, la variable ``su_nombre`` guarda un string si se le proveen letras. Otro tipo de de dato (no nativo) es una Lista. Una **Lista**, es un objeto que contiene múltiples datos. Por ahora, piense en una lista como un pedazo de memoria (una variable) que puede tener varios datos asociados a ella. Estudie el siguiente código:
 

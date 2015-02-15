@@ -1,0 +1,191 @@
+==========================================================
+Lab 02: Estructuras de Decisión y operadores relacionales 
+==========================================================
+
+Ya que hemos jugado un poco con Python, es hora de entrar más en detalle. Este laboratorio tiene como propósito instruir al estudiante en las estructuras de Selección y operadores relacionales de Python. Al final del laboratorio, el estudiante tendrá una consola de Python para codificar su laboratorio. Favor de seguir las instrucciones paso por paso y favor de no saltar secciones.
+
+**Objetivos**
+
+En este laboratorio los estudiantes:
+
+* Entenderán el concepto de estructura de decisión
+* Aprenderán sobre estructuras de selección
+* Conocerán el tipo de dato booleano y su importancia
+* Entenderán el concepto de indentación   
+* Conocerán los operadores relaciones de comparación
+* Sabrán como importar librerías en Python 
+
+**Estructuras de Selección**
+
+Como el nombre sugiere, una **estructura de decisión** hace un tipo de selección (escoger algo). En otras palabras, escoge que instrucciones ejecutar del programa y cuales no. En la vida diaria, usted puede decir: *Si consigo trabajo, entonces me compró una computadora*. Esta oración nos da una información equivalente: *Si usted no consiguio trabajo entonces no comprará una computadora*. Como describir este tipo de oración en programación? En muchos lenguajes, existe la palabra reservada ``if`` y ``else`` (si, de lo contrario). Sin embargo, en programación un ``if`` puede usarse sin ``else``. El proximo pedazo de código es para que tenga una idea de como funciona ``if`` y ``else`` en Python:
+ 
+.. code-block:: python
+
+    # Codigo ilustrativo (no un programa en Python)
+    # Solo se ejecuta el if o el else, no las dos a la vez
+    if (consegui trabajo):
+        me compro una computadora
+    else:
+        no me la compro 
+    
+    #---------------------------
+    # Otro codigo, solo usando if (programa en Python)
+    x = 10
+    if( x > 10):
+        print("x es mayor de 12")
+    # La instruccion x = -1 se ejecuta, sin importar si el if es cierto o no
+    x = -1
+    
+    #Formato de if-else
+    #----------------------------
+    if (expresion):
+        primera instruccion
+        segunda instruccion
+        .
+        .
+        
+    else:
+        primera instruccion
+        segunda instruccion
+        .
+        .        
+
+La oración **if** se puede definir de la siguiente manera: se usa *if* para crear una estructura de decisión la cual hace que un programa tenga más de un camino de ejecución. EL bloque de código dentro del *if* se ejecuta si la expresión **booleana** que verifica es cierta. Entonces, ¿Que es un booleano y una expresión booleana? Volveremos a esto muy brevemente. Vea el siguiente código e intente predecir lo que hace el programa dependiendo del número que entre el usuario. Luego corra el programa con distintos valores (incluyendo valores menores que 5). 
+
+.. activecode:: ejemplo_selección
+
+    # Pida al usuario un numero
+    mi_numero = int(input("Ingrese un numero entero "))
+    
+    if mi_numero < 0:
+    # Notar que los prints estan con un tab, adentro del if (identacion)
+        print("El numero insertado es negativo")
+    elif mi_numero == 0:
+        print("El numero insertado es 0")
+    else:
+        print("El numero insertado es positivo")
+    
+    if mi_numero <= 5:
+        print("Es menor o igual 5")
+
+**Explicación del programa:** El programa pide al usuario un número entero. Si el número es menor que ``0``, despliega que es negativo. Si de lo contrario, el número insertado es igual a ``0``, despliega que es ``0``. De lo contrario, el número es positivo y despliega este mensaje al usuario. Note que si el usuario inserta un número menor o igual a 5, entonces, además de desplegar un mensaje de los antes mencionados, desplegará ``Es menor que 5`` ya que el ultimo ``if`` no interfiere con los primeros. La palabra ``elif`` se traduce como ``else if`` (de lo contrario, si). De esta manera, uno puede tener varias selecciones, como por ejemplo, en un menú de un restaurante. *Importante*: El orden de los ifs importa!
+
+Esperen, hay muchas cosas que explicar sobre este programa! Primero algunas definiciones: El tipo de Dato **Booleano** representa dos valores, ``True`` (Cierto) o F ``False`` (Falso). Cada comparación hecha en el ``if`` es una **expresión booleana**, que se evalúa a cierto o falso. Entonces, ``mi_numero < 0`` es una expresión booleana que devuelve ``True`` o ``False`` (estas dos palabras son reservadas en Python). Los **operadores de comparación** son operadores para comparar. La comparación debe ser hecha cuidadosamente y, en general, comparar tipo de datos iguales.      
+
+**Identación**
+
+La **identación** es una convención que se utiliza para estructurar el programa de manera que sea entendible. Es como dejar "sangría" por cada bloque de código. En Python, es obligatorio usar identación (los programas no corren). Del ejemplo anterior, note que las lineas 6,8,10 y 13 del programa estan "hacia dentro" por un "tab". Esto indica, por ejemplo, que si se ejecuta el ``elif`` de la linea 7, entonces la linea 8 se ejecutará. Mire este ejercicio y haga los arreglos necesarios para que funcione: 
+
+.. activecode:: ejemplo_identacion
+
+    # Pida al usuario su edad
+    mi_edad = int(input("Ingrese su edad "))
+    
+    if mi_edad > 18:
+    print("Es mayor de edad")
+    elif mi_edad < 18:
+      print("Es menor de edad")
+    else:
+        
+    print("Tiene exactamente 18")
+    
+
+Lo hicistes? Bien! La identación es importante en Python, por eso mira este otro ejercicio y haz "drag and drop" con la identación correcta.
+ 
+.. parsonsprob:: if_elif_if
+
+   Construya un pedazo de codigó que implemente correctamente un if-elif-else, Asumiendo que la variable temperatura tiene la temperaptura en Farenheit y 85 determina que es cálido.
+   -----
+   x = temperatura
+   if x > 85:
+    print("Caliente!")
+   elif x < 85:
+    print("Frio!")
+   else:
+    print("Cálido!")
+   
+    
+**Operadores de comparación**
+Aunque ya sabemos algunos, una tabla de los operadores de comparación con ejemplos de expresiones booleanas es muy útil:
+ 
+=========  ==================  =========  =========
+Operador   Explicación         Ejemplo    Resultado
+=========  ==================  =========  =========
+>           Mayor que          5 > 3      Cierto
+<           Menor que          3 < 3      Falso
+<=          Menor o igual que  2 <= 2     Cierto
+=>          Mayor o igual que  -3 => 2    Falso
+!=          No igual           5 != 4     Cierto
+=========  ==================  =========  =========
+
+Todos los tipos de datos pueden compararse (deben tener cuidado que sean del mismo tipo para evitar resultados erroneos). En otros labs, utilizaremos estos operadores e introduciremos algunos nuevos.
+
+**Importando módulos y creando enteros aleatorios**
+
+En este laboratorio usaremos un módulo (o librería en otros lenguajes) para ayudarnos a crear enteros aleatorios. Un **módulo** es un archivo que contiene definiciones y oraciones para usarse en otros archivos. En Python, se usa la palabra reservada ``import`` *nombre* para tener acceso a un módulo llamado nombre. En nuestro caso, usaremos el módulo *random*. Dentro de este módulo la oración ``random.randint()`` nos ayudará a crear un un entero aleatorio:    
+
+.. code-block:: python
+
+    >> import random       # para tener acceso al moduló
+    >> random.seed()       # Se asegura de que el num. aleatorio sea distinto
+                           # cada vez que se ejecuta el programa
+    >> x = random.randint(0,10)  # Crea un entero aleatorio entre 0 y 10
+    >> print(x)            
+    >> 5  
+
+``random.randint(a,b)`` Crea un entero aleatorio entre a y b incluyendolos. Osea, si x es el entero aleatorio, a <= x <= b. En el ejemplo anterior, 0 <= x <= 10.
+Para el laboratorio, debe usar las oraciones ``random.seed()`` y ``random.int()``.    
+
+Lab: Adivinando un número
+-------------------------
+
+En este laboratorio, usted confeccionará un juego sencillo para adivinar un número. El programa crea un número entero aleatorio, pide al usuario un entero y le brinda información en la pantalla para ver si adivinó. Sino, le dice si el numero es mayor o menor a lo insertado. El programa estará dentro de un ``ciclo`` (algo que se repite) provisto en la consola para que el programa se repita hasta que el usuario adivine el entero. Usted no se preocupe por esto ahora, solo debe escribir el programa en los espacios indicados en la consola (con identacion  para  Detalladamente:
+
+    1. Cree un entero aleatorio, entre 1 y 20 utilizando el modulo random.
+    2. Pida al usuario un entero, diciendole que debe ser entre 1 y 20.
+    3. Verifique el entero insertado y provea información a la pantalla:
+    
+         * Si es mayor a lo insertado: despliegue que debe ser mayor 
+         * Si es menor a lo insertado: despliegue que debe ser menor
+         * Si es el entero: despliegue que adivinó. El programa terminara saliendo del ciclo.
+
+    4. El programa seguirá ejecutando y preguntando al usuario hasta que adivine el entero.
+
+Favor de seguir las instrucciones al pie de la letra y codifique su programa en la consola siguiente, la cual tiene comentarios para ayudarlo a hacer el programa. Luego de leerlo, corralo para que entienda lo que esta pasando. 
+
+.. activecode:: Lab_2
+
+    # Codifique su lab en este espacio
+    import random
+    
+    # Use las dos oraciones discutidas de random 
+    # para crear un numero entero entre 1 y 20 
+
+    random_num = 0 # Cambie el 0 por el numero aleatorio
+    
+    # ciclo, se ejecuta por siempre.
+    # La istruccion break hace que salga del ciclo
+    # Use break para cuando el usuario adivine el entero
+     
+    while True:
+        # Debe escribir el codigo identado
+        # Dentro del loop, como estan escrito
+        # estos comentarios (dentro del while) 
+        
+        # Pida al usuario el entero aqui
+        # Asi, el loop asegurara que se pregunte
+        # al usuario hasta que adivine
+        guess = 0
+        
+        # Ejemplo de que si encuentra el entero
+        # termina el programa
+        if random_num == guess:
+            print("Ha adivinado el entero! ")
+            break   
+
+**Para Entregar**: Luego de terminar su laboratorio, haga "copy/paste" de su código en un file. Incluya el template como el profesor discutio en clase. Guarde el file con el nombre *lab2.py*. Ingrese a la clase registrada en `moodle <http://moodle.ccom.uprrp.edu/>`_ y haga "upload" de su file en el tab correspondiente. Luego de entregar el lab, favor de llenar este `cuestionario <http://goo.gl/forms/7vLlJsGTXe>`_. De surgir alguna duda con respecto al lab, puede enviar preguntas a `Piazza <https://piazza.com/class/i5szw5xlczl2du>`_.
+
+**Fecha de Entrega:** Miércoles 25 de febrero del 2015, antes de las 11:55pm en moodle.
+
+**Científico del día**: *Alan Turing*. Matemático, lógico, cryptoanalista, filósofo, entre otros. Se le considera el padre de la Ciencias de Cómputos y de la inteligencia aritificial. Definió formalmente los conceptos de computación y algoritmo con su Máquina de Turing. En la segunda guerra mundial, rompió códigos nazis para los aliados. Se dice que gracias a el, se ganó la segunda guerra mundial.
+Puede leer más en `Wikipedia <http://en.wikipedia.org/wiki/Alan_Turing>`_. 

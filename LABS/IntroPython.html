@@ -73,6 +73,7 @@
     <script type="text/javascript" src="../_static/processing-1.4.1.min.js"></script>
     <script type="text/javascript" src="../_static/jquery.hotkey.js"></script>
     <link rel="top" title="&lt;CCOM 3030 Python Labs&gt;" href="../index.html" />
+    <link rel="next" title="Lab 02: Estructuras de Decisión y operadores relacionales" href="Est_control_rel_op.html" />
     <link rel="prev" title="Antes de Empezar" href="../antesempezar.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
@@ -241,9 +242,6 @@
   <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
   <ul class="dropdown-menu localtoc"><ul>
 <li><a class="reference internal" href="#">Lab 01: Introducción a Python</a><ul>
-<li><a class="reference internal" href="#objetivos">Objetivos</a></li>
-<li><a class="reference internal" href="#jugando-con-python">Jugando con Python</a></li>
-<li><a class="reference internal" href="#algunos-tipos-de-datos">Algunos Tipos de Datos</a></li>
 <li><a class="reference internal" href="#el-lab-informacion-de-contacto">El Lab: Información de Contacto</a></li>
 </ul>
 </li>
@@ -260,8 +258,12 @@
     </a>
   </li>
   
-    <li class="divider-vertical"></li>
-  
+  <li id="relations-next" title='Next Chapter - Lab 02: Estructuras de Decisión y operadores relacionales' data-toggle="tooltip" >
+    <a href="Est_control_rel_op.html" >
+      <i class='glyphicon glyphicon-forward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  <li class="divider-vertical"></li>
 
 <script type="text/javascript">
   opts = {'placement':'bottom',
@@ -287,9 +289,8 @@
   
   <div class="section" id="lab-01-introduccion-a-python">
 <h1>Lab 01: Introducción a Python<a class="headerlink" href="#lab-01-introduccion-a-python" title="Permalink to this headline">¶</a></h1>
-<p>En clase se va a utilizar el lenguaje de programación <strong>Python</strong> a lo largo del semestre para aprender a programar e introducir conceptos básicos de las Ciencias de Cómputos. Este laboratorio tiene como propósito instruir al estudiante a la práctica de este lenguaje. Al final del laboratorio, el estudiante tendrá una consola de Python para codificar su laboratorio. Favor de seguir las instrucciones paso por paso y no salte secciones.</p>
-<div class="section" id="objetivos">
-<h2>Objetivos<a class="headerlink" href="#objetivos" title="Permalink to this headline">¶</a></h2>
+<p>En clase se va a utilizar el lenguaje de programación <strong>Python</strong> a lo largo del semestre para aprender a programar e introducir conceptos básicos de las Ciencias de Cómputos. Este laboratorio tiene como propósito instruir al estudiante a la práctica de este lenguaje. Al final del laboratorio, el estudiante tendrá una consola de Python para codificar su laboratorio. Favor de seguir las instrucciones paso por paso y favor de no saltar secciones.</p>
+<p><strong>Objetivos</strong></p>
 <p>En este laboratorio los estudiantes:</p>
 <ul>
 <li><p class="first">Se familiarizarán con Python y la estructura de los laboratorios</p>
@@ -310,9 +311,7 @@
 </li>
 </ul>
 <p>Python es un lenguaje de programación de alto nivel, diseñado para la legibilidad de código y aprendizaje. Aunque no es necesario para el curso, se puede descargar y encontrar más información del mismo <a class="reference external" href="https://www.python.org/">aquí</a>. Empezemos!</p>
-</div>
-<div class="section" id="jugando-con-python">
-<h2>Jugando con Python<a class="headerlink" href="#jugando-con-python" title="Permalink to this headline">¶</a></h2>
+<p><strong>Jugando con Python</strong></p>
 <p>Python puede utilizarse como una calculadora, con las operaciones de suma, resta, multiplicación y división. Por ejemplo:</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="o">&gt;&gt;</span> <span class="mi">5</span> <span class="o">+</span> <span class="mi">3</span>  <span class="c"># devuelve 8</span>
 <span class="mi">8</span>
@@ -452,9 +451,7 @@ if ('block' == 'none') {
 
 </div>
 
-</div>
-<div class="section" id="algunos-tipos-de-datos">
-<h2>Algunos Tipos de Datos<a class="headerlink" href="#algunos-tipos-de-datos" title="Permalink to this headline">¶</a></h2>
+<p><strong>Algunos Tipos de Datos</strong></p>
 <p>Los tipos de datos nativos de Python que hemos utilizado hasta ahora son los <tt class="docutils literal"><span class="pre">int</span></tt>, que son enteros como el número 5 y los <tt class="docutils literal"><span class="pre">floats</span></tt>, los cuales son números reales, como el 2.456. Otro tipo de dato en Python que usamos fue una cadena de caracteres, mejor conocido como <tt class="docutils literal"><span class="pre">string</span></tt>. En el código anterior, la variable <tt class="docutils literal"><span class="pre">su_nombre</span></tt> guarda un string si se le proveen letras. Otro tipo de de dato (no nativo) es una Lista. Una <strong>Lista</strong>, es un objeto que contiene múltiples datos. Por ahora, piense en una lista como un pedazo de memoria (una variable) que puede tener varios datos asociados a ella. Estudie el siguiente código:</p>
 
 <div id="Listas_y_strings"></div>
@@ -491,7 +488,6 @@ $(window).resize(function() {
 });
 </script>
 <p>La primera instrucción guarda el string <tt class="docutils literal"><span class="pre">Arce</span></tt> en la variable <tt class="docutils literal"><span class="pre">un_string</span></tt>. Luego, se declara una lista vacía. La tercera línea es importante: <tt class="docutils literal"><span class="pre">L2</span></tt> contiene tres elementos: en la primera posición contiene <tt class="docutils literal"><span class="pre">-1</span></tt>, en la segunda <tt class="docutils literal"><span class="pre">10.3</span></tt> y en la tercera lo que tiene guardado la variable <tt class="docutils literal"><span class="pre">un_string</span></tt>. La última instrucción, imprime el primer elemento de L2. Es importante ver que, al igual que otros lenguajes, en Python se empieza a contar posiciones desde 0 y no desde 1. ¿Qué imprimiría <tt class="docutils literal"><span class="pre">print(L2[1])</span></tt>? Intentelo!</p>
-</div>
 <div class="section" id="el-lab-informacion-de-contacto">
 <h2>El Lab: Información de Contacto<a class="headerlink" href="#el-lab-informacion-de-contacto" title="Permalink to this headline">¶</a></h2>
 <p>Para practicar lo aprendido, usted desarrollará un programa donde guardará la información de contacto de una persona: su nombre, apellido, edad, teléfono y su email. Además, determinará si es mayor de edad usando una fórmula sencilla. Siga las siguientes instrucciones:</p>
