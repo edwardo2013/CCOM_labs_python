@@ -308,7 +308,7 @@
 <span class="c"># Otro codigo, solo usando if (programa en Python)</span>
 <span class="n">x</span> <span class="o">=</span> <span class="mi">10</span>
 <span class="k">if</span><span class="p">(</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="mi">10</span><span class="p">):</span>
-    <span class="k">print</span><span class="p">(</span><span class="s">&quot;x es mayor de 12&quot;</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">&quot;x es mayor de 10&quot;</span><span class="p">)</span>
 <span class="c"># La instruccion x = -1 se ejecuta, sin importar si el if es cierto o no</span>
 <span class="n">x</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
 
@@ -436,7 +436,7 @@ if ('block' == 'none') {
 <p>Lo hicistes? Bien! La identación es importante en Python, por eso mira este otro ejercicio y haz &#8220;drag and drop&#8221; con la identación correcta.</p>
 
         <div class='parsons alert alert-warning'>
-        Q-16: Construya un pedazo de codigó que implemente correctamente un if-elif-else, Asumiendo que la variable temperatura tiene la temperaptura en Farenheit y 85 determina que es cálido.<br /><br />
+        Q-17: Construya un pedazo de codigó que implemente correctamente un if-elif-else, Asumiendo que la variable temperatura tiene la temperaptura en Farenheit y 85 determina que es cálido.<br /><br />
         <div style="clear:left;"></div>
         <div id="parsons-orig-95" style="display:none;">x = temperatura
 if x > 85:
@@ -598,9 +598,10 @@ Aunque ya sabemos algunos, una tabla de los operadores de comparación con ejemp
 <p>Todos los tipos de datos pueden compararse (deben tener cuidado que sean del mismo tipo para evitar resultados erroneos). En otros labs, utilizaremos estos operadores e introduciremos algunos nuevos.</p>
 <p><strong>Importando módulos y creando enteros aleatorios</strong></p>
 <p>En este laboratorio usaremos un módulo (o librería en otros lenguajes) para ayudarnos a crear enteros aleatorios. Un <strong>módulo</strong> es un archivo que contiene definiciones y oraciones para usarse en otros archivos. En Python, se usa la palabra reservada <tt class="docutils literal"><span class="pre">import</span></tt> <em>nombre</em> para tener acceso a un módulo llamado nombre. En nuestro caso, usaremos el módulo <em>random</em>. Dentro de este módulo la oración <tt class="docutils literal"><span class="pre">random.randint()</span></tt> nos ayudará a crear un un entero aleatorio:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="o">&gt;&gt;</span> <span class="kn">import</span> <span class="nn">random</span>       <span class="c"># para tener acceso al moduló</span>
-<span class="o">&gt;&gt;</span> <span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">()</span>       <span class="c"># Se asegura de que el num. aleatorio sea distinto</span>
-                       <span class="c"># cada vez que se ejecuta el programa</span>
+<div class="highlight-python"><div class="highlight"><pre><span class="o">&gt;&gt;</span> <span class="kn">import</span> <span class="nn">random</span>       <span class="c"># para tener acceso al modulo</span>
+<span class="o">&gt;&gt;</span> <span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">()</span>       <span class="c"># Se asegura de que la semilla sea distinta</span>
+                       <span class="c"># cada vez que se ejecuta el programa.</span>
+                       <span class="c"># (Hace que el entero aleatorio sea distinto siempre)</span>
 <span class="o">&gt;&gt;</span> <span class="n">x</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">10</span><span class="p">)</span>  <span class="c"># Crea un entero aleatorio entre 0 y 10</span>
 <span class="o">&gt;&gt;</span> <span class="k">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
 <span class="o">&gt;&gt;</span> <span class="mi">5</span>

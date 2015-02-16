@@ -32,7 +32,7 @@ Como el nombre sugiere, una **estructura de decisión** hace un tipo de selecci�
     # Otro codigo, solo usando if (programa en Python)
     x = 10
     if( x > 10):
-        print("x es mayor de 12")
+        print("x es mayor de 10")
     # La instruccion x = -1 se ejecuta, sin importar si el if es cierto o no
     x = -1
     
@@ -126,9 +126,10 @@ En este laboratorio usaremos un módulo (o librería en otros lenguajes) para ay
 
 .. code-block:: python
 
-    >> import random       # para tener acceso al moduló
-    >> random.seed()       # Se asegura de que el num. aleatorio sea distinto
-                           # cada vez que se ejecuta el programa
+    >> import random       # para tener acceso al modulo
+    >> random.seed()       # Se asegura de que la semilla sea distinta
+                           # cada vez que se ejecuta el programa.
+                           # (Hace que el entero aleatorio sea distinto siempre)
     >> x = random.randint(0,10)  # Crea un entero aleatorio entre 0 y 10
     >> print(x)            
     >> 5  
