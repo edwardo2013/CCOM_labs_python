@@ -91,10 +91,11 @@ La **identación** es una convención que se utiliza para estructurar el program
     
 
 Lo hicistes? Bien! La identación es importante en Python, por eso mira este otro ejercicio y haz "drag and drop" con la identación correcta.
- 
-.. parsonsprob:: if_elif_if
 
-   Construya un pedazo de codigó que implemente correctamente un if-elif-else, Asumiendo que la variable temperatura tiene la temperaptura en Farenheit y 85 determina que es cálido.
+
+.. parsonsprob:: question_1_100_4
+
+    Construya un pedazo de codigó que implemente correctamente un if-elif-else, Asumiendo que la variable temperatura tiene la temperaptura en Farenheit y 85 determina que es cálido.
    -----
    x = temperatura
    if x > 85:
@@ -103,8 +104,31 @@ Lo hicistes? Bien! La identación es importante en Python, por eso mira este otr
     print("Frio!")
    else:
     print("Cálido!")
-   
-    
+
+Por último, uno puede tener varios *elif* (no tiene que ser solo uno):
+
+.. code-block:: python
+
+    #Formato de if-elif-else
+    #----------------------------
+    if (expresion):
+        primera instruccion
+        segunda instruccion
+        .
+        .
+    elif (expresion):
+        .
+        .
+    elif (expresion):
+        .
+        .    
+    else:
+        primera instruccion
+        segunda instruccion
+        .
+        .        
+
+     
 **Operadores de comparación**
 Aunque ya sabemos algunos, una tabla de los operadores de comparación con ejemplos de expresiones booleanas es muy útil:
  
@@ -140,7 +164,7 @@ Para el laboratorio, debe usar las oraciones ``random.seed()`` y ``random.int()`
 Lab: Adivinando un número
 -------------------------
 
-En este laboratorio, usted confeccionará un juego sencillo para adivinar un número. El programa crea un número entero aleatorio, pide al usuario un entero y le brinda información en la pantalla para ver si adivinó. Sino, le dice si el numero es mayor o menor a lo insertado. El programa estará dentro de un ``ciclo`` (algo que se repite) provisto en la consola para que el programa se repita hasta que el usuario adivine el entero. Usted no se preocupe por esto ahora, solo debe escribir el programa en los espacios indicados en la consola (con identacion  para  Detalladamente:
+En este laboratorio, usted confeccionará un juego sencillo para adivinar un número. El programa crea un número entero aleatorio, pide al usuario un entero y le brinda información en la pantalla para ver si adivinó. Sino, le dice si el numero es mayor o menor a lo insertado. El programa estará dentro de un ``ciclo`` (algo que se repite) provisto en la consola para que el programa se repita hasta que el usuario adivine el entero. Usted no se preocupe por esto ahora, solo debe escribir el programa en los espacios indicados en la consola (con identación). Detalladamente:
 
     1. Cree un entero aleatorio, entre 1 y 20 utilizando el modulo random.
     2. Pida al usuario un entero, diciendole que debe ser entre 1 y 20.
@@ -152,7 +176,7 @@ En este laboratorio, usted confeccionará un juego sencillo para adivinar un nú
 
     4. El programa seguirá ejecutando y preguntando al usuario hasta que adivine el entero.
 
-Favor de seguir las instrucciones al pie de la letra y codifique su programa en la consola siguiente, la cual tiene comentarios para ayudarlo a hacer el programa. Luego de leerlo, corralo para que entienda lo que esta pasando. 
+Recuerde que debe usar las oraciones ``random.seed()`` y ``random.int()``. Favor de seguir las instrucciones al pie de la letra y codifique su programa en la consola siguiente, la cual tiene comentarios para ayudarlo a hacer el programa. Luego de leerlo, corralo para que entienda lo que esta pasando. 
 
 .. activecode:: Lab_2
 

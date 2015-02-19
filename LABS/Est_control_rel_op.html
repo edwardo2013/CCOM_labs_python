@@ -436,37 +436,37 @@ if ('block' == 'none') {
 <p>Lo hicistes? Bien! La identación es importante en Python, por eso mira este otro ejercicio y haz &#8220;drag and drop&#8221; con la identación correcta.</p>
 
         <div class='parsons alert alert-warning'>
-        Q-17: Construya un pedazo de codigó que implemente correctamente un if-elif-else, Asumiendo que la variable temperatura tiene la temperaptura en Farenheit y 85 determina que es cálido.<br /><br />
+        Q-2:  Construya un pedazo de codigó que implemente correctamente un if-elif-else, Asumiendo que la variable temperatura tiene la temperaptura en Farenheit y 85 determina que es cálido.<br /><br />
         <div style="clear:left;"></div>
-        <div id="parsons-orig-95" style="display:none;">x = temperatura
+        <div id="parsons-orig-96" style="display:none;">x = temperatura
 if x > 85:
  print("Caliente!")
 elif x < 85:
  print("Frio!")
 else:
  print("Cálido!")</div>
-        <div id="parsons-sortableTrash-95" class="sortable-code"></div>
-        <div id="parsons-sortableCode-95" class="sortable-code"></div>
+        <div id="parsons-sortableTrash-96" class="sortable-code"></div>
+        <div id="parsons-sortableCode-96" class="sortable-code"></div>
     	<div style="clear:left;"></div>
-        <input type="button" class='btn btn-success' id="checkMe95" value="Check Me"/>
-        <input type="button" class='btn btn-default' id="reset95" value="Reset"/>
-        <div id="parsons-message-95"></div>
+        <input type="button" class='btn btn-success' id="checkMe96" value="Check Me"/>
+        <input type="button" class='btn btn-default' id="reset96" value="Reset"/>
+        <div id="parsons-message-96"></div>
         </div>
 
     <script>
         $pjQ(document).ready(function(){
-            var msgBox = $("#parsons-message-95");
+            var msgBox = $("#parsons-message-96");
             msgBox.hide();
 	    var displayErrors = function (fb) {
 	        if(fb.errors.length > 0) {
-                    var hash = pp_95.getHash("#ul-parsons-sortableCode-95");
+                    var hash = pp_96.getHash("#ul-parsons-sortableCode-96");
                     msgBox.fadeIn(500);
                     msgBox.attr('class','alert alert-danger');
                     msgBox.html(fb.errors[0]);
-                    logBookEvent({'event':'parsons', 'act':hash, 'div_id':'if_elif_if'});
+                    logBookEvent({'event':'parsons', 'act':hash, 'div_id':'question_1_100_4'});
 
 	        } else {
-                    logBookEvent({'event':'parsons', 'act':'yes', 'div_id':'if_elif_if'});
+                    logBookEvent({'event':'parsons', 'act':'yes', 'div_id':'question_1_100_4'});
                     msgBox.fadeIn(100);
                     msgBox.attr('class','alert alert-success');
                     msgBox.html("Perfect!")
@@ -476,8 +476,8 @@ else:
 
         $(window).load(function() {
             // set min width and height
-            var sortableul = $("#ul-parsons-sortableCode-95");
-            var trashul = $("#ul-parsons-sortableTrash-95");
+            var sortableul = $("#ul-parsons-sortableCode-96");
+            var trashul = $("#ul-parsons-sortableTrash-96");
             var sortableHeight = sortableul.height();
             var sortableWidth = sortableul.width();
             var trashWidth = trashul.width();
@@ -492,35 +492,35 @@ else:
         });
  
 
-        var pp_95 = new ParsonsWidget({
-                'sortableId': 'parsons-sortableCode-95',
-		'trashId': 'parsons-sortableTrash-95',
+        var pp_96 = new ParsonsWidget({
+                'sortableId': 'parsons-sortableCode-96',
+		'trashId': 'parsons-sortableTrash-96',
                 'max_wrong_lines': 1,
                 'solution_label': 'Drop blocks here',
                 'feedback_cb' : displayErrors
         });
-        pp_95.init($pjQ("#parsons-orig-95").text());
-	pp_95.shuffleLines();
+        pp_96.init($pjQ("#parsons-orig-96").text());
+	pp_96.shuffleLines();
             
-        if(localStorage.getItem('if_elif_if') && localStorage.getItem('if_elif_if-trash')) {
+        if(localStorage.getItem('question_1_100_4') && localStorage.getItem('question_1_100_4-trash')) {
             try {
-                var solution = localStorage.getItem('if_elif_if');
-                var trash = localStorage.getItem('if_elif_if-trash');
-                pp_95.createHTMLFromHashes(solution,trash);
-                pp_95.getFeedback();
+                var solution = localStorage.getItem('question_1_100_4');
+                var trash = localStorage.getItem('question_1_100_4-trash');
+                pp_96.createHTMLFromHashes(solution,trash);
+                pp_96.getFeedback();
             } catch(err) {
-                var text = "An error occured restoring old if_elif_if state.  Error: ";
+                var text = "An error occured restoring old question_1_100_4 state.  Error: ";
                 console.log(text + err.message);
             }
 
         }
-            $pjQ("#reset95").click(function(event){
+            $pjQ("#reset96").click(function(event){
               event.preventDefault();
-              pp_95.shuffleLines();
+              pp_96.shuffleLines();
             
             // set min width and height
-            var sortableul = $("#ul-parsons-sortableCode-95");
-            var trashul = $("#ul-parsons-sortableTrash-95");
+            var sortableul = $("#ul-parsons-sortableCode-96");
+            var trashul = $("#ul-parsons-sortableTrash-96");
             var sortableHeight = sortableul.height();
             var sortableWidth = sortableul.width();
             var trashWidth = trashul.width();
@@ -534,14 +534,14 @@ else:
               msgBox.hide();
             });
             
-            $pjQ("#checkMe95").click(function(event){
+            $pjQ("#checkMe96").click(function(event){
               event.preventDefault();
-              var hash = pp_95.getHash("#ul-parsons-sortableCode-95");
-              localStorage.setItem('if_elif_if',hash);
-              hash = pp_95.getHash("#ul-parsons-sortableTrash-95");
-              localStorage.setItem('if_elif_if-trash',hash);
+              var hash = pp_96.getHash("#ul-parsons-sortableCode-96");
+              localStorage.setItem('question_1_100_4',hash);
+              hash = pp_96.getHash("#ul-parsons-sortableTrash-96");
+              localStorage.setItem('question_1_100_4-trash',hash);
             
-            pp_95.getFeedback();
+            pp_96.getFeedback();
             msgBox.fadeIn(100);
             
             });
@@ -551,6 +551,27 @@ else:
 
     </script>
 
+<p>Por último, uno puede tener varios <em>elif</em> (no tiene que ser solo uno):</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="c">#Formato de if-elif-else</span>
+<span class="c">#----------------------------</span>
+<span class="k">if</span> <span class="p">(</span><span class="n">expresion</span><span class="p">):</span>
+    <span class="n">primera</span> <span class="n">instruccion</span>
+    <span class="n">segunda</span> <span class="n">instruccion</span>
+    <span class="o">.</span>
+    <span class="o">.</span>
+<span class="k">elif</span> <span class="p">(</span><span class="n">expresion</span><span class="p">):</span>
+    <span class="o">.</span>
+    <span class="o">.</span>
+<span class="k">elif</span> <span class="p">(</span><span class="n">expresion</span><span class="p">):</span>
+    <span class="o">.</span>
+    <span class="o">.</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="n">primera</span> <span class="n">instruccion</span>
+    <span class="n">segunda</span> <span class="n">instruccion</span>
+    <span class="o">.</span>
+    <span class="o">.</span>
+</pre></div>
+</div>
 <p><strong>Operadores de comparación</strong>
 Aunque ya sabemos algunos, una tabla de los operadores de comparación con ejemplos de expresiones booleanas es muy útil:</p>
 <table border="1" class="docutils">
@@ -611,7 +632,7 @@ Aunque ya sabemos algunos, una tabla de los operadores de comparación con ejemp
 Para el laboratorio, debe usar las oraciones <tt class="docutils literal"><span class="pre">random.seed()</span></tt> y <tt class="docutils literal"><span class="pre">random.int()</span></tt>.</p>
 <div class="section" id="lab-adivinando-un-numero">
 <h2>Lab: Adivinando un número<a class="headerlink" href="#lab-adivinando-un-numero" title="Permalink to this headline">¶</a></h2>
-<p>En este laboratorio, usted confeccionará un juego sencillo para adivinar un número. El programa crea un número entero aleatorio, pide al usuario un entero y le brinda información en la pantalla para ver si adivinó. Sino, le dice si el numero es mayor o menor a lo insertado. El programa estará dentro de un <tt class="docutils literal"><span class="pre">ciclo</span></tt> (algo que se repite) provisto en la consola para que el programa se repita hasta que el usuario adivine el entero. Usted no se preocupe por esto ahora, solo debe escribir el programa en los espacios indicados en la consola (con identacion  para  Detalladamente:</p>
+<p>En este laboratorio, usted confeccionará un juego sencillo para adivinar un número. El programa crea un número entero aleatorio, pide al usuario un entero y le brinda información en la pantalla para ver si adivinó. Sino, le dice si el numero es mayor o menor a lo insertado. El programa estará dentro de un <tt class="docutils literal"><span class="pre">ciclo</span></tt> (algo que se repite) provisto en la consola para que el programa se repita hasta que el usuario adivine el entero. Usted no se preocupe por esto ahora, solo debe escribir el programa en los espacios indicados en la consola (con identación). Detalladamente:</p>
 <blockquote>
 <div><ol class="arabic">
 <li><p class="first">Cree un entero aleatorio, entre 1 y 20 utilizando el modulo random.</p>
@@ -631,7 +652,7 @@ Para el laboratorio, debe usar las oraciones <tt class="docutils literal"><span 
 </li>
 </ol>
 </div></blockquote>
-<p>Favor de seguir las instrucciones al pie de la letra y codifique su programa en la consola siguiente, la cual tiene comentarios para ayudarlo a hacer el programa. Luego de leerlo, corralo para que entienda lo que esta pasando.</p>
+<p>Recuerde que debe usar las oraciones <tt class="docutils literal"><span class="pre">random.seed()</span></tt> y <tt class="docutils literal"><span class="pre">random.int()</span></tt>. Favor de seguir las instrucciones al pie de la letra y codifique su programa en la consola siguiente, la cual tiene comentarios para ayudarlo a hacer el programa. Luego de leerlo, corralo para que entienda lo que esta pasando.</p>
 
 <div id="Lab_2" lang="python" >
 
