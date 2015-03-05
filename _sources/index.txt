@@ -22,3 +22,4 @@ Introducción a Python
     antesempezar.rst
     LABS/IntroPython.rst
     LABS/Est_control_rel_op.rst
+    LABS/logica_fun.rst

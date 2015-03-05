@@ -73,6 +73,7 @@
     <script type="text/javascript" src="../_static/processing-1.4.1.min.js"></script>
     <script type="text/javascript" src="../_static/jquery.hotkey.js"></script>
     <link rel="top" title="&lt;CCOM 3030 Python Labs&gt;" href="../index.html" />
+    <link rel="next" title="Lab 03: Operadores lógicos y funciones" href="logica_fun.html" />
     <link rel="prev" title="Lab 01: Introducción a Python" href="IntroPython.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
@@ -257,8 +258,12 @@
     </a>
   </li>
   
-    <li class="divider-vertical"></li>
-  
+  <li id="relations-next" title='Next Chapter - Lab 03: Operadores lógicos y funciones' data-toggle="tooltip" >
+    <a href="logica_fun.html" >
+      <i class='glyphicon glyphicon-forward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  <li class="divider-vertical"></li>
 
 <script type="text/javascript">
   opts = {'placement':'bottom',
@@ -296,7 +301,7 @@
 <li>Sabrán como importar librerías en Python</li>
 </ul>
 <p><strong>Estructuras de Selección</strong></p>
-<p>Como el nombre sugiere, una <strong>estructura de decisión</strong> hace un tipo de selección (escoger algo). En otras palabras, escoge que instrucciones ejecutar del programa y cuales no. En la vida diaria, usted puede decir: <em>Si consigo trabajo, entonces me compró una computadora</em>. Esta oración nos da una información equivalente: <em>Si usted no consiguio trabajo entonces no comprará una computadora</em>. Como describir este tipo de oración en programación? En muchos lenguajes, existe la palabra reservada <tt class="docutils literal"><span class="pre">if</span></tt> y <tt class="docutils literal"><span class="pre">else</span></tt> (si, de lo contrario). Sin embargo, en programación un <tt class="docutils literal"><span class="pre">if</span></tt> puede usarse sin <tt class="docutils literal"><span class="pre">else</span></tt>. El proximo pedazo de código es para que tenga una idea de como funciona <tt class="docutils literal"><span class="pre">if</span></tt> y <tt class="docutils literal"><span class="pre">else</span></tt> en Python:</p>
+<p>Como el nombre sugiere, una <strong>estructura de decisión</strong> hace un tipo de selección (escoger algo). En otras palabras, escoge que instrucciones ejecutar del programa y cuales no. En la vida diaria, usted puede decir: <em>Si consigo trabajo, entonces me compró una computadora</em>. Esta oración nos da una información equivalente: <em>Si usted no consiguio trabajo entonces no comprará una computadora</em>. Como describir este tipo de oración en programación? En muchos lenguajes, existe la palabra reservada <tt class="docutils literal"><span class="pre">if</span></tt> y <tt class="docutils literal"><span class="pre">else</span></tt> (si, de lo contrario). Sin embargo, en programación un <tt class="docutils literal"><span class="pre">if</span></tt> puede usarse sin <tt class="docutils literal"><span class="pre">else</span></tt>. El siguiente pedazo de código es para que tenga una idea de como funciona <tt class="docutils literal"><span class="pre">if</span></tt> y <tt class="docutils literal"><span class="pre">else</span></tt> en Python:</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="c"># Codigo ilustrativo (no un programa en Python)</span>
 <span class="c"># Solo se ejecuta el if o el else, no las dos a la vez</span>
 <span class="k">if</span> <span class="p">(</span><span class="n">consegui</span> <span class="n">trabajo</span><span class="p">):</span>
@@ -572,6 +577,7 @@ else:
     <span class="o">.</span>
 </pre></div>
 </div>
+<p>Recuerde, en <em>if-elif-else</em> solo se ejecuta (escoje) uno de ellos.</p>
 <p><strong>Operadores de comparación</strong>
 Aunque ya sabemos algunos, una tabla de los operadores de comparación con ejemplos de expresiones booleanas es muy útil:</p>
 <table border="1" class="docutils">

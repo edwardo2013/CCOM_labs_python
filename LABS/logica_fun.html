@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Lab 03: Operadores lógicos y funciones &mdash; &lt;CCOM 3030 Python Labs&gt;</title>
+    
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/video.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/poll.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/tabbedstuff.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/css/pytutor.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/css/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/codemirror.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/activecode.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/parsons.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/lib/prettify.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/jquery-ui-1.10.3.custom.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/user-highlights.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/runestone-custom-sphinx-bootstrap.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/poll.js"></script>
+    <script type="text/javascript" src="../_static/js/d3.v2.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery.ba-bbq.min.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery.jsPlumb-1.3.10-all-min.js"></script>
+    <script type="text/javascript" src="../_static/js/pytutor.js"></script>
+    <script type="text/javascript" src="../_static/jquery.highlight.js"></script>
+    <script type="text/javascript" src="../_static/bookfuncs.js"></script>
+    <script type="text/javascript" src="../_static/codemirror.js"></script>
+    <script type="text/javascript" src="../_static/python.js"></script>
+    <script type="text/javascript" src="../_static/javascript.js"></script>
+    <script type="text/javascript" src="../_static/activecode.js"></script>
+    <script type="text/javascript" src="../_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../_static/assess.js"></script>
+    <script type="text/javascript" src="../_static/animationbase.js"></script>
+    <script type="text/javascript" src="../_static/lib/jquery.min.js"></script>
+    <script type="text/javascript" src="../_static/lib/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../_static/lib/prettify.js"></script>
+    <script type="text/javascript" src="../_static/lib/underscore-min.js"></script>
+    <script type="text/javascript" src="../_static/lib/lis.js"></script>
+    <script type="text/javascript" src="../_static/parsons.js"></script>
+    <script type="text/javascript" src="../_static/parsons-noconflict.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <script type="text/javascript" src="../_static/waypoints.min.js"></script>
+    <script type="text/javascript" src="../_static/rangy-core.js"></script>
+    <script type="text/javascript" src="../_static/rangy-textrange.js"></script>
+    <script type="text/javascript" src="../_static/rangy-cssclassapplier.js"></script>
+    <script type="text/javascript" src="../_static/user-highlights.js"></script>
+    <script type="text/javascript" src="../_static/jquery.idle-timer.js"></script>
+    <script type="text/javascript" src="../_static/processing-1.4.1.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.hotkey.js"></script>
+    <link rel="top" title="&lt;CCOM 3030 Python Labs&gt;" href="../index.html" />
+    <link rel="prev" title="Lab 02: Estructuras de Decisión y operadores relacionales" href="Est_control_rel_op.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+<script type="text/javascript">
+  eBookConfig = {};
+  eBookConfig.host = 'http://interactivepython.org' ? 'http://interactivepython.org' : 'http://127.0.0.1:8000';
+  eBookConfig.app = eBookConfig.host+'/runestone';
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.course = 'template';
+  eBookConfig.logLevel = 10;
+  eBookConfig.loginRequired = false
+  eBookConfig.build_info = "";
+  eBookConfig.isLoggedIn = false;
+</script>
+
+<div id="fb-root"></div>
+<script>
+  (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&status=0";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+</script>
+
+
+  </head>
+  <body>
+
+
+<!-- Begin navbar -->
+<div id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+      <button type='button' class='navbar-toggle' data-toggle="collapse" data-target=".navbar-ex1-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <div>
+        <a class="brand-logo" style='background: transparent url("../_static/img/logo_small.png") no-repeat 0px 0px;' href="/runestone/default/user/login">&nbsp; </a>
+        <a class="navbar-brand" href="../index.html">CCOM3030 Python Labs</a>
+      </div>
+    </div>
+
+    <div class="navbar-collapse collapse navbar-ex1-collapse">
+
+      <ul class="nav navbar-nav navbar-right">
+
+        <li class="divider-vertical"></li>
+
+        <!-- social media dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-share-alt" style="opacity: 0.9"></i>
+          </a>
+          <ul class="dropdown-menu social-menu">
+              <li>
+                <div>
+                  <b>Runestone in social media:</b>
+                </div>
+                <a href="https://twitter.com/iRunestone" class="twitter-follow-button" data-show-count="true">Follow @iRunestone</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+                <div class="fb-like" data-href="https://www.facebook.com/RunestoneInteractive" data-send="false" data-layout="button_count" data-width="300" data-show-faces="false" data-font="arial"></div>
+              </li>
+
+              <li class="divider"></li>
+              <li>
+                <div>
+                  <b>Help support us:</b>
+                </div>
+                <div class="gittip">
+                  <iframe style="border:0;"
+                    src="https://www.gittip.com/bnmnetp/widget.html"
+                    width="48pt" height="22pt" class="gittip-button">
+                  </iframe>
+                </div>
+              </li>
+          </ul>
+        </li>
+        <!-- end social media dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        <!-- search dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-search" style='opacity:0.9;'></i>
+          </a>
+          <ul class='dropdown-menu'>
+            
+                <li><a href='../index.html'>Table of Contents</a></li>
+            
+            <li><a href='/runestone/static/template/genindex.html'>Book Index</a></li>
+            <li class="divider"></li>
+            <li id="scratch_ac_link"><a href="javascript:toggleScratchActivecode()">Scratch ActiveCode</a></li>
+            <li class="divider"></li>
+            <li style="width: 240px;">
+              <form class="navbar-search" style="margin:10px;" action="../search.html" method="get">
+                <div class="input-group">
+                  <input type="text" class="form-control" name="q" placeholder="Search this book" />
+                  <span class="input-group-btn">
+                    <button class="btn btn-primary" style="margin:0;" type="submit">
+                      <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                  </span>
+                </div><!-- /input-group -->
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+            </li>
+          </ul>
+        </li>
+        <!-- end search dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        <!-- user account dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-user" style="opacity:0.9;"></i>
+          </a>
+          <ul class="dropdown-menu user-menu">
+            <li><span class='loggedinuser'></span></li>
+            <li class="divider"></li>
+            <li><a href='http://interactivepython.org/runestone/admin/index'>Instructor's Page</a></li>
+            <li class="divider"></li>
+            <li><a href="http://interactivepython.org/runestone/default/user/profile" id="profilelink">Edit Profile</a></li>
+            <li><a href="http://interactivepython.org/runestone/default/user/change_password" id="passwordlink">Change Password</a></li>
+            <li><a href="http://interactivepython.org/runestone/default/user/register" id="registerlink">Register</a></li>
+            <li class='loginout'><a href='#'>Login</a></li> <!-- correct link populated by addNavbarLoginLink() -->
+          </ul>
+        </li>
+        <!-- end user account dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        <!-- help menu dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-question-sign" style="opacity:0.9;"></i>
+          </a>
+          <ul class="dropdown-menu user-menu">
+            <li><a href='/runestone/static/template/navhelp.html'>Navigation Help</a></li>
+            <li><a href='/runestone/static/overview/instructor.html'>Help for Instructors</a></li>            
+            <li class="divider"></li>
+            <li><a href='http://runestoneinteractive.org'>About Runestone</a></li>
+            <li><a href='https://github.com/bnmnetp/runestone/issues/new'>Report A Problem</a></li>
+          </ul>
+        </li>
+        <!-- end help menu dropdown -->
+
+        <li class="divider-vertical"></li>
+
+      </ul>
+
+      <ul class="nav navbar-nav">
+        <li class="divider-vertical"></li>
+        
+          <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"><ul>
+<li><a class="reference internal" href="#">Lab 03: Operadores lógicos y funciones</a><ul>
+<li><a class="reference internal" href="#lab-creando-los-operadores-logicos">Lab: Creando los operadores lógicos</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+          <li class="divider-vertical"></li>
+        
+        
+          
+  <li id="relations-prev" title="Previous Chapter - Lab 02: Estructuras de Decisión y operadores relacionales" data-toggle="tooltip">
+    <a href="Est_control_rel_op.html" >
+      <i class='glyphicon glyphicon-backward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  
+    <li class="divider-vertical"></li>
+  
+
+<script type="text/javascript">
+  opts = {'placement':'bottom',
+          'selector': '',
+          'delay': { show: 100, hide: 50}
+         };
+
+  $('#relations-prev').tooltip(opts);
+  $('#relations-next').tooltip(opts);
+</script>
+        
+        
+          <li></li>
+        
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+
+<div class="container">
+  
+  <div class="section" id="lab-03-operadores-logicos-y-funciones">
+<h1>Lab 03: Operadores lógicos y funciones<a class="headerlink" href="#lab-03-operadores-logicos-y-funciones" title="Permalink to this headline">¶</a></h1>
+<p>Como tenemos en nuestro arsenal las estructuras de decisión, veremos otros operadores y la importancia de la programación modular (funciones). Este laboratorio tiene como propósito instruir al estudiante en los operadores de lógica presentados en clase y tambien a las funciones con su uso para reusibilidad de código. Al final del laboratorio, el estudiante tendrá una consola de Python para codificar su laboratorio. Favor de seguir las instrucciones paso por paso y favor de no saltar secciones. Recuerde que para su laboratorio, debe tener el &#8220;template&#8221; provisto por el profesor y usar comentarios en su programa.</p>
+<p><strong>Objetivos</strong></p>
+<p>En este laboratorio los estudiantes:</p>
+<ul class="simple">
+<li>Aprenderán sobre operadores lógicos</li>
+<li>Entenderán el concepto de programación modular</li>
+<li>Aprenderán sobre funciones en Python</li>
+<li>Apreciarán la importancia de funciones</li>
+<li>El estudiante practicará estructuras de decisión y funciones</li>
+</ul>
+<p><strong>Operadores lógicos</strong></p>
+<p>Un <strong>operador lógico</strong> opera con <em>expresiones booleanas</em> y da como resultado cierto o falso. Los operadores más conocidos son el <tt class="docutils literal"><span class="pre">and</span></tt>, el <tt class="docutils literal"><span class="pre">or</span></tt> y <tt class="docutils literal"><span class="pre">not</span></tt>. El <tt class="docutils literal"><span class="pre">and</span></tt> y <tt class="docutils literal"><span class="pre">or</span></tt> le premite al programador conectar múltiples expresiones booleanas. El <tt class="docutils literal"><span class="pre">and</span></tt> es cierto cuando ambas subexpresiones a evaluarse son ciertas. El <tt class="docutils literal"><span class="pre">or</span></tt> es cierto cuando al menos una de las dos subexpresiones es cierta. El operador <tt class="docutils literal"><span class="pre">not</span></tt> da el resultado contrario al evaluar una expresión booleana. Como <tt class="docutils literal"><span class="pre">and</span></tt> y <tt class="docutils literal"><span class="pre">or</span></tt> operan sobre dos expresiones, se le llaman <em>operadores binarios</em>. A <tt class="docutils literal"><span class="pre">not</span></tt> se le llama <em>operador unario</em> (sobre una expresión). La importancia de estos operadores es que se pueden usar con las estructuras de decisión para verificar una expresión. Estos operadores se usan en diseño de circuitos. En Python, estos operadores pueden usarse simplemente usando las palabras <tt class="docutils literal"><span class="pre">and</span></tt>, <tt class="docutils literal"><span class="pre">or</span></tt> y <tt class="docutils literal"><span class="pre">not</span></tt>:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="c"># Ejemplo del and</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">st</span> <span class="o">=</span> <span class="s">&quot;Odiseo&quot;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">x</span> <span class="o">=&gt;</span> <span class="mi">5</span> <span class="ow">and</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">10</span>
+<span class="bp">False</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="mi">9</span> <span class="ow">and</span> <span class="n">x</span> <span class="o">==</span> <span class="mi">10</span>
+<span class="bp">True</span>
+
+<span class="c"># Ejemplo del or</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="mi">5</span> <span class="ow">or</span> <span class="n">st</span> <span class="o">&gt;</span> <span class="s">&quot;Edmund&quot;</span>
+<span class="bp">True</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="mi">5</span> <span class="ow">or</span> <span class="n">st</span> <span class="o">&lt;</span> <span class="s">&quot;Edmund&quot;</span>
+<span class="bp">False</span>
+
+<span class="c"># Ejemplo de not</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="ow">not</span> <span class="mi">0</span>
+<span class="bp">True</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="ow">not</span> <span class="mi">5</span>
+<span class="bp">False</span>
+</pre></div>
+</div>
+<p>Si, se pueden comparar strings! La comparación se hace a base de la tabla <a class="reference external" href="http://www.asciitable.com/">ascii</a> (ver columna Decimal). Se compara letra por letra, y, en este ejemplo la letra <em>O</em> (79) es mayor que la letra <em>E</em> (45). Tambien, al negar (con el operador not) algo que no sea cero (en caso de lista, vacio), devolverá Cierto. Esto es una convención que se hace en muchos lenguajes.</p>
+<p><strong>Estructuras de decisión y operadores lógicos</strong></p>
+<p>Los operadores lógicos se usan mayormente para tomar una decisión sobre algo. Por ejemplo, imagine que quiere hacer un programa que, dado una letra verifique si es una vocal o no. Esto se puede hacer con un <tt class="docutils literal"><span class="pre">if</span></tt> y el operador lógico <tt class="docutils literal"><span class="pre">or</span></tt>. Estudie el siguiente código, donde dado una letra (se asume que el usuario va a entrar solo una letra y en minuscula), el programa imprime si es vocal o no. Utilice el espacio para practicar cualquier cosa que desee:</p>
+
+<div id="or_y_decision" lang="python" >
+
+<br/>
+<div id="or_y_decision_code_div" style="display: block">
+<textarea cols="50" rows="12" id="or_y_decision_code" class="active_code", prefixcode="undefined" lang="python">
+# Pida al usuario una letra
+let = input("Ingrese una letra: ")
+
+# Verifique condiciones
+if let == "a" or let == "e" or let == "i" or let == "o" or let == "u":
+    print(True)
+else:
+    print(False)
+
+# Luego de correr el programa, escriba el codigo para el ejercicio
+# de practica. (Borre lo anterior).
+</textarea>
+</div>
+<p class="ac_caption"><span class="ac_caption_text"> (or_y_decision)</span> </p>
+
+<button class='btn btn-success' id="or_y_decision_runb" onclick="runit('or_y_decision',this, undefined);">Run</button>
+
+<div id="cont"></div>
+
+<button class="ac_opt btn btn-default" style="display: inline-block" id="or_y_decision_saveb" onclick="saveEditor('or_y_decision');">Save</button>
+<button class="ac_opt btn btn-default" style="display: inline-block" id="or_y_decision_loadb" onclick="requestCode('or_y_decision');">Load</button>
+
+<script>
+if ('block' == 'none') {
+    // a hack to preserve the inline-block display style. Toggle() will use display: block
+    // (instead of inline-block) if the previous display style was 'none'
+    $('#or_y_decision_saveb').toggle();
+    $('#or_y_decision_loadb').toggle();
+}
+</script>
+
+
+<div style="text-align: center">
+<canvas id="or_y_decision_canvas" class="ac-canvas" height="400" width="400" style="border-style: solid; display: none; text-align: center"></canvas>
+</div>
+<pre id="or_y_decision_suffix" style="display:none">
+</pre>
+<pre id="or_y_decision_pre" class="active_out">
+
+</pre>
+
+
+</div>
+
+<p><strong>Explicación del programa:</strong> Primero, se pide una letra al usuario. Luego se verifica si la letra insertada es una de las cinco vocales. De serlo, se imprime a la pantalla <tt class="docutils literal"><span class="pre">True</span></tt>, de lo contrario de imprime <tt class="docutils literal"><span class="pre">False</span></tt>. Note que en la linea 5 del programa se usa <tt class="docutils literal"><span class="pre">or</span></tt> para verificar si es una letra, pues queremos que sea una de ellas. Usar <tt class="docutils literal"><span class="pre">and</span></tt> para este código es erroneo, pues para ser cierto tendría que ser que una letra fuera igual a las cinco vocales, lo cual es imposible. Pregunta para usted: Si se quiere verificar que sea vocal sin importar que sea minuscula o mayuscula, ¿que cambios se le debe hacer al <em>if*</em>?</p>
+<p><em>Ejercicio de Práctica</em>: En el espacio anterior (luego de borrar), escriba un pedazo de código que, dado un número (float), verifique si es mayor que cero y menor o igual que 50. Esto es bueno para verificar el alcance (en ingles range) de los números en un intervalo y verificar el &#8220;input&#8221; de un usuario.</p>
+<p>Un ejemplo algo mas largo, puede ser un programa para traducir una letra a su correspondiente traducción al alfabeto fonético <a class="reference external" href="http://en.wikipedia.org/wiki/NATO_phonetic_alphabet">NATO</a> para telefonía. Una posible implementacion es la siguiente:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">letra</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s">&quot;Ingrese una letra: &quot;</span><span class="p">)</span>
+
+<span class="c"># imprima correspodiente palabra del NATO</span>
+<span class="k">if</span> <span class="n">letra</span> <span class="o">==</span> <span class="s">&#39;a&#39;</span> <span class="ow">or</span> <span class="n">letra</span> <span class="o">==</span> <span class="s">&#39;A&#39;</span><span class="p">:</span>
+    <span class="k">print</span> <span class="p">(</span><span class="s">&quot;Alpha&quot;</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">letra</span> <span class="o">==</span> <span class="s">&#39;b&#39;</span> <span class="ow">or</span> <span class="n">letra</span> <span class="o">==</span> <span class="s">&#39;B&#39;</span><span class="p">:</span>
+    <span class="k">print</span> <span class="p">(</span><span class="s">&quot;Bravo&quot;</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">letra</span> <span class="o">==</span> <span class="s">&#39;c&#39;</span> <span class="ow">or</span> <span class="n">letra</span> <span class="o">==</span> <span class="s">&#39;C&#39;</span><span class="p">:</span>
+    <span class="k">print</span> <span class="p">(</span><span class="s">&quot;Charlie&quot;</span><span class="p">)</span>
+<span class="c"># Siga asi hasta z:</span>
+<span class="o">.</span>
+<span class="o">.</span>
+<span class="o">.</span>
+<span class="k">elif</span> <span class="n">letra</span> <span class="o">==</span> <span class="s">&#39;z&#39;</span> <span class="ow">or</span> <span class="n">letra</span> <span class="o">==</span> <span class="s">&#39;Z&#39;</span><span class="p">:</span>
+    <span class="k">print</span> <span class="p">(</span><span class="s">&quot;Zulu&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="k">print</span> <span class="p">(</span><span class="s">&quot;letra incorrecta Insertada&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><strong>Funciones y programación modular</strong></p>
+<p>Digamos que usted quiere verificar si una letra es vocal, como en el ejemplo anterior. Sin embargo, ahora usted quiere verificarlo para varias letras. El problema de usar el código anterior es que usted debe <em>repetir</em> el código una y otra vez para verificar las letras. Por esta necesidad de reusar código, se necesitan los subprogramas, o funciones. Una <strong>función</strong> es un grupo de instrucciones que se ejecutan para llevar a cabo una tarea. Una función puede devolver un valor ( o no devolver nada). De hecho, en los laboratorios anteriores, la palabra <tt class="docutils literal"><span class="pre">input()</span></tt> en realidad es una función (al igual que <tt class="docutils literal"><span class="pre">print()</span></tt>). Las funciones tienen tres partes:</p>
+<ul class="simple">
+<li><em>Nombre</em>: El nombre que se le da a la función. No puede ser una palabra reservada.</li>
+<li><em>Parámetros</em>: Variables a recibirse para computar algo dentro de la función. Puede ser 0 o más parametros. Son separados por comma.</li>
+<li><em>valor regresado (return type)</em>: El tipo de dato que devuelve una función. Puede ser que no devuelva nada.</li>
+</ul>
+<p>Las funciones se usan para la <strong>programación modular:</strong> Dividir un programa en indepedientes subprogramas (funciones) para que cada subprograma ejecute una parte del código. Por ejemplo, si usted quiere hacer una calculadora sencilla (suma, resta, multiplicación y división), usted haría una función para cada una de las operaciones, simplificando el código.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="k">def</span> <span class="nf">nombre_de_funcion</span><span class="p">(</span><span class="n">param1</span><span class="p">,</span><span class="n">param2</span><span class="p">,</span> <span class="n">etc</span><span class="o">.</span> <span class="p">):</span>
+    <span class="n">instruccion</span>
+    <span class="n">instruccion</span>
+    <span class="o">.</span>
+    <span class="o">.</span>
+    <span class="k">return</span> <span class="n">some_value</span>
+</pre></div>
+</div>
+<p>Veamos como hacer una función para nuestro ejemplo:</p>
+
+<div id="func_letra" lang="python" >
+
+<br/>
+<div id="func_letra_code_div" style="display: block">
+<textarea cols="50" rows="12" id="func_letra_code" class="active_code", prefixcode="undefined" lang="python">
+# Definicion de una funcion. (En parentesis son los parametros)
+def es_vocal(letra):
+    if letra == "a" or letra == "e" or letra == "i" or letra == "o" or letra == "u":
+        return True
+    else:
+        return False
+
+# Llamando la funcion (usandola)
+mi_letra = "u"
+es_vocal("3")        # ejecuta per no se guarda su valor
+print(es_vocal("w")) # Hara print de lo que devuelva es_vocal
+ej1 = es_vocal("a")  # guardando el valor en una variable
+ej2 = es_vocal("s")
+ej3 = es_vocal(mi_letra)
+
+# Haciendo prints
+print(" verificando si u,a,s son vocales (1-lo es 0-no lo es)")
+print(ej1,ej2,ej3)
+</textarea>
+</div>
+<p class="ac_caption"><span class="ac_caption_text"> (func_letra)</span> </p>
+
+<button class='btn btn-success' id="func_letra_runb" onclick="runit('func_letra',this, undefined);">Run</button>
+
+<div id="cont"></div>
+
+<button class="ac_opt btn btn-default" style="display: inline-block" id="func_letra_saveb" onclick="saveEditor('func_letra');">Save</button>
+<button class="ac_opt btn btn-default" style="display: inline-block" id="func_letra_loadb" onclick="requestCode('func_letra');">Load</button>
+
+<script>
+if ('block' == 'none') {
+    // a hack to preserve the inline-block display style. Toggle() will use display: block
+    // (instead of inline-block) if the previous display style was 'none'
+    $('#func_letra_saveb').toggle();
+    $('#func_letra_loadb').toggle();
+}
+</script>
+
+
+<div style="text-align: center">
+<canvas id="func_letra_canvas" class="ac-canvas" height="400" width="400" style="border-style: solid; display: none; text-align: center"></canvas>
+</div>
+<pre id="func_letra_suffix" style="display:none">
+</pre>
+<pre id="func_letra_pre" class="active_out">
+
+</pre>
+
+
+</div>
+
+<p>Note que se usa <tt class="docutils literal"><span class="pre">def</span></tt> para definir una función. El nombre de esta función es <em>es_vocal</em>, solo tiene un solo parámetro (letra) y regresa un booleano. Luego de definirla, se &#8220;llama&#8221; la función en el programa. Esto hace que <em>es_vocal</em> se ejecute y devuelva un booleano. Luego de ejecutar, el programa continua con la próxima instrucción. <em>Importante</em>: Todas las variables creadas dentro de una función son locales (se ven solo dentro de la función) y se eliminan cuando la función termina su ejecución.</p>
+<p>Para ver otra utilidad de las funciones, imagine que usted quiere implementar una función que dado dos numeros, saque el cubo del número mayor. Entonces, podemos defininir una función <tt class="docutils literal"><span class="pre">el_mayor()</span></tt> para determinar el número mayor y, luego, la función <tt class="docutils literal"><span class="pre">cubo_del_mayor()</span></tt> puede usar <tt class="docutils literal"><span class="pre">el_mayor()</span></tt> dentro de su definición! Aqui la implementación:</p>
+
+<div id="cubo_del_mayor" lang="python" >
+
+<br/>
+<div id="cubo_del_mayor_code_div" style="display: block">
+<textarea cols="50" rows="12" id="cubo_del_mayor_code" class="active_code", prefixcode="undefined" lang="python">
+# Funcion para encontrar el mayor  de dos numeros
+# Nota: Para usar una funcion, priemro tiene que estar definida
+def el_mayor(a,b):
+    if a > b:
+        return a
+    else:
+        return b
+
+# Funcion para encontrar el cubo del mayor de los dos numeros
+def cubo_del_mayor(num1,num2):
+    mi_mayor = el_mayor(num1,num2)          # Use la fun. el_mayor()!
+    return (mi_mayor * mi_mayor * mi_mayor) # regrese el cubo del mayor
+
+print(cubo_del_mayor(5,10)) # 1000
+print(cubo_del_mayor(0,1))  # 1
+</textarea>
+</div>
+<p class="ac_caption"><span class="ac_caption_text"> (cubo_del_mayor)</span> </p>
+
+<button class='btn btn-success' id="cubo_del_mayor_runb" onclick="runit('cubo_del_mayor',this, undefined);">Run</button>
+
+<div id="cont"></div>
+
+<button class="ac_opt btn btn-default" style="display: inline-block" id="cubo_del_mayor_saveb" onclick="saveEditor('cubo_del_mayor');">Save</button>
+<button class="ac_opt btn btn-default" style="display: inline-block" id="cubo_del_mayor_loadb" onclick="requestCode('cubo_del_mayor');">Load</button>
+
+<script>
+if ('block' == 'none') {
+    // a hack to preserve the inline-block display style. Toggle() will use display: block
+    // (instead of inline-block) if the previous display style was 'none'
+    $('#cubo_del_mayor_saveb').toggle();
+    $('#cubo_del_mayor_loadb').toggle();
+}
+</script>
+
+
+<div style="text-align: center">
+<canvas id="cubo_del_mayor_canvas" class="ac-canvas" height="400" width="400" style="border-style: solid; display: none; text-align: center"></canvas>
+</div>
+<pre id="cubo_del_mayor_suffix" style="display:none">
+</pre>
+<pre id="cubo_del_mayor_pre" class="active_out">
+
+</pre>
+
+
+</div>
+
+<p>Si quiere practicar, implemente una función <tt class="docutils literal"><span class="pre">el_menor()</span></tt> y otra <tt class="docutils literal"><span class="pre">cubo_del_menor()</span></tt>. Lo importante es ver que las funciones son muy importantes a la hora de reusar código. A la vez que usted define una función, puede usarla cuantas veces sea necesario.</p>
+<p><strong>Tablas de Veracidad de los operadores lógicos</strong></p>
+<p>Para este laboratorio, implementaremos los operadores lógicos. Para esto, necesita conocer las tablas de veracidad. En otras palabras cuando es cierto y cuando es falso. En la figura siguiente, estan dichas tablas. La &#8220;n&#8221; quiere decir negación de. La tabla de <tt class="docutils literal"><span class="pre">nxor</span></tt> es la negación de la tabla (ultima columna) de <tt class="docutils literal"><span class="pre">xor</span></tt>.</p>
+<div class="figure align-center">
+<img alt="../_images/gates.gif" src="../_images/gates.gif" />
+<p class="caption">Operadores lógicos y sus tablas de veracidad</p>
+</div>
+<div class="section" id="lab-creando-los-operadores-logicos">
+<h2>Lab: Creando los operadores lógicos<a class="headerlink" href="#lab-creando-los-operadores-logicos" title="Permalink to this headline">¶</a></h2>
+<p>En este laboratorio, crearán funciones para simular los operadores lógicos que ya estan en Python y otros circuitos. Usted implementará una función por cada circuito: <tt class="docutils literal"><span class="pre">and</span></tt>, <tt class="docutils literal"><span class="pre">or</span></tt>, <tt class="docutils literal"><span class="pre">not</span></tt>, <tt class="docutils literal"><span class="pre">nand</span></tt>, <tt class="docutils literal"><span class="pre">nor</span></tt>,``xor`` y <tt class="docutils literal"><span class="pre">nxor</span></tt>. <strong>Importante:</strong> NO puede utilizar los operadores <tt class="docutils literal"><span class="pre">and</span></tt>, <tt class="docutils literal"><span class="pre">or</span></tt> ni <tt class="docutils literal"><span class="pre">not</span></tt> de Python, solo debe usar sus funciones (dentro de otras) para que sea mas fácil crear sus funciones. El código para el <tt class="docutils literal"><span class="pre">and</span></tt> ya esta implementado, lean el código y simplemente usen la función para construir otros operadores. El último detalle es que recibirán dos parametros, ambos booleanos. (excepto por <em>not</em> que solo recibe un booleano) que seran strings. Use comentarios en las funciones. En el espacio provisto, se verifica si ls funciones estan implementadas correctamente (Todavia TODO).</p>
+<p>En especifico, para el laboratorio:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li>Creara una función, por cada circuito: <tt class="docutils literal"><span class="pre">and</span></tt>, <tt class="docutils literal"><span class="pre">or</span></tt>, <tt class="docutils literal"><span class="pre">not</span></tt>, <tt class="docutils literal"><span class="pre">nand</span></tt>, <tt class="docutils literal"><span class="pre">nor</span></tt>, <tt class="docutils literal"><span class="pre">xor</span></tt> y <tt class="docutils literal"><span class="pre">nxor</span></tt> (programación modular).</li>
+<li>Todas las funciones reciben dos parametros (solo not recibe un solo parametro). Cada parametro es un booleano (True o False). (Mire la función <tt class="docutils literal"><span class="pre">AND</span></tt> dada).</li>
+<li>Todos los nombres de las funciones tienen que ser con mayúscula (AND, OR, NOT, etc...).</li>
+<li>Utlize solo las funciones que cree para usarlas en otras funciones cuando vea la oportunidad. Por ejemplo, ya que se le provee <tt class="docutils literal"><span class="pre">AND</span></tt>, implemente <tt class="docutils literal"><span class="pre">NOT</span></tt>. Luego Usando estas dos funciones puede implementar <tt class="docutils literal"><span class="pre">NAND</span></tt>. Cuando construya <tt class="docutils literal"><span class="pre">OR</span></tt>, use <tt class="docutils literal"><span class="pre">NOT</span></tt> para obtener <tt class="docutils literal"><span class="pre">NOR</span></tt>.</li>
+<li>El <tt class="docutils literal"><span class="pre">NAND</span></tt> es un circuito universal, esto quiere decir que con NAND se puede construir los otros circuitos. Utilice esta idea para <tt class="docutils literal"><span class="pre">OR</span></tt>.</li>
+<li>Piense como puede implementar <tt class="docutils literal"><span class="pre">XOR</span></tt> en terminos de otras funciones.</li>
+</ol>
+
+<div id="Laboratorio" lang="python" >
+
+<br/>
+<div id="Laboratorio_code_div" style="display: block">
+<textarea cols="50" rows="12" id="Laboratorio_code" class="active_code", prefixcode="undefined" lang="python">
+# operador AND. Recibe dos string
+# ej. a = True, b = False
+# devuelve falso.
+def AND (a,b):
+    if a:               # es lo mismo que a == True
+        if b:           # Nested if: Si a es cierto y b es cierto
+            return True # Regresa Cierto
+        else:
+            return False# Solo x es cierto, regresa Falso
+    else:
+        return False    # x no es cierto, no importa si
+                        # y es cierto, regresa falso.
+#Ejemplo de como llamar AND
+print(AND(True,True))   # Cierto
+
+# Implemente las otras funciones
+# Sugerencia: empiece por NOT luego NAND, etc.
+</textarea>
+</div>
+<p class="ac_caption"><span class="ac_caption_text"> (Laboratorio)</span> </p>
+
+<button class='btn btn-success' id="Laboratorio_runb" onclick="runit('Laboratorio',this, undefined);">Run</button>
+
+<div id="cont"></div>
+
+<button class="ac_opt btn btn-default" style="display: inline-block" id="Laboratorio_saveb" onclick="saveEditor('Laboratorio');">Save</button>
+<button class="ac_opt btn btn-default" style="display: inline-block" id="Laboratorio_loadb" onclick="requestCode('Laboratorio');">Load</button>
+
+<script>
+if ('block' == 'none') {
+    // a hack to preserve the inline-block display style. Toggle() will use display: block
+    // (instead of inline-block) if the previous display style was 'none'
+    $('#Laboratorio_saveb').toggle();
+    $('#Laboratorio_loadb').toggle();
+}
+</script>
+
+
+<div style="text-align: center">
+<canvas id="Laboratorio_canvas" class="ac-canvas" height="400" width="400" style="border-style: solid; display: none; text-align: center"></canvas>
+</div>
+<pre id="Laboratorio_suffix" style="display:none">
+</pre>
+<pre id="Laboratorio_pre" class="active_out">
+
+</pre>
+
+
+</div>
+
+</div></blockquote>
+<p><strong>Para Entregar</strong>: Luego de terminar su laboratorio, haga &#8220;copy/paste&#8221; de su código en un file. Incluya el template como el profesor discutió en clase. Guarde el file con el nombre <em>lab3.py</em>. Ingrese a la clase registrada en <a class="reference external" href="http://moodle.ccom.uprrp.edu/">moodle</a> y haga &#8220;upload&#8221; de su file en el tab correspondiente. Luego de entregar el lab, favor de llenar este cuestionario. De surgir alguna duda con respecto al lab, puede enviar preguntas a <a class="reference external" href="https://piazza.com/class/i5szw5xlczl2du">Piazza</a>.</p>
+<p><strong>Fecha de Entrega:</strong> Viernes 20 de marzo del 2015, antes de las 11:55pm en moodle.</p>
+<p><strong>Científico del día</strong>: <em>Von Neummann</em>. Matemático húngaro-estadounidense que hizo contribuciones en muchas ramas ( teoría de conjuntos, teoría de juegos, ciencias de la computación, economía, etc.). Inventó el concepto de ariqutectura de Von Neumann, la cual es usada actualmente en las computadoras - Un CPU con un ALU y un Control, Memoria Principal, y sistemas de entrada y salida. Se le atribuye la invención del algoritmo Merge Sort. Es considerado como uno de los más importantes matemáticos de la historia moderna. Puede leer más en <a class="reference external" href="http://es.wikipedia.org/wiki/Arquitectura_de_von_Neumann">Wikipedia</a>.</p>
+</div>
+</div>
+
+
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <span id='numuserspan'></span> readers online now | <span class='loggedinuser'></span> | <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2015, Edwardo S. Rivera.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.2.3.
+    </p>
+  </div>
+</footer>
+
+<script type="text/javascript" charset="utf-8">
+    $(document).ready(addUserToFooter);
+    $(document).ready(addNavbarLoginLink);
+    $(document).ready(createEditors);
+    $(document).ready(getNumUsers);
+    $(document).ready(getOnlineUsers);
+    $(document).ready(createScratchActivecode());
+    $(document).ready(styleUnittestResults());
+</script>
+
+<script type="text/javascript">
+  // add the video play button overlay image
+  $(".video-play-overlay").each(function() {
+    $(this).css('background-image', "url(\'../_static/play_overlay_icon.png\')")
+    });
+
+  // This function is needed to allow the dropdown search bar to work;
+  // The default behaviour is that the dropdown menu closes when something in
+  // it (like the search bar) is clicked
+  $(function() {
+    // Fix input element click problem
+    $('.dropdown input, .dropdown label').click(function(e) {
+      e.stopPropagation();
+      });
+  });
+
+  // style codelens buttons (doing it here because PyTutor is a submodule owned by someone else
+  $(function() {
+    $(".ExecutionVisualizer").each(function() {
+      $(this).find("#jmpFirstInstr").addClass('btn btn-default');
+      $(this).find("#jmpStepBack").addClass('btn btn-danger');
+      $(this).find("#jmpStepFwd").addClass('btn btn-success');
+      $(this).find("#jmpLastInstr").addClass('btn btn-default');
+      });
+  });
+
+</script>
+
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-32029811-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+  </body>
+</html>

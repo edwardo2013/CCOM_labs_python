@@ -17,7 +17,7 @@ En este laboratorio los estudiantes:
 
 **Estructuras de Selección**
 
-Como el nombre sugiere, una **estructura de decisión** hace un tipo de selección (escoger algo). En otras palabras, escoge que instrucciones ejecutar del programa y cuales no. En la vida diaria, usted puede decir: *Si consigo trabajo, entonces me compró una computadora*. Esta oración nos da una información equivalente: *Si usted no consiguio trabajo entonces no comprará una computadora*. Como describir este tipo de oración en programación? En muchos lenguajes, existe la palabra reservada ``if`` y ``else`` (si, de lo contrario). Sin embargo, en programación un ``if`` puede usarse sin ``else``. El proximo pedazo de código es para que tenga una idea de como funciona ``if`` y ``else`` en Python:
+Como el nombre sugiere, una **estructura de decisión** hace un tipo de selección (escoger algo). En otras palabras, escoge que instrucciones ejecutar del programa y cuales no. En la vida diaria, usted puede decir: *Si consigo trabajo, entonces me compró una computadora*. Esta oración nos da una información equivalente: *Si usted no consiguio trabajo entonces no comprará una computadora*. Como describir este tipo de oración en programación? En muchos lenguajes, existe la palabra reservada ``if`` y ``else`` (si, de lo contrario). Sin embargo, en programación un ``if`` puede usarse sin ``else``. El siguiente pedazo de código es para que tenga una idea de como funciona ``if`` y ``else`` en Python:
  
 .. code-block:: python
 
@@ -128,7 +128,8 @@ Por último, uno puede tener varios *elif* (no tiene que ser solo uno):
         .
         .        
 
-     
+Recuerde, en *if-elif-else* solo se ejecuta (escoje) uno de ellos.
+
 **Operadores de comparación**
 Aunque ya sabemos algunos, una tabla de los operadores de comparación con ejemplos de expresiones booleanas es muy útil:
  

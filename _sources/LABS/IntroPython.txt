@@ -113,8 +113,8 @@ Los tipos de datos nativos de Python que hemos utilizado hasta ahora son los ``i
 La primera instrucción guarda el string ``Arce`` en la variable ``un_string``. Luego, se declara una lista vacía. La tercera línea es importante: ``L2`` contiene tres elementos: en la primera posición contiene ``-1``, en la segunda ``10.3`` y en la tercera lo que tiene guardado la variable ``un_string``. La última instrucción, imprime el primer elemento de L2. Es importante ver que, al igual que otros lenguajes, en Python se empieza a contar posiciones desde 0 y no desde 1. ¿Qué imprimiría ``print(L2[1])``? Intentelo!
 
 
-El Lab: Información de Contacto
--------------------------------
+Lab: Información de Contacto
+----------------------------
 
 Para practicar lo aprendido, usted desarrollará un programa donde guardará la información de contacto de una persona: su nombre, apellido, edad, teléfono y su email. Además, determinará si es mayor de edad usando una fórmula sencilla. Siga las siguientes instrucciones:
 

@@ -1,0 +1,204 @@
+======================================
+Lab 03: Operadores lógicos y funciones 
+======================================
+
+Como tenemos en nuestro arsenal las estructuras de decisión, veremos otros operadores y la importancia de la programación modular (funciones). Este laboratorio tiene como propósito instruir al estudiante en los operadores de lógica presentados en clase y tambien a las funciones con su uso para reusibilidad de código. Al final del laboratorio, el estudiante tendrá una consola de Python para codificar su laboratorio. Favor de seguir las instrucciones paso por paso y favor de no saltar secciones. Recuerde que para su laboratorio, debe tener el "template" provisto por el profesor y usar comentarios en su programa.
+
+**Objetivos**
+
+En este laboratorio los estudiantes:
+
+* Aprenderán sobre operadores lógicos
+* Entenderán el concepto de programación modular
+* Aprenderán sobre funciones en Python
+* Apreciarán la importancia de funciones   
+* El estudiante practicará estructuras de decisión y funciones  
+
+**Operadores lógicos**
+
+Un **operador lógico** opera con *expresiones booleanas* y da como resultado cierto o falso. Los operadores más conocidos son el ``and``, el ``or`` y ``not``. El ``and`` y ``or`` le premite al programador conectar múltiples expresiones booleanas. El ``and`` es cierto cuando ambas subexpresiones a evaluarse son ciertas. El ``or`` es cierto cuando al menos una de las dos subexpresiones es cierta. El operador ``not`` da el resultado contrario al evaluar una expresión booleana. Como ``and`` y ``or`` operan sobre dos expresiones, se le llaman *operadores binarios*. A ``not`` se le llama *operador unario* (sobre una expresión). La importancia de estos operadores es que se pueden usar con las estructuras de decisión para verificar una expresión. Estos operadores se usan en diseño de circuitos. En Python, estos operadores pueden usarse simplemente usando las palabras ``and``, ``or`` y ``not``:
+
+.. code-block:: python
+
+    # Ejemplo del and
+    >>> x = 10
+    >>> st = "Odiseo"
+    >>> x => 5 and x < 10          
+    False
+    >>> x > 9 and x == 10
+    True
+    
+    # Ejemplo del or
+    >>> x > 5 or st > "Edmund" 
+    True
+    >>> x > 5 or st < "Edmund" 
+    False
+    
+    # Ejemplo de not
+    >>> not 0
+    True
+    >>> not 5
+    False
+
+Si, se pueden comparar strings! La comparación se hace a base de la tabla `ascii <http://www.asciitable.com/>`_ (ver columna Decimal). Se compara letra por letra, y, en este ejemplo la letra *O* (79) es mayor que la letra *E* (45). Tambien, al negar (con el operador not) algo que no sea cero (en caso de lista, vacio), devolverá Cierto. Esto es una convención que se hace en muchos lenguajes.
+
+**Estructuras de decisión y operadores lógicos**
+
+Los operadores lógicos se usan mayormente para tomar una decisión sobre algo. Por ejemplo, imagine que quiere hacer un programa que, dado una letra verifique si es una vocal o no. Esto se puede hacer con un ``if`` y el operador lógico ``or``. Estudie el siguiente código, donde dado una letra (se asume que el usuario va a entrar solo una letra y en minuscula), el programa imprime si es vocal o no. Utilice el espacio para practicar cualquier cosa que desee:
+
+.. activecode:: or_y_decision
+
+    # Pida al usuario una letra
+    let = input("Ingrese una letra: ")
+    
+    # Verifique condiciones
+    if let == "a" or let == "e" or let == "i" or let == "o" or let == "u":
+        print(True)
+    else:
+        print(False) 
+ 
+    # Luego de correr el programa, escriba el codigo para el ejercicio
+    # de practica. (Borre lo anterior).
+    
+**Explicación del programa:** Primero, se pide una letra al usuario. Luego se verifica si la letra insertada es una de las cinco vocales. De serlo, se imprime a la pantalla ``True``, de lo contrario de imprime ``False``. Note que en la linea 5 del programa se usa ``or`` para verificar si es una letra, pues queremos que sea una de ellas. Usar ``and`` para este código es erroneo, pues para ser cierto tendría que ser que una letra fuera igual a las cinco vocales, lo cual es imposible. Pregunta para usted: Si se quiere verificar que sea vocal sin importar que sea minuscula o mayuscula, ¿que cambios se le debe hacer al *if**? 
+
+*Ejercicio de Práctica*: En el espacio anterior (luego de borrar), escriba un pedazo de código que, dado un número (float), verifique si es mayor que cero y menor o igual que 50. Esto es bueno para verificar el alcance (en ingles range) de los números en un intervalo y verificar el "input" de un usuario.
+
+Un ejemplo algo mas largo, puede ser un programa para traducir una letra a su correspondiente traducción al alfabeto fonético `NATO <http://en.wikipedia.org/wiki/NATO_phonetic_alphabet>`_ para telefonía. Una posible implementacion es la siguiente:
+
+.. code-block:: python
+
+    letra = input("Ingrese una letra: ")
+    
+    # imprima correspodiente palabra del NATO
+    if letra == 'a' or letra == 'A':
+        print ("Alpha")
+    elif letra == 'b' or letra == 'B':
+        print ("Bravo")
+    elif letra == 'c' or letra == 'C':
+        print ("Charlie")
+    # Siga asi hasta z:
+    .
+    .
+    .
+    elif letra == 'z' or letra == 'Z':
+        print ("Zulu")
+    else:
+        print ("letra incorrecta Insertada")    
+            
+**Funciones y programación modular**
+
+Digamos que usted quiere verificar si una letra es vocal, como en el ejemplo anterior. Sin embargo, ahora usted quiere verificarlo para varias letras. El problema de usar el código anterior es que usted debe *repetir* el código una y otra vez para verificar las letras. Por esta necesidad de reusar código, se necesitan los subprogramas, o funciones. Una **función** es un grupo de instrucciones que se ejecutan para llevar a cabo una tarea. Una función puede devolver un valor ( o no devolver nada). De hecho, en los laboratorios anteriores, la palabra ``input()`` en realidad es una función (al igual que ``print()``). Las funciones tienen tres partes:
+
+* *Nombre*: El nombre que se le da a la función. No puede ser una palabra reservada.
+* *Parámetros*: Variables a recibirse para computar algo dentro de la función. Puede ser 0 o más parametros. Son separados por comma. 
+* *valor regresado (return type)*: El tipo de dato que devuelve una función. Puede ser que no devuelva nada. 
+
+Las funciones se usan para la **programación modular:** Dividir un programa en indepedientes subprogramas (funciones) para que cada subprograma ejecute una parte del código. Por ejemplo, si usted quiere hacer una calculadora sencilla (suma, resta, multiplicación y división), usted haría una función para cada una de las operaciones, simplificando el código.  
+
+.. code-block:: python
+
+    def nombre_de_funcion(param1,param2, etc. ):
+        instruccion
+        instruccion
+        .
+        .
+        return some_value
+
+            
+Veamos como hacer una función para nuestro ejemplo:
+
+.. activecode:: func_letra
+   
+    # Definicion de una funcion. (En parentesis son los parametros) 
+    def es_vocal(letra):
+        if letra == "a" or letra == "e" or letra == "i" or letra == "o" or letra == "u":
+            return True
+        else:
+            return False
+    
+    # Llamando la funcion (usandola)
+    mi_letra = "u"
+    es_vocal("3")        # ejecuta per no se guarda su valor
+    print(es_vocal("w")) # Hara print de lo que devuelva es_vocal 
+    ej1 = es_vocal("a")  # guardando el valor en una variable
+    ej2 = es_vocal("s") 
+    ej3 = es_vocal(mi_letra) 
+    
+    # Haciendo prints
+    print(" verificando si u,a,s son vocales (1-lo es 0-no lo es)")
+    print(ej1,ej2,ej3)
+
+Note que se usa ``def`` para definir una función. El nombre de esta función es *es_vocal*, solo tiene un solo parámetro (letra) y regresa un booleano. Luego de definirla, se "llama" la función en el programa. Esto hace que *es_vocal* se ejecute y devuelva un booleano. Luego de ejecutar, el programa continua con la próxima instrucción. *Importante*: Todas las variables creadas dentro de una función son locales (se ven solo dentro de la función) y se eliminan cuando la función termina su ejecución.
+
+Para ver otra utilidad de las funciones, imagine que usted quiere implementar una función que dado dos numeros, saque el cubo del número mayor. Entonces, podemos defininir una función ``el_mayor()`` para determinar el número mayor y, luego, la función ``cubo_del_mayor()`` puede usar ``el_mayor()`` dentro de su definición! Aqui la implementación:
+
+.. activecode:: cubo_del_mayor
+
+    # Funcion para encontrar el mayor  de dos numeros
+    # Nota: Para usar una funcion, priemro tiene que estar definida
+    def el_mayor(a,b):
+        if a > b:
+            return a
+        else:
+            return b
+    
+    # Funcion para encontrar el cubo del mayor de los dos numeros
+    def cubo_del_mayor(num1,num2):
+        mi_mayor = el_mayor(num1,num2)          # Use la fun. el_mayor()!
+        return (mi_mayor * mi_mayor * mi_mayor) # regrese el cubo del mayor
+        
+    print(cubo_del_mayor(5,10)) # 1000
+    print(cubo_del_mayor(0,1))  # 1
+    
+Si quiere practicar, implemente una función ``el_menor()`` y otra ``cubo_del_menor()``. Lo importante es ver que las funciones son muy importantes a la hora de reusar código. A la vez que usted define una función, puede usarla cuantas veces sea necesario. 
+
+**Tablas de Veracidad de los operadores lógicos** 
+
+Para este laboratorio, implementaremos los operadores lógicos. Para esto, necesita conocer las tablas de veracidad. En otras palabras cuando es cierto y cuando es falso. En la figura siguiente, estan dichas tablas. La "n" quiere decir negación de. La tabla de ``nxor`` es la negación de la tabla (ultima columna) de ``xor``.
+    
+.. figure:: ../../images/gates.gif
+    :align: center
+    
+    Operadores lógicos y sus tablas de veracidad
+
+
+Lab: Creando los operadores lógicos  
+-----------------------------------
+
+En este laboratorio, crearán funciones para simular los operadores lógicos que ya estan en Python y otros circuitos. Usted implementará una función por cada circuito: ``and``, ``or``, ``not``, ``nand``, ``nor``,``xor`` y ``nxor``. **Importante:** NO puede utilizar los operadores ``and``, ``or`` ni ``not`` de Python, solo debe usar sus funciones (dentro de otras) para que sea mas fácil crear sus funciones. El código para el ``and`` ya esta implementado, lean el código y simplemente usen la función para construir otros operadores. El último detalle es que recibirán dos parametros, ambos booleanos. (excepto por *not* que solo recibe un booleano) que seran strings. Use comentarios en las funciones. En el espacio provisto, se verifica si ls funciones estan implementadas correctamente (Todavia TODO).
+
+En especifico, para el laboratorio:
+
+    1. Creara una función, por cada circuito: ``and``, ``or``, ``not``, ``nand``, ``nor``, ``xor`` y ``nxor`` (programación modular). 
+    2. Todas las funciones reciben dos parametros (solo not recibe un solo parametro). Cada parametro es un booleano (True o False). (Mire la función ``AND`` dada). 
+    3. Todos los nombres de las funciones tienen que ser con mayúscula (AND, OR, NOT, etc...). 
+    4. Utlize solo las funciones que cree para usarlas en otras funciones cuando vea la oportunidad. Por ejemplo, ya que se le provee ``AND``, implemente ``NOT``. Luego Usando estas dos funciones puede implementar ``NAND``. Cuando construya ``OR``, use ``NOT`` para obtener ``NOR``.
+    5. El ``NAND`` es un circuito universal, esto quiere decir que con NAND se puede construir los otros circuitos. Utilice esta idea para ``OR``.
+    6. Piense como puede implementar ``XOR`` en terminos de otras funciones. 
+
+    .. activecode:: Laboratorio
+
+        # operador AND. Recibe dos string
+        # ej. a = True, b = False
+        # devuelve falso.
+        def AND (a,b):
+            if a:               # es lo mismo que a == True
+                if b:           # Nested if: Si a es cierto y b es cierto
+                    return True # Regresa Cierto
+                else:
+                    return False# Solo x es cierto, regresa Falso
+            else:
+                return False    # x no es cierto, no importa si 
+                                # y es cierto, regresa falso.
+        #Ejemplo de como llamar AND
+        print(AND(True,True))   # Cierto                
+        
+        # Implemente las otras funciones
+        # Sugerencia: empiece por NOT luego NAND, etc.
+
+**Para Entregar**: Luego de terminar su laboratorio, haga "copy/paste" de su código en un file. Incluya el template como el profesor discutió en clase. Guarde el file con el nombre *lab3.py*. Ingrese a la clase registrada en `moodle <http://moodle.ccom.uprrp.edu/>`_ y haga "upload" de su file en el tab correspondiente. Luego de entregar el lab, favor de llenar este cuestionario. De surgir alguna duda con respecto al lab, puede enviar preguntas a `Piazza <https://piazza.com/class/i5szw5xlczl2du>`_.
+
+**Fecha de Entrega:** Viernes 20 de marzo del 2015, antes de las 11:55pm en moodle.
+
+**Científico del día**: *Von Neummann*. Matemático húngaro-estadounidense que hizo contribuciones en muchas ramas ( teoría de conjuntos, teoría de juegos, ciencias de la computación, economía, etc.). Inventó el concepto de ariqutectura de Von Neumann, la cual es usada actualmente en las computadoras - Un CPU con un ALU y un Control, Memoria Principal, y sistemas de entrada y salida. Se le atribuye la invención del algoritmo Merge Sort. Es considerado como uno de los más importantes matemáticos de la historia moderna. Puede leer más en `Wikipedia <http://es.wikipedia.org/wiki/Arquitectura_de_von_Neumann>`_.
