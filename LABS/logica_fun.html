@@ -408,7 +408,7 @@ if ('block' == 'none') {
     <span class="k">return</span> <span class="n">some_value</span>
 </pre></div>
 </div>
-<p>Veamos como hacer una función para nuestro ejemplo:</p>
+<p>Los <em>argumentos</em> de una función son simplemente los valores especificos de los parametros cuando se llaman la función. Veamos como hacer una función para nuestro ejemplo:</p>
 
 <div id="func_letra" lang="python" >
 
@@ -416,7 +416,7 @@ if ('block' == 'none') {
 <div id="func_letra_code_div" style="display: block">
 <textarea cols="50" rows="12" id="func_letra_code" class="active_code", prefixcode="undefined" lang="python">
 # Definicion de una funcion. (En parentesis son los parametros)
-def es_vocal(letra):
+def es_vocal(letra): # Parametro: letra
     if letra == "a" or letra == "e" or letra == "i" or letra == "o" or letra == "u":
         return True
     else:
@@ -424,14 +424,14 @@ def es_vocal(letra):
 
 # Llamando la funcion (usandola)
 mi_letra = "u"
-es_vocal("3")        # ejecuta per no se guarda su valor
-print(es_vocal("w")) # Hara print de lo que devuelva es_vocal
+es_vocal("3")        # ejecuta per no se guarda su valor. Argummento: "3"
+print(es_vocal("w")) # Hara print de lo que devuelva es_vocal. Argumento: "w"
 ej1 = es_vocal("a")  # guardando el valor en una variable
 ej2 = es_vocal("s")
 ej3 = es_vocal(mi_letra)
 
 # Haciendo prints
-print(" verificando si u,a,s son vocales (1-lo es 0-no lo es)")
+print(" verificando si u,a,s son vocales")
 print(ej1,ej2,ej3)
 </textarea>
 </div>
@@ -467,62 +467,42 @@ if ('block' == 'none') {
 </div>
 
 <p>Note que se usa <tt class="docutils literal"><span class="pre">def</span></tt> para definir una función. El nombre de esta función es <em>es_vocal</em>, solo tiene un solo parámetro (letra) y regresa un booleano. Luego de definirla, se &#8220;llama&#8221; la función en el programa. Esto hace que <em>es_vocal</em> se ejecute y devuelva un booleano. Luego de ejecutar, el programa continua con la próxima instrucción. <em>Importante</em>: Todas las variables creadas dentro de una función son locales (se ven solo dentro de la función) y se eliminan cuando la función termina su ejecución.</p>
-<p>Para ver otra utilidad de las funciones, imagine que usted quiere implementar una función que dado dos numeros, saque el cubo del número mayor. Entonces, podemos defininir una función <tt class="docutils literal"><span class="pre">el_mayor()</span></tt> para determinar el número mayor y, luego, la función <tt class="docutils literal"><span class="pre">cubo_del_mayor()</span></tt> puede usar <tt class="docutils literal"><span class="pre">el_mayor()</span></tt> dentro de su definición! Aqui la implementación:</p>
+<p>Para ver otra utilidad de las funciones, imagine que usted quiere implementar una función que dado dos numeros, saque el cubo del número mayor. Entonces, podemos defininir una función <tt class="docutils literal"><span class="pre">el_mayor()</span></tt> para determinar el número mayor y, luego, la función <tt class="docutils literal"><span class="pre">cubo_del_mayor()</span></tt> puede usar <tt class="docutils literal"><span class="pre">el_mayor()</span></tt> dentro de su definición! Aqui la implementación, mire como la flecha roja a la izquierda se va moviendo por cada paso:</p>
 
-<div id="cubo_del_mayor" lang="python" >
+<div id="cubo_del_mayor"></div>
+<p class="cl_caption"><span class="cl_caption_text"> (cubo_del_mayor)</span> </p>
+<script type="text/javascript">
+var cubo_del_mayor_trace = {"code": "# Funcion para encontrar el mayor  de dos numeros\n# Nota: Para usar una funcion, priemro tiene que estar definida\ndef el_mayor(a,b):\n    if a > b:\n        return a\n    else:\n        return b\n\n# Funcion para encontrar el cubo del mayor de los dos numeros\ndef cubo_del_mayor(num1,num2):\n    mi_mayor = el_mayor(num1,num2)          # Use la fun. el_mayor()!\n    return (mi_mayor * mi_mayor * mi_mayor) # regrese el cubo del mayor\n\nprint(cubo_del_mayor(5,10)) # 1000\nprint(cubo_del_mayor(0,1))  # 1", "trace": [{"ordered_globals": [], "stdout": "", "func_name": "<module>", "stack_to_render": [], "globals": {}, "heap": {}, "line": 3, "event": "step_line"}, {"ordered_globals": ["el_mayor"], "stdout": "", "func_name": "<module>", "stack_to_render": [], "globals": {"el_mayor": ["REF", 1]}, "heap": {"1": ["FUNCTION", "el_mayor(a, b)", null]}, "line": 10, "event": "step_line"}, {"ordered_globals": ["el_mayor", "cubo_del_mayor"], "stdout": "", "func_name": "<module>", "stack_to_render": [], "globals": {"cubo_del_mayor": ["REF", 2], "el_mayor": ["REF", 1]}, "heap": {"1": ["FUNCTION", "el_mayor(a, b)", null], "2": ["FUNCTION", "cubo_del_mayor(num1, num2)", null]}, "line": 14, "event": "step_line"}, {"ordered_globals": ["el_mayor", "cubo_del_mayor"], "stdout": "", "func_name": "cubo_del_mayor", "stack_to_render": [{"frame_id": 1, "encoded_locals": {"num1": 5, "num2": 10}, "is_highlighted": true, "is_parent": false, "func_name": "cubo_del_mayor", "is_zombie": false, "parent_frame_id_list": [], "unique_hash": "cubo_del_mayor_f1", "ordered_varnames": ["num1", "num2"]}], "globals": {"cubo_del_mayor": ["REF", 2], "el_mayor": ["REF", 1]}, "heap": {"1": ["FUNCTION", "el_mayor(a, b)", null], "2": ["FUNCTION", "cubo_del_mayor(num1, num2)", null]}, "line": 10, "event": "call"}, {"ordered_globals": ["el_mayor", "cubo_del_mayor"], "stdout": "", "func_name": "cubo_del_mayor", "stack_to_render": [{"frame_id": 1, "encoded_locals": {"num1": 5, "num2": 10}, "is_highlighted": true, "is_parent": false, "func_name": "cubo_del_mayor", "is_zombie": false, "parent_frame_id_list": [], "unique_hash": "cubo_del_mayor_f1", "ordered_varnames": ["num1", "num2"]}], "globals": {"cubo_del_mayor": ["REF", 2], "el_mayor": ["REF", 1]}, "heap": {"1": ["FUNCTION", "el_mayor(a, b)", null], "2": ["FUNCTION", "cubo_del_mayor(num1, num2)", null]}, "line": 11, "event": "step_line"}, {"ordered_globals": ["el_mayor", "cubo_del_mayor"], "stdout": "", "func_name": "el_mayor", "stack_to_render": [{"frame_id": 1, "encoded_locals": {"num1": 5, "num2": 10}, "is_highlighted": false, "is_parent": false, "func_name": "cubo_del_mayor", "is_zombie": false, "parent_frame_id_list": [], "unique_hash": "cubo_del_mayor_f1", "ordered_varnames": ["num1", "num2"]}, {"frame_id": 2, "encoded_locals": {"a": 5, "b": 10}, "is_highlighted": true, "is_parent": false, "func_name": "el_mayor", "is_zombie": false, "parent_frame_id_list": [], "unique_hash": "el_mayor_f2", "ordered_varnames": ["a", "b"]}], "globals": {"cubo_del_mayor": ["REF", 2], "el_mayor": ["REF", 1]}, "heap": {"1": ["FUNCTION", "el_mayor(a, b)", null], "2": ["FUNCTION", "cubo_del_mayor(num1, num2)", null]}, "line": 3, "event": "call"}, {"ordered_globals": ["el_mayor", "cubo_del_mayor"], "stdout": "", "func_name": "el_mayor", "stack_to_render": [{"frame_id": 1, "encoded_locals": {"num1": 5, "num2": 10}, "is_highlighted": false, "is_parent": false, "func_name": "cubo_del_mayor", "is_zombie": false, "parent_frame_id_list": [], "unique_hash": "cubo_del_mayor_f1", "ordered_varnames": ["num1", "num2"]}, {"frame_id": 2, "encoded_locals": {"a": 5, "b": 10}, "is_highlighted": true, "is_parent": false, "func_name": "el_mayor", "is_zombie": false, "parent_frame_id_list": [], "unique_hash": "el_mayor_f2", "ordered_varnames": ["a", "b"]}], "globals": {"cubo_del_mayor": ["REF", 2], "el_mayor": ["REF", 1]}, "heap": {"1": ["FUNCTION", "el_mayor(a, b)", null], "2": ["FUNCTION", "cubo_del_mayor(num1, num2)", null]}, "line": 4, "event": "step_line"}, {"ordered_globals": ["el_mayor", "cubo_del_mayor"], "stdout": "", "func_name": "el_mayor", "stack_to_render": [{"frame_id": 1, "encoded_locals": {"num1": 5, "num2": 10}, "is_highlighted": false, "is_parent": false, "func_name": "cubo_del_mayor", "is_zombie": false, "parent_frame_id_list": [], "unique_hash": "cubo_del_mayor_f1", "ordered_varnames": ["num1", "num2"]}, {"frame_id": 2, "encoded_locals": {"a": 5, "b": 10}, "is_highlighted": true, "is_parent": false, "func_name": "el_mayor", "is_zombie": false, "parent_frame_id_list": [], "unique_hash": "el_mayor_f2", "ordered_varnames": ["a", "b"]}], "globals": {"cubo_del_mayor": ["REF", 2], "el_mayor": ["REF", 1]}, "heap": {"1": ["FUNCTION", "el_mayor(a, b)", null], "2": ["FUNCTION", "cubo_del_mayor(num1, num2)", null]}, "line": 7, "event": "step_line"}, {"ordered_globals": ["el_mayor", "cubo_del_mayor"], "stdout": "", "func_name": "el_mayor", "stack_to_render": [{"frame_id": 1, "encoded_locals": {"num1": 5, "num2": 10}, "is_highlighted": false, "is_parent": false, "func_name": "cubo_del_mayor", "is_zombie": false, "parent_frame_id_list": [], "unique_hash": "cubo_del_mayor_f1", "ordered_varnames": ["num1", "num2"]}, {"frame_id": 2, "encoded_locals": {"a": 5, "__return__": 10, "b": 10}, "is_highlighted": true, "is_parent": false, "func_name": "el_mayor", "is_zombie": false, "parent_frame_id_list": [], "unique_hash": "el_mayor_f2", "ordered_varnames": ["a", "b", "__return__"]}], "globals": {"cubo_del_mayor": ["REF", 2], "el_mayor": ["REF", 1]}, "heap": {"1": ["FUNCTION", "el_mayor(a, b)", null], "2": ["FUNCTION", "cubo_del_mayor(num1, num2)", null]}, "line": 7, "event": "return"}, {"ordered_globals": ["el_mayor", "cubo_del_mayor"], "stdout": "", "func_name": "cubo_del_mayor", "stack_to_render": [{"frame_id": 1, "encoded_locals": {"mi_mayor": 10, "num1": 5, "num2": 10}, "is_highlighted": true, "is_parent": false, "func_name": "cubo_del_mayor", "is_zombie": false, "parent_frame_id_list": [], "unique_hash": "cubo_del_mayor_f1", "ordered_varnames": ["num1", "num2", "mi_mayor"]}], "globals": {"cubo_del_mayor": ["REF", 2], "el_mayor": ["REF", 1]}, "heap": {"1": ["FUNCTION", "el_mayor(a, b)", null], "2": ["FUNCTION", "cubo_del_mayor(num1, num2)", null]}, "line": 12, "event": "step_line"}, {"ordered_globals": ["el_mayor", "cubo_del_mayor"], "stdout": "", "func_name": "cubo_del_mayor", "stack_to_render": [{"frame_id": 1, "encoded_locals": {"__return__": 1000, "mi_mayor": 10, "num1": 5, "num2": 10}, "is_highlighted": true, "is_parent": false, "func_name": "cubo_del_mayor", "is_zombie": false, "parent_frame_id_list": [], "unique_hash": "cubo_del_mayor_f1", "ordered_varnames": ["num1", "num2", "mi_mayor", "__return__"]}], "globals": {"cubo_del_mayor": ["REF", 2], "el_mayor": ["REF", 1]}, "heap": {"1": ["FUNCTION", "el_mayor(a, b)", null], "2": ["FUNCTION", "cubo_del_mayor(num1, num2)", null]}, "line": 12, "event": "return"}, {"ordered_globals": ["el_mayor", "cubo_del_mayor"], "stdout": "1000\n", "func_name": "<module>", "stack_to_render": [], "globals": {"cubo_del_mayor": ["REF", 2], "el_mayor": ["REF", 1]}, "heap": {"1": ["FUNCTION", "el_mayor(a, b)", null], "2": ["FUNCTION", "cubo_del_mayor(num1, num2)", null]}, "line": 15, "event": "step_line"}, {"ordered_globals": ["el_mayor", "cubo_del_mayor"], "stdout": "1000\n", "func_name": "cubo_del_mayor", "stack_to_render": [{"frame_id": 3, "encoded_locals": {"num1": 0, "num2": 1}, "is_highlighted": true, "is_parent": false, "func_name": "cubo_del_mayor", "is_zombie": false, "parent_frame_id_list": [], "unique_hash": "cubo_del_mayor_f3", "ordered_varnames": ["num1", "num2"]}], "globals": {"cubo_del_mayor": ["REF", 2], "el_mayor": ["REF", 1]}, "heap": {"1": ["FUNCTION", "el_mayor(a, b)", null], "2": ["FUNCTION", "cubo_del_mayor(num1, num2)", null]}, "line": 10, "event": "call"}, {"ordered_globals": ["el_mayor", "cubo_del_mayor"], "stdout": "1000\n", "func_name": "cubo_del_mayor", "stack_to_render": [{"frame_id": 3, "encoded_locals": {"num1": 0, "num2": 1}, "is_highlighted": true, "is_parent": false, "func_name": "cubo_del_mayor", "is_zombie": false, "parent_frame_id_list": [], "unique_hash": "cubo_del_mayor_f3", "ordered_varnames": ["num1", "num2"]}], "globals": {"cubo_del_mayor": ["REF", 2], "el_mayor": ["REF", 1]}, "heap": {"1": ["FUNCTION", "el_mayor(a, b)", null], "2": ["FUNCTION", "cubo_del_mayor(num1, num2)", null]}, "line": 11, "event": "step_line"}, {"ordered_globals": ["el_mayor", "cubo_del_mayor"], "stdout": "1000\n", "func_name": "el_mayor", "stack_to_render": [{"frame_id": 3, "encoded_locals": {"num1": 0, "num2": 1}, "is_highlighted": false, "is_parent": false, "func_name": "cubo_del_mayor", "is_zombie": false, "parent_frame_id_list": [], "unique_hash": "cubo_del_mayor_f3", "ordered_varnames": ["num1", "num2"]}, {"frame_id": 4, "encoded_locals": {"a": 0, "b": 1}, "is_highlighted": true, "is_parent": false, "func_name": "el_mayor", "is_zombie": false, "parent_frame_id_list": [], "unique_hash": "el_mayor_f4", "ordered_varnames": ["a", "b"]}], "globals": {"cubo_del_mayor": ["REF", 2], "el_mayor": ["REF", 1]}, "heap": {"1": ["FUNCTION", "el_mayor(a, b)", null], "2": ["FUNCTION", "cubo_del_mayor(num1, num2)", null]}, "line": 3, "event": "call"}, {"ordered_globals": ["el_mayor", "cubo_del_mayor"], "stdout": "1000\n", "func_name": "el_mayor", "stack_to_render": [{"frame_id": 3, "encoded_locals": {"num1": 0, "num2": 1}, "is_highlighted": false, "is_parent": false, "func_name": "cubo_del_mayor", "is_zombie": false, "parent_frame_id_list": [], "unique_hash": "cubo_del_mayor_f3", "ordered_varnames": ["num1", "num2"]}, {"frame_id": 4, "encoded_locals": {"a": 0, "b": 1}, "is_highlighted": true, "is_parent": false, "func_name": "el_mayor", "is_zombie": false, "parent_frame_id_list": [], "unique_hash": "el_mayor_f4", "ordered_varnames": ["a", "b"]}], "globals": {"cubo_del_mayor": ["REF", 2], "el_mayor": ["REF", 1]}, "heap": {"1": ["FUNCTION", "el_mayor(a, b)", null], "2": ["FUNCTION", "cubo_del_mayor(num1, num2)", null]}, "line": 4, "event": "step_line"}, {"ordered_globals": ["el_mayor", "cubo_del_mayor"], "stdout": "1000\n", "func_name": "el_mayor", "stack_to_render": [{"frame_id": 3, "encoded_locals": {"num1": 0, "num2": 1}, "is_highlighted": false, "is_parent": false, "func_name": "cubo_del_mayor", "is_zombie": false, "parent_frame_id_list": [], "unique_hash": "cubo_del_mayor_f3", "ordered_varnames": ["num1", "num2"]}, {"frame_id": 4, "encoded_locals": {"a": 0, "b": 1}, "is_highlighted": true, "is_parent": false, "func_name": "el_mayor", "is_zombie": false, "parent_frame_id_list": [], "unique_hash": "el_mayor_f4", "ordered_varnames": ["a", "b"]}], "globals": {"cubo_del_mayor": ["REF", 2], "el_mayor": ["REF", 1]}, "heap": {"1": ["FUNCTION", "el_mayor(a, b)", null], "2": ["FUNCTION", "cubo_del_mayor(num1, num2)", null]}, "line": 7, "event": "step_line"}, {"ordered_globals": ["el_mayor", "cubo_del_mayor"], "stdout": "1000\n", "func_name": "el_mayor", "stack_to_render": [{"frame_id": 3, "encoded_locals": {"num1": 0, "num2": 1}, "is_highlighted": false, "is_parent": false, "func_name": "cubo_del_mayor", "is_zombie": false, "parent_frame_id_list": [], "unique_hash": "cubo_del_mayor_f3", "ordered_varnames": ["num1", "num2"]}, {"frame_id": 4, "encoded_locals": {"a": 0, "__return__": 1, "b": 1}, "is_highlighted": true, "is_parent": false, "func_name": "el_mayor", "is_zombie": false, "parent_frame_id_list": [], "unique_hash": "el_mayor_f4", "ordered_varnames": ["a", "b", "__return__"]}], "globals": {"cubo_del_mayor": ["REF", 2], "el_mayor": ["REF", 1]}, "heap": {"1": ["FUNCTION", "el_mayor(a, b)", null], "2": ["FUNCTION", "cubo_del_mayor(num1, num2)", null]}, "line": 7, "event": "return"}, {"ordered_globals": ["el_mayor", "cubo_del_mayor"], "stdout": "1000\n", "func_name": "cubo_del_mayor", "stack_to_render": [{"frame_id": 3, "encoded_locals": {"mi_mayor": 1, "num1": 0, "num2": 1}, "is_highlighted": true, "is_parent": false, "func_name": "cubo_del_mayor", "is_zombie": false, "parent_frame_id_list": [], "unique_hash": "cubo_del_mayor_f3", "ordered_varnames": ["num1", "num2", "mi_mayor"]}], "globals": {"cubo_del_mayor": ["REF", 2], "el_mayor": ["REF", 1]}, "heap": {"1": ["FUNCTION", "el_mayor(a, b)", null], "2": ["FUNCTION", "cubo_del_mayor(num1, num2)", null]}, "line": 12, "event": "step_line"}, {"ordered_globals": ["el_mayor", "cubo_del_mayor"], "stdout": "1000\n", "func_name": "cubo_del_mayor", "stack_to_render": [{"frame_id": 3, "encoded_locals": {"__return__": 1, "mi_mayor": 1, "num1": 0, "num2": 1}, "is_highlighted": true, "is_parent": false, "func_name": "cubo_del_mayor", "is_zombie": false, "parent_frame_id_list": [], "unique_hash": "cubo_del_mayor_f3", "ordered_varnames": ["num1", "num2", "mi_mayor", "__return__"]}], "globals": {"cubo_del_mayor": ["REF", 2], "el_mayor": ["REF", 1]}, "heap": {"1": ["FUNCTION", "el_mayor(a, b)", null], "2": ["FUNCTION", "cubo_del_mayor(num1, num2)", null]}, "line": 12, "event": "return"}, {"ordered_globals": ["el_mayor", "cubo_del_mayor"], "stdout": "1000\n1\n", "func_name": "<module>", "stack_to_render": [], "globals": {"cubo_del_mayor": ["REF", 2], "el_mayor": ["REF", 1]}, "heap": {"1": ["FUNCTION", "el_mayor(a, b)", null], "2": ["FUNCTION", "cubo_del_mayor(num1, num2)", null]}, "line": 15, "event": "return"}]};
+var cubo_del_mayor_vis;
 
-<br/>
-<div id="cubo_del_mayor_code_div" style="display: block">
-<textarea cols="50" rows="12" id="cubo_del_mayor_code" class="active_code", prefixcode="undefined" lang="python">
-# Funcion para encontrar el mayor  de dos numeros
-# Nota: Para usar una funcion, priemro tiene que estar definida
-def el_mayor(a,b):
-    if a > b:
-        return a
-    else:
-        return b
+$(document).ready(function() {
+    cubo_del_mayor_vis = new ExecutionVisualizer('cubo_del_mayor',cubo_del_mayor_trace,
+                                {embeddedMode: true,
+                                verticalStack: true,
+                                heightChangeCallback: redrawAllVisualizerArrows,
+                                codeDivWidth: 500
+                                });
+    attachLoggers(cubo_del_mayor_vis,'cubo_del_mayor');
+    allVisualizers.push(cubo_del_mayor_vis);
 
-# Funcion para encontrar el cubo del mayor de los dos numeros
-def cubo_del_mayor(num1,num2):
-    mi_mayor = el_mayor(num1,num2)          # Use la fun. el_mayor()!
-    return (mi_mayor * mi_mayor * mi_mayor) # regrese el cubo del mayor
+});
 
-print(cubo_del_mayor(5,10)) # 1000
-print(cubo_del_mayor(0,1))  # 1
-</textarea>
-</div>
-<p class="ac_caption"><span class="ac_caption_text"> (cubo_del_mayor)</span> </p>
+$(document).ready(function() {
+    $("#cubo_del_mayor_tracecheck").click(function() {
+        logBookEvent({'event':'codelens', 'act': 'check', 'div_id':'cubo_del_mayor'});
+    });
+});
 
-<button class='btn btn-success' id="cubo_del_mayor_runb" onclick="runit('cubo_del_mayor',this, undefined);">Run</button>
-
-<div id="cont"></div>
-
-<button class="ac_opt btn btn-default" style="display: inline-block" id="cubo_del_mayor_saveb" onclick="saveEditor('cubo_del_mayor');">Save</button>
-<button class="ac_opt btn btn-default" style="display: inline-block" id="cubo_del_mayor_loadb" onclick="requestCode('cubo_del_mayor');">Load</button>
-
-<script>
-if ('block' == 'none') {
-    // a hack to preserve the inline-block display style. Toggle() will use display: block
-    // (instead of inline-block) if the previous display style was 'none'
-    $('#cubo_del_mayor_saveb').toggle();
-    $('#cubo_del_mayor_loadb').toggle();
+if (allVisualizers === undefined) {
+   var allVisualizers = [];
 }
+
+
+$(window).resize(function() {
+    cubo_del_mayor_vis.redrawConnectors();
+});
 </script>
-
-
-<div style="text-align: center">
-<canvas id="cubo_del_mayor_canvas" class="ac-canvas" height="400" width="400" style="border-style: solid; display: none; text-align: center"></canvas>
-</div>
-<pre id="cubo_del_mayor_suffix" style="display:none">
-</pre>
-<pre id="cubo_del_mayor_pre" class="active_out">
-
-</pre>
-
-
-</div>
-
-<p>Si quiere practicar, implemente una función <tt class="docutils literal"><span class="pre">el_menor()</span></tt> y otra <tt class="docutils literal"><span class="pre">cubo_del_menor()</span></tt>. Lo importante es ver que las funciones son muy importantes a la hora de reusar código. A la vez que usted define una función, puede usarla cuantas veces sea necesario.</p>
+<p>Para practicar, implemente una función <tt class="docutils literal"><span class="pre">el_menor()</span></tt> y otra <tt class="docutils literal"><span class="pre">cubo_del_menor()</span></tt> que hace lo mismo pero para el número menor. Lo importante es ver que las funciones son muy importantes a la hora de reusar código. A la vez que usted define una función, puede usarla cuantas veces sea necesario.</p>
 <p><strong>Tablas de Veracidad de los operadores lógicos</strong></p>
 <p>Para este laboratorio, implementaremos los operadores lógicos. Para esto, necesita conocer las tablas de veracidad. En otras palabras cuando es cierto y cuando es falso. En la figura siguiente, estan dichas tablas. La &#8220;n&#8221; quiere decir negación de. La tabla de <tt class="docutils literal"><span class="pre">nxor</span></tt> es la negación de la tabla (ultima columna) de <tt class="docutils literal"><span class="pre">xor</span></tt>.</p>
 <div class="figure align-center">
@@ -531,26 +511,28 @@ if ('block' == 'none') {
 </div>
 <div class="section" id="lab-creando-los-operadores-logicos">
 <h2>Lab: Creando los operadores lógicos<a class="headerlink" href="#lab-creando-los-operadores-logicos" title="Permalink to this headline">¶</a></h2>
-<p>En este laboratorio, crearán funciones para simular los operadores lógicos que ya estan en Python y otros circuitos. Usted implementará una función por cada circuito: <tt class="docutils literal"><span class="pre">and</span></tt>, <tt class="docutils literal"><span class="pre">or</span></tt>, <tt class="docutils literal"><span class="pre">not</span></tt>, <tt class="docutils literal"><span class="pre">nand</span></tt>, <tt class="docutils literal"><span class="pre">nor</span></tt>,``xor`` y <tt class="docutils literal"><span class="pre">nxor</span></tt>. <strong>Importante:</strong> NO puede utilizar los operadores <tt class="docutils literal"><span class="pre">and</span></tt>, <tt class="docutils literal"><span class="pre">or</span></tt> ni <tt class="docutils literal"><span class="pre">not</span></tt> de Python, solo debe usar sus funciones (dentro de otras) para que sea mas fácil crear sus funciones. El código para el <tt class="docutils literal"><span class="pre">and</span></tt> ya esta implementado, lean el código y simplemente usen la función para construir otros operadores. El último detalle es que recibirán dos parametros, ambos booleanos. (excepto por <em>not</em> que solo recibe un booleano) que seran strings. Use comentarios en las funciones. En el espacio provisto, se verifica si ls funciones estan implementadas correctamente (Todavia TODO).</p>
+<p>En este laboratorio, crearán funciones para simular los operadores lógicos que ya estan en Python y otros circuitos. Usted implementará una función por cada circuito: <tt class="docutils literal"><span class="pre">and</span></tt>, <tt class="docutils literal"><span class="pre">or</span></tt>, <tt class="docutils literal"><span class="pre">not</span></tt>, <tt class="docutils literal"><span class="pre">nand</span></tt>, <tt class="docutils literal"><span class="pre">nor</span></tt>,``xor`` y <tt class="docutils literal"><span class="pre">nxor</span></tt>. <strong>Importante:</strong> NO puede utilizar los operadores <tt class="docutils literal"><span class="pre">and</span></tt>, <tt class="docutils literal"><span class="pre">or</span></tt> ni <tt class="docutils literal"><span class="pre">not</span></tt> de Python, solo debe usar sus funciones (dentro de otras) para que sea mas fácil crear sus funciones. El código para el <tt class="docutils literal"><span class="pre">and</span></tt> ya esta implementado, lean el código y simplemente usen la función para construir otros operadores. Tambien, se da el esqueleto de cada función donde usted debe llenar el código correspondiente. El último detalle es que recibirán dos parametros, ambos booleanos. (excepto por <em>not</em> que solo recibe un booleano). En el espacio provisto, se verifica si las funciones estan implementadas correctamente. Como AND esta implementado, al correr el programa saldrá cuatro veces &#8220;Pass&#8221;. Mientras siga implementando las demas funciones, pasará mas pruebas. Cuando diga &#8220;Pass&#8221; para todas las pruebas, habrá completado el laboratorio.</p>
 <p>En especifico, para el laboratorio:</p>
 <blockquote>
 <div><ol class="arabic simple">
-<li>Creara una función, por cada circuito: <tt class="docutils literal"><span class="pre">and</span></tt>, <tt class="docutils literal"><span class="pre">or</span></tt>, <tt class="docutils literal"><span class="pre">not</span></tt>, <tt class="docutils literal"><span class="pre">nand</span></tt>, <tt class="docutils literal"><span class="pre">nor</span></tt>, <tt class="docutils literal"><span class="pre">xor</span></tt> y <tt class="docutils literal"><span class="pre">nxor</span></tt> (programación modular).</li>
+<li>Creará una función, por cada circuito: <tt class="docutils literal"><span class="pre">and</span></tt>, <tt class="docutils literal"><span class="pre">or</span></tt>, <tt class="docutils literal"><span class="pre">not</span></tt>, <tt class="docutils literal"><span class="pre">nand</span></tt>, <tt class="docutils literal"><span class="pre">nor</span></tt>, <tt class="docutils literal"><span class="pre">xor</span></tt> y <tt class="docutils literal"><span class="pre">nxor</span></tt> (programación modular).</li>
 <li>Todas las funciones reciben dos parametros (solo not recibe un solo parametro). Cada parametro es un booleano (True o False). (Mire la función <tt class="docutils literal"><span class="pre">AND</span></tt> dada).</li>
 <li>Todos los nombres de las funciones tienen que ser con mayúscula (AND, OR, NOT, etc...).</li>
 <li>Utlize solo las funciones que cree para usarlas en otras funciones cuando vea la oportunidad. Por ejemplo, ya que se le provee <tt class="docutils literal"><span class="pre">AND</span></tt>, implemente <tt class="docutils literal"><span class="pre">NOT</span></tt>. Luego Usando estas dos funciones puede implementar <tt class="docutils literal"><span class="pre">NAND</span></tt>. Cuando construya <tt class="docutils literal"><span class="pre">OR</span></tt>, use <tt class="docutils literal"><span class="pre">NOT</span></tt> para obtener <tt class="docutils literal"><span class="pre">NOR</span></tt>.</li>
 <li>El <tt class="docutils literal"><span class="pre">NAND</span></tt> es un circuito universal, esto quiere decir que con NAND se puede construir los otros circuitos. Utilice esta idea para <tt class="docutils literal"><span class="pre">OR</span></tt>.</li>
 <li>Piense como puede implementar <tt class="docutils literal"><span class="pre">XOR</span></tt> en terminos de otras funciones.</li>
+<li>Para tener todo correcto, debe pasar todas las pruebas.</li>
 </ol>
+</div></blockquote>
+<p>Utilice el siguiente espacio para codificar su laboratorio (se verifican si las funciones estan bien!):</p>
 
-<div id="Laboratorio" lang="python" >
+<div id="units1" lang="python" >
 
 <br/>
-<div id="Laboratorio_code_div" style="display: block">
-<textarea cols="50" rows="12" id="Laboratorio_code" class="active_code", prefixcode="undefined" lang="python">
-# operador AND. Recibe dos string
-# ej. a = True, b = False
-# devuelve falso.
+<div id="units1_code_div" style="display: block">
+<textarea cols="50" rows="12" id="units1_code" class="active_code", prefixcode="undefined" lang="python">
+# operador AND.
+# ej. a = True, b = False devolvera falso
 def AND (a,b):
     if a:               # es lo mismo que a == True
         if b:           # Nested if: Si a es cierto y b es cierto
@@ -560,46 +542,106 @@ def AND (a,b):
     else:
         return False    # x no es cierto, no importa si
                         # y es cierto, regresa falso.
-#Ejemplo de como llamar AND
-print(AND(True,True))   # Cierto
 
-# Implemente las otras funciones
-# Sugerencia: empiece por NOT luego NAND, etc.
+
+# Implemente los siguientes circuitos
+# escriba el codigo para cada funcion (identado!)
+def NOT(a):
+    return None
+
+def NAND(a,b):
+    return None
+
+def OR(a,b):
+    return None
+
+def NOR(a,b):
+    return None
+
+def XOR(a,b):
+    return None
+
+def NXOR(a,b):
+    return None
+
 </textarea>
 </div>
-<p class="ac_caption"><span class="ac_caption_text"> (Laboratorio)</span> </p>
+<p class="ac_caption"><span class="ac_caption_text"> (units1)</span> </p>
 
-<button class='btn btn-success' id="Laboratorio_runb" onclick="runit('Laboratorio',this, undefined);">Run</button>
+<button class='btn btn-success' id="units1_runb" onclick="runit('units1',this, undefined);">Run</button>
 
 <div id="cont"></div>
 
-<button class="ac_opt btn btn-default" style="display: inline-block" id="Laboratorio_saveb" onclick="saveEditor('Laboratorio');">Save</button>
-<button class="ac_opt btn btn-default" style="display: inline-block" id="Laboratorio_loadb" onclick="requestCode('Laboratorio');">Load</button>
+<button class="ac_opt btn btn-default" style="display: inline-block" id="units1_saveb" onclick="saveEditor('units1');">Save</button>
+<button class="ac_opt btn btn-default" style="display: inline-block" id="units1_loadb" onclick="requestCode('units1');">Load</button>
 
 <script>
 if ('block' == 'none') {
     // a hack to preserve the inline-block display style. Toggle() will use display: block
     // (instead of inline-block) if the previous display style was 'none'
-    $('#Laboratorio_saveb').toggle();
-    $('#Laboratorio_loadb').toggle();
+    $('#units1_saveb').toggle();
+    $('#units1_loadb').toggle();
 }
 </script>
 
 
 <div style="text-align: center">
-<canvas id="Laboratorio_canvas" class="ac-canvas" height="400" width="400" style="border-style: solid; display: none; text-align: center"></canvas>
+<canvas id="units1_canvas" class="ac-canvas" height="400" width="400" style="border-style: solid; display: none; text-align: center"></canvas>
 </div>
-<pre id="Laboratorio_suffix" style="display:none">
-</pre>
-<pre id="Laboratorio_pre" class="active_out">
+<pre id="units1_suffix" style="display:none">import unittestgui
+
+class myTests(unittestgui.unittest):
+    # Cannot use assertFalse() is broken
+    def testAND(self): #AND
+        self.assertTrue(AND(True,True),"NAND() fallo con argumentos True, True")
+        self.assertEqual(AND(True,False),False,"AND() fallo con argumentos True, False")
+        self.assertEqual(AND(False,True),False,"AND() fallo con argumentos False, True")
+        self.assertEqual(AND(False,False),False,"AND() fallo con argumentos False, False")
+
+    def testNOT(self): #NOT
+        self.assertEqual(NOT(True),False,"NOT() fallo con argumento True")
+        self.assertTrue(NOT(False),"NOT() fallo con argumento False")
+
+    def testNAND(self): #NAND
+        self.assertEqual(NAND(True,True),False,"NAND() fallo con argumentos True, True")
+        self.assertTrue(NAND(True,False),"NAND() fallo con argumentos True, False")
+        self.assertTrue(NAND(False,True),"NAND() fallo con argumentos False, True")
+        self.assertTrue(NAND(False,False),"NAND() fallo con argumentos False, False")
+
+    def testOR(self): #OR
+        self.assertTrue(OR(True,True),"OR() fallo con argumentos True, True")
+        self.assertTrue(OR(True,False),"OR() fallo con argumentos True, False")
+        self.assertTrue(OR(False,True),"OR() fallo con argumentos False, True")
+        self.assertEqual(OR(False,False),False,"OR() fallo con argumentos False, False")
+
+    def testNOR(self): #NOR
+        self.assertEqual(NOR(True,True),False,"NOR() fallo con argumentos True, True")
+        self.assertEqual(NOR(True,False),False,"NOR() fallo con argumentos True, False")
+        self.assertEqual(NOR(False,True),False,"NOR() fallo con argumentos False, True")
+        self.assertTrue(NOR(False,False),"NOR() fallo con argumentos False, False")
+
+    def testXOR(self): #XOR
+        self.assertEqual(XOR(True,True),False,"XOR() fallo con argumentos True, True")
+        self.assertTrue(XOR(True,False),"XOR() fallo con argumentos True, False")
+        self.assertTrue(XOR(False,True),"XOR() fallo con argumentos False, True")
+        self.assertEqual(XOR(False,False),False,"XOR() fallo con argumentos False, False")
+
+    def testNXOR(self): #NXOR
+        self.assertTrue(NXOR(True,True),"NXOR() fallo con argumentos True, True")
+        self.assertEqual(NXOR(True,False),False,"NXOR() fallo con argumentos True, False")
+        self.assertEqual(NXOR(False,True),False,"NXOR() fallo con argumentos False, True")
+        self.assertTrue(NXOR(False,False),"NXOR() fallo con argumentos False, False")
+
+myTests().main()</pre>
+<pre id="units1_pre" class="active_out">
 
 </pre>
 
 
 </div>
 
-</div></blockquote>
-<p><strong>Para Entregar</strong>: Luego de terminar su laboratorio, haga &#8220;copy/paste&#8221; de su código en un file. Incluya el template como el profesor discutió en clase. Guarde el file con el nombre <em>lab3.py</em>. Ingrese a la clase registrada en <a class="reference external" href="http://moodle.ccom.uprrp.edu/">moodle</a> y haga &#8220;upload&#8221; de su file en el tab correspondiente. Luego de entregar el lab, favor de llenar este cuestionario. De surgir alguna duda con respecto al lab, puede enviar preguntas a <a class="reference external" href="https://piazza.com/class/i5szw5xlczl2du">Piazza</a>.</p>
+<p><em>Nota:</em> Si borra la definición de las funciones dadas, la consola dará un &#8220;Type Error&#8221; porque no tiene contra que verificar.</p>
+<p><strong>Para Entregar</strong>: Luego de terminar su laboratorio, haga &#8220;copy/paste&#8221; de su código en un file. Incluya el template como el profesor discutió en clase. Guarde el file con el nombre <em>lab3.py</em>. Ingrese a la clase registrada en <a class="reference external" href="http://moodle.ccom.uprrp.edu/">moodle</a> y haga &#8220;upload&#8221; de su file en el tab correspondiente. Luego de entregar el lab, favor de llenar este <a class="reference external" href="http://goo.gl/forms/c9QlfZIYsg">cuestionario</a>. De surgir alguna duda con respecto al lab, puede enviar preguntas a <a class="reference external" href="https://piazza.com/class/i5szw5xlczl2du">Piazza</a>.</p>
 <p><strong>Fecha de Entrega:</strong> Viernes 20 de marzo del 2015, antes de las 11:55pm en moodle.</p>
 <p><strong>Científico del día</strong>: <em>Von Neummann</em>. Matemático húngaro-estadounidense que hizo contribuciones en muchas ramas ( teoría de conjuntos, teoría de juegos, ciencias de la computación, economía, etc.). Inventó el concepto de ariqutectura de Von Neumann, la cual es usada actualmente en las computadoras - Un CPU con un ALU y un Control, Memoria Principal, y sistemas de entrada y salida. Se le atribuye la invención del algoritmo Merge Sort. Es considerado como uno de los más importantes matemáticos de la historia moderna. Puede leer más en <a class="reference external" href="http://es.wikipedia.org/wiki/Arquitectura_de_von_Neumann">Wikipedia</a>.</p>
 </div>
