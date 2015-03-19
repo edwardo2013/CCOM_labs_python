@@ -165,7 +165,7 @@ Para este laboratorio, implementaremos los operadores lógicos. Para esto, neces
 Lab: Creando los operadores lógicos  
 -----------------------------------
 
-En este laboratorio, crearán funciones para simular los operadores lógicos que ya estan en Python y otros circuitos. Usted implementará una función por cada circuito: ``and``, ``or``, ``not``, ``nand``, ``nor``,``xor`` y ``nxor``. **Importante:** NO puede utilizar los operadores ``and``, ``or`` ni tampoco ``not`` de Python, solo puede usar sus funciones (dentro de otras) para que sea mas fácil crear sus funciones. 
+En este laboratorio, crearán funciones para simular los operadores lógicos que ya estan en Python y otros circuitos. Usted implementará una función por cada circuito: ``and``, ``or``, ``not``, ``nand``, ``nor``, ``xor`` y ``nxor``. **Importante:** NO puede utilizar los operadores ``and``, ``or`` ni tampoco ``not`` de Python, solo puede usar sus funciones (dentro de otras) para que sea mas fácil crear sus funciones. 
 
 El código para el ``and`` ya esta implementado, lean el código y simplemente usen la función para construir otros operadores. Tambien, se provee el esqueleto de cada función donde usted debe llenar el código correspondiente. El último detalle es que recibirán dos parametros, ambos booleanos (excepto por *not* que solo recibe un booleano) y devuelve un Booleano. La palabra reservada ``None`` significa "nada". Por ende debe cambiar esto en todas las funciones (no lo borre hasta que implemente completo su función, se usa para las pruebas que hace el código). 
 
