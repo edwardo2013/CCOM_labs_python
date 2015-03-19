@@ -511,20 +511,22 @@ $(window).resize(function() {
 </div>
 <div class="section" id="lab-creando-los-operadores-logicos">
 <h2>Lab: Creando los operadores lógicos<a class="headerlink" href="#lab-creando-los-operadores-logicos" title="Permalink to this headline">¶</a></h2>
-<p>En este laboratorio, crearán funciones para simular los operadores lógicos que ya estan en Python y otros circuitos. Usted implementará una función por cada circuito: <tt class="docutils literal"><span class="pre">and</span></tt>, <tt class="docutils literal"><span class="pre">or</span></tt>, <tt class="docutils literal"><span class="pre">not</span></tt>, <tt class="docutils literal"><span class="pre">nand</span></tt>, <tt class="docutils literal"><span class="pre">nor</span></tt>,``xor`` y <tt class="docutils literal"><span class="pre">nxor</span></tt>. <strong>Importante:</strong> NO puede utilizar los operadores <tt class="docutils literal"><span class="pre">and</span></tt>, <tt class="docutils literal"><span class="pre">or</span></tt> ni <tt class="docutils literal"><span class="pre">not</span></tt> de Python, solo debe usar sus funciones (dentro de otras) para que sea mas fácil crear sus funciones. El código para el <tt class="docutils literal"><span class="pre">and</span></tt> ya esta implementado, lean el código y simplemente usen la función para construir otros operadores. Tambien, se da el esqueleto de cada función donde usted debe llenar el código correspondiente. El último detalle es que recibirán dos parametros, ambos booleanos. (excepto por <em>not</em> que solo recibe un booleano). En el espacio provisto, se verifica si las funciones estan implementadas correctamente. Como AND esta implementado, al correr el programa saldrá cuatro veces &#8220;Pass&#8221;. Mientras siga implementando las demas funciones, pasará mas pruebas. Cuando diga &#8220;Pass&#8221; para todas las pruebas, habrá completado el laboratorio.</p>
+<p>En este laboratorio, crearán funciones para simular los operadores lógicos que ya estan en Python y otros circuitos. Usted implementará una función por cada circuito: <tt class="docutils literal"><span class="pre">and</span></tt>, <tt class="docutils literal"><span class="pre">or</span></tt>, <tt class="docutils literal"><span class="pre">not</span></tt>, <tt class="docutils literal"><span class="pre">nand</span></tt>, <tt class="docutils literal"><span class="pre">nor</span></tt>,``xor`` y <tt class="docutils literal"><span class="pre">nxor</span></tt>. <strong>Importante:</strong> NO puede utilizar los operadores <tt class="docutils literal"><span class="pre">and</span></tt>, <tt class="docutils literal"><span class="pre">or</span></tt> ni tampoco <tt class="docutils literal"><span class="pre">not</span></tt> de Python, solo puede usar sus funciones (dentro de otras) para que sea mas fácil crear sus funciones.</p>
+<p>El código para el <tt class="docutils literal"><span class="pre">and</span></tt> ya esta implementado, lean el código y simplemente usen la función para construir otros operadores. Tambien, se provee el esqueleto de cada función donde usted debe llenar el código correspondiente. El último detalle es que recibirán dos parametros, ambos booleanos (excepto por <em>not</em> que solo recibe un booleano) y devuelve un Booleano. La palabra reservada <tt class="docutils literal"><span class="pre">None</span></tt> significa &#8220;nada&#8221;. Por ende debe cambiar esto en todas las funciones (no lo borre hasta que implemente completo su función, se usa para las pruebas que hace el código).</p>
+<p>En el espacio provisto, se verifica si las funciones estan implementadas correctamente. Como AND esta implementado, al correr el programa saldrá cuatro veces &#8220;Pass&#8221;. Mientras siga implementando las demas funciones, pasará mas pruebas. Cuando diga &#8220;Pass&#8221; para todas las pruebas, habrá completado el laboratorio.</p>
 <p>En especifico, para el laboratorio:</p>
 <blockquote>
 <div><ol class="arabic simple">
 <li>Creará una función, por cada circuito: <tt class="docutils literal"><span class="pre">and</span></tt>, <tt class="docutils literal"><span class="pre">or</span></tt>, <tt class="docutils literal"><span class="pre">not</span></tt>, <tt class="docutils literal"><span class="pre">nand</span></tt>, <tt class="docutils literal"><span class="pre">nor</span></tt>, <tt class="docutils literal"><span class="pre">xor</span></tt> y <tt class="docutils literal"><span class="pre">nxor</span></tt> (programación modular).</li>
-<li>Todas las funciones reciben dos parametros (solo not recibe un solo parametro). Cada parametro es un booleano (True o False). (Mire la función <tt class="docutils literal"><span class="pre">AND</span></tt> dada).</li>
+<li>Todas las funciones reciben dos parametros (solo not recibe un solo parametro). Cada parametro es un booleano (True o False). (Mire la función <tt class="docutils literal"><span class="pre">AND</span></tt> dada). NO PUEDE USAR el <em>and, or, not</em> que provee Python para ninguna función.</li>
 <li>Todos los nombres de las funciones tienen que ser con mayúscula (AND, OR, NOT, etc...).</li>
-<li>Utlize solo las funciones que cree para usarlas en otras funciones cuando vea la oportunidad. Por ejemplo, ya que se le provee <tt class="docutils literal"><span class="pre">AND</span></tt>, implemente <tt class="docutils literal"><span class="pre">NOT</span></tt>. Luego Usando estas dos funciones puede implementar <tt class="docutils literal"><span class="pre">NAND</span></tt>. Cuando construya <tt class="docutils literal"><span class="pre">OR</span></tt>, use <tt class="docutils literal"><span class="pre">NOT</span></tt> para obtener <tt class="docutils literal"><span class="pre">NOR</span></tt>.</li>
-<li>El <tt class="docutils literal"><span class="pre">NAND</span></tt> es un circuito universal, esto quiere decir que con NAND se puede construir los otros circuitos. Utilice esta idea para <tt class="docutils literal"><span class="pre">OR</span></tt>.</li>
-<li>Piense como puede implementar <tt class="docutils literal"><span class="pre">XOR</span></tt> en terminos de otras funciones.</li>
+<li>Se recomienda que use las funciones que cree para usarlas en otras funciones cuando vea la oportunidad. Por ejemplo, ya que se le provee <tt class="docutils literal"><span class="pre">AND</span></tt>, implemente <tt class="docutils literal"><span class="pre">NOT</span></tt>. Luego, usando estas dos funciones puede implementar <tt class="docutils literal"><span class="pre">NAND</span></tt>. Cuando construya <tt class="docutils literal"><span class="pre">OR</span></tt>, use <tt class="docutils literal"><span class="pre">NOT</span></tt> para obtener <tt class="docutils literal"><span class="pre">NOR</span></tt>.</li>
+<li>El <tt class="docutils literal"><span class="pre">NAND</span></tt> es un circuito universal, esto quiere decir que con NAND se puede construir los otros circuitos. Utilice esta idea para <tt class="docutils literal"><span class="pre">OR</span></tt>. Tambien puede implementarlo de una manera similar al <tt class="docutils literal"><span class="pre">AND</span></tt> dado.</li>
+<li>Piense como puede implementar <tt class="docutils literal"><span class="pre">XOR</span></tt> en terminos de otras funciones. Tambien puede implementarlo de una manera similar al <tt class="docutils literal"><span class="pre">AND</span></tt> dado.</li>
 <li>Para tener todo correcto, debe pasar todas las pruebas.</li>
 </ol>
 </div></blockquote>
-<p>Utilice el siguiente espacio para codificar su laboratorio (se verifican si las funciones estan bien!):</p>
+<p>Utilice el siguiente espacio para codificar su laboratorio (se verifican si las funciones estan bien):</p>
 
 <div id="units1" lang="python" >
 
@@ -538,10 +540,10 @@ def AND (a,b):
         if b:           # Nested if: Si a es cierto y b es cierto
             return True # Regresa Cierto
         else:
-            return False# Solo x es cierto, regresa Falso
+            return False# Solo a es cierto, regresa Falso
     else:
-        return False    # x no es cierto, no importa si
-                        # y es cierto, regresa falso.
+        return False    # a no es cierto, no importa si
+                        # b es cierto, regresa falso.
 
 
 # Implemente los siguientes circuitos
@@ -640,7 +642,7 @@ myTests().main()</pre>
 
 </div>
 
-<p><em>Nota:</em> Si borra la definición de las funciones dadas, la consola dará un &#8220;Type Error&#8221; porque no tiene contra que verificar.</p>
+<p><em>Nota:</em> Si borra la definición de las funciones dadas, la consola dará un &#8220;Type Error&#8221; porque no tiene como verificar las pruebas de las funciones.</p>
 <p><strong>Para Entregar</strong>: Luego de terminar su laboratorio, haga &#8220;copy/paste&#8221; de su código en un file. Incluya el template como el profesor discutió en clase. Guarde el file con el nombre <em>lab3.py</em>. Ingrese a la clase registrada en <a class="reference external" href="http://moodle.ccom.uprrp.edu/">moodle</a> y haga &#8220;upload&#8221; de su file en el tab correspondiente. Luego de entregar el lab, favor de llenar este <a class="reference external" href="http://goo.gl/forms/c9QlfZIYsg">cuestionario</a>. De surgir alguna duda con respecto al lab, puede enviar preguntas a <a class="reference external" href="https://piazza.com/class/i5szw5xlczl2du">Piazza</a>.</p>
 <p><strong>Fecha de Entrega:</strong> Viernes 20 de marzo del 2015, antes de las 11:55pm en moodle.</p>
 <p><strong>Científico del día</strong>: <em>Von Neummann</em>. Matemático húngaro-estadounidense que hizo contribuciones en muchas ramas ( teoría de conjuntos, teoría de juegos, ciencias de la computación, economía, etc.). Inventó el concepto de ariqutectura de Von Neumann, la cual es usada actualmente en las computadoras - Un CPU con un ALU y un Control, Memoria Principal, y sistemas de entrada y salida. Se le atribuye la invención del algoritmo Merge Sort. Es considerado como uno de los más importantes matemáticos de la historia moderna. Puede leer más en <a class="reference external" href="http://es.wikipedia.org/wiki/Arquitectura_de_von_Neumann">Wikipedia</a>.</p>

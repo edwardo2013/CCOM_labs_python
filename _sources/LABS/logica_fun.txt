@@ -165,19 +165,23 @@ Para este laboratorio, implementaremos los operadores lógicos. Para esto, neces
 Lab: Creando los operadores lógicos  
 -----------------------------------
 
-En este laboratorio, crearán funciones para simular los operadores lógicos que ya estan en Python y otros circuitos. Usted implementará una función por cada circuito: ``and``, ``or``, ``not``, ``nand``, ``nor``,``xor`` y ``nxor``. **Importante:** NO puede utilizar los operadores ``and``, ``or`` ni ``not`` de Python, solo debe usar sus funciones (dentro de otras) para que sea mas fácil crear sus funciones. El código para el ``and`` ya esta implementado, lean el código y simplemente usen la función para construir otros operadores. Tambien, se da el esqueleto de cada función donde usted debe llenar el código correspondiente. El último detalle es que recibirán dos parametros, ambos booleanos. (excepto por *not* que solo recibe un booleano). En el espacio provisto, se verifica si las funciones estan implementadas correctamente. Como AND esta implementado, al correr el programa saldrá cuatro veces "Pass". Mientras siga implementando las demas funciones, pasará mas pruebas. Cuando diga "Pass" para todas las pruebas, habrá completado el laboratorio. 
+En este laboratorio, crearán funciones para simular los operadores lógicos que ya estan en Python y otros circuitos. Usted implementará una función por cada circuito: ``and``, ``or``, ``not``, ``nand``, ``nor``,``xor`` y ``nxor``. **Importante:** NO puede utilizar los operadores ``and``, ``or`` ni tampoco ``not`` de Python, solo puede usar sus funciones (dentro de otras) para que sea mas fácil crear sus funciones. 
+
+El código para el ``and`` ya esta implementado, lean el código y simplemente usen la función para construir otros operadores. Tambien, se provee el esqueleto de cada función donde usted debe llenar el código correspondiente. El último detalle es que recibirán dos parametros, ambos booleanos (excepto por *not* que solo recibe un booleano) y devuelve un Booleano. La palabra reservada ``None`` significa "nada". Por ende debe cambiar esto en todas las funciones (no lo borre hasta que implemente completo su función, se usa para las pruebas que hace el código). 
+
+En el espacio provisto, se verifica si las funciones estan implementadas correctamente. Como AND esta implementado, al correr el programa saldrá cuatro veces "Pass". Mientras siga implementando las demas funciones, pasará mas pruebas. Cuando diga "Pass" para todas las pruebas, habrá completado el laboratorio. 
 
 En especifico, para el laboratorio:
 
     1. Creará una función, por cada circuito: ``and``, ``or``, ``not``, ``nand``, ``nor``, ``xor`` y ``nxor`` (programación modular). 
-    2. Todas las funciones reciben dos parametros (solo not recibe un solo parametro). Cada parametro es un booleano (True o False). (Mire la función ``AND`` dada). 
+    2. Todas las funciones reciben dos parametros (solo not recibe un solo parametro). Cada parametro es un booleano (True o False). (Mire la función ``AND`` dada). NO PUEDE USAR el *and, or, not* que provee Python para ninguna función.
     3. Todos los nombres de las funciones tienen que ser con mayúscula (AND, OR, NOT, etc...). 
-    4. Utlize solo las funciones que cree para usarlas en otras funciones cuando vea la oportunidad. Por ejemplo, ya que se le provee ``AND``, implemente ``NOT``. Luego Usando estas dos funciones puede implementar ``NAND``. Cuando construya ``OR``, use ``NOT`` para obtener ``NOR``.
-    5. El ``NAND`` es un circuito universal, esto quiere decir que con NAND se puede construir los otros circuitos. Utilice esta idea para ``OR``.
-    6. Piense como puede implementar ``XOR`` en terminos de otras funciones.
+    4. Se recomienda que use las funciones que cree para usarlas en otras funciones cuando vea la oportunidad. Por ejemplo, ya que se le provee ``AND``, implemente ``NOT``. Luego, usando estas dos funciones puede implementar ``NAND``. Cuando construya ``OR``, use ``NOT`` para obtener ``NOR``.
+    5. El ``NAND`` es un circuito universal, esto quiere decir que con NAND se puede construir los otros circuitos. Utilice esta idea para ``OR``. Tambien puede implementarlo de una manera similar al ``AND`` dado.
+    6. Piense como puede implementar ``XOR`` en terminos de otras funciones. Tambien puede implementarlo de una manera similar al ``AND`` dado.
     7. Para tener todo correcto, debe pasar todas las pruebas. 
 
-Utilice el siguiente espacio para codificar su laboratorio (se verifican si las funciones estan bien!):
+Utilice el siguiente espacio para codificar su laboratorio (se verifican si las funciones estan bien):
 
 .. activecode:: units1
 
@@ -188,10 +192,10 @@ Utilice el siguiente espacio para codificar su laboratorio (se verifican si las 
             if b:           # Nested if: Si a es cierto y b es cierto
                 return True # Regresa Cierto
             else:
-                return False# Solo x es cierto, regresa Falso
+                return False# Solo a es cierto, regresa Falso
         else:
-            return False    # x no es cierto, no importa si 
-                            # y es cierto, regresa falso.
+            return False    # a no es cierto, no importa si 
+                            # b es cierto, regresa falso.
                             
 
     # Implemente los siguientes circuitos
@@ -261,7 +265,7 @@ Utilice el siguiente espacio para codificar su laboratorio (se verifican si las 
          
     myTests().main()
 
-*Nota:* Si borra la definición de las funciones dadas, la consola dará un "Type Error" porque no tiene contra que verificar.
+*Nota:* Si borra la definición de las funciones dadas, la consola dará un "Type Error" porque no tiene como verificar las pruebas de las funciones.
 
 **Para Entregar**: Luego de terminar su laboratorio, haga "copy/paste" de su código en un file. Incluya el template como el profesor discutió en clase. Guarde el file con el nombre *lab3.py*. Ingrese a la clase registrada en `moodle <http://moodle.ccom.uprrp.edu/>`_ y haga "upload" de su file en el tab correspondiente. Luego de entregar el lab, favor de llenar este `cuestionario <http://goo.gl/forms/c9QlfZIYsg>`_. De surgir alguna duda con respecto al lab, puede enviar preguntas a `Piazza <https://piazza.com/class/i5szw5xlczl2du>`_.
 

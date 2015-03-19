@@ -160,7 +160,7 @@ En este laboratorio usaremos un módulo (o librería en otros lenguajes) para ay
     >> 5  
 
 ``random.randint(a,b)`` Crea un entero aleatorio entre a y b incluyendolos. Osea, si x es el entero aleatorio, a <= x <= b. En el ejemplo anterior, 0 <= x <= 10.
-Para el laboratorio, debe usar las oraciones ``random.seed()`` y ``random.int()``.    
+Para el laboratorio, debe usar las oraciones ``random.seed()`` y ``random.randint()``.    
 
 Lab: Adivinando un número
 -------------------------
