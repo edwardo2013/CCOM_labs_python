@@ -154,7 +154,7 @@ Para practicar, implemente una función ``el_menor()`` y otra ``cubo_del_menor()
 
 **Tablas de Veracidad de los operadores lógicos** 
 
-Para este laboratorio, implementaremos los operadores lógicos. Para esto, necesita conocer las tablas de veracidad. En otras palabras cuando es cierto y cuando es falso. En la figura siguiente, estan dichas tablas. La "n" quiere decir negación de. La tabla de ``nxor`` es la negación de la tabla (ultima columna) de ``xor``.
+Para este laboratorio, implementaremos los operadores lógicos. Para esto, necesita conocer las tablas de veracidad. En otras palabras cuando es cierto y cuando es falso. En la figura siguiente, estan dichas tablas. La "n" quiere decir negación de. Por ejemplo, ``nand`` es la negación de ``and``. La tabla de ``nxor`` es la negación de la tabla (ultima columna) de ``xor``.
     
 .. figure:: ../../images/gates.gif
     :align: center
