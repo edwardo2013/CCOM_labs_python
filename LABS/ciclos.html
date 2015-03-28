@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Lab 04: Ciclos, Listas y strings &mdash; &lt;CCOM 3030 Python Labs&gt;</title>
+    
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/video.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/poll.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/tabbedstuff.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/css/pytutor.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/css/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/codemirror.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/activecode.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/parsons.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/lib/prettify.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/jquery-ui-1.10.3.custom.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/user-highlights.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/runestone-custom-sphinx-bootstrap.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/poll.js"></script>
+    <script type="text/javascript" src="../_static/js/d3.v2.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery.ba-bbq.min.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery.jsPlumb-1.3.10-all-min.js"></script>
+    <script type="text/javascript" src="../_static/js/pytutor.js"></script>
+    <script type="text/javascript" src="../_static/jquery.highlight.js"></script>
+    <script type="text/javascript" src="../_static/bookfuncs.js"></script>
+    <script type="text/javascript" src="../_static/codemirror.js"></script>
+    <script type="text/javascript" src="../_static/python.js"></script>
+    <script type="text/javascript" src="../_static/javascript.js"></script>
+    <script type="text/javascript" src="../_static/activecode.js"></script>
+    <script type="text/javascript" src="../_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../_static/assess.js"></script>
+    <script type="text/javascript" src="../_static/animationbase.js"></script>
+    <script type="text/javascript" src="../_static/lib/jquery.min.js"></script>
+    <script type="text/javascript" src="../_static/lib/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../_static/lib/prettify.js"></script>
+    <script type="text/javascript" src="../_static/lib/underscore-min.js"></script>
+    <script type="text/javascript" src="../_static/lib/lis.js"></script>
+    <script type="text/javascript" src="../_static/parsons.js"></script>
+    <script type="text/javascript" src="../_static/parsons-noconflict.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <script type="text/javascript" src="../_static/waypoints.min.js"></script>
+    <script type="text/javascript" src="../_static/rangy-core.js"></script>
+    <script type="text/javascript" src="../_static/rangy-textrange.js"></script>
+    <script type="text/javascript" src="../_static/rangy-cssclassapplier.js"></script>
+    <script type="text/javascript" src="../_static/user-highlights.js"></script>
+    <script type="text/javascript" src="../_static/jquery.idle-timer.js"></script>
+    <script type="text/javascript" src="../_static/processing-1.4.1.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.hotkey.js"></script>
+    <link rel="top" title="&lt;CCOM 3030 Python Labs&gt;" href="../index.html" />
+    <link rel="prev" title="Lab 03: Operadores lógicos y funciones" href="logica_fun.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+<script type="text/javascript">
+  eBookConfig = {};
+  eBookConfig.host = 'http://interactivepython.org' ? 'http://interactivepython.org' : 'http://127.0.0.1:8000';
+  eBookConfig.app = eBookConfig.host+'/runestone';
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.course = 'template';
+  eBookConfig.logLevel = 10;
+  eBookConfig.loginRequired = false
+  eBookConfig.build_info = "";
+  eBookConfig.isLoggedIn = false;
+</script>
+
+<div id="fb-root"></div>
+<script>
+  (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&status=0";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+</script>
+
+
+  </head>
+  <body>
+
+
+<!-- Begin navbar -->
+<div id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+      <button type='button' class='navbar-toggle' data-toggle="collapse" data-target=".navbar-ex1-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <div>
+        <a class="brand-logo" style='background: transparent url("../_static/img/logo_small.png") no-repeat 0px 0px;' href="/runestone/default/user/login">&nbsp; </a>
+        <a class="navbar-brand" href="../index.html">CCOM3030 Python Labs</a>
+      </div>
+    </div>
+
+    <div class="navbar-collapse collapse navbar-ex1-collapse">
+
+      <ul class="nav navbar-nav navbar-right">
+
+        <li class="divider-vertical"></li>
+
+        <!-- social media dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-share-alt" style="opacity: 0.9"></i>
+          </a>
+          <ul class="dropdown-menu social-menu">
+              <li>
+                <div>
+                  <b>Runestone in social media:</b>
+                </div>
+                <a href="https://twitter.com/iRunestone" class="twitter-follow-button" data-show-count="true">Follow @iRunestone</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+                <div class="fb-like" data-href="https://www.facebook.com/RunestoneInteractive" data-send="false" data-layout="button_count" data-width="300" data-show-faces="false" data-font="arial"></div>
+              </li>
+
+              <li class="divider"></li>
+              <li>
+                <div>
+                  <b>Help support us:</b>
+                </div>
+                <div class="gittip">
+                  <iframe style="border:0;"
+                    src="https://www.gittip.com/bnmnetp/widget.html"
+                    width="48pt" height="22pt" class="gittip-button">
+                  </iframe>
+                </div>
+              </li>
+          </ul>
+        </li>
+        <!-- end social media dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        <!-- search dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-search" style='opacity:0.9;'></i>
+          </a>
+          <ul class='dropdown-menu'>
+            
+                <li><a href='../index.html'>Table of Contents</a></li>
+            
+            <li><a href='/runestone/static/template/genindex.html'>Book Index</a></li>
+            <li class="divider"></li>
+            <li id="scratch_ac_link"><a href="javascript:toggleScratchActivecode()">Scratch ActiveCode</a></li>
+            <li class="divider"></li>
+            <li style="width: 240px;">
+              <form class="navbar-search" style="margin:10px;" action="../search.html" method="get">
+                <div class="input-group">
+                  <input type="text" class="form-control" name="q" placeholder="Search this book" />
+                  <span class="input-group-btn">
+                    <button class="btn btn-primary" style="margin:0;" type="submit">
+                      <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                  </span>
+                </div><!-- /input-group -->
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+            </li>
+          </ul>
+        </li>
+        <!-- end search dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        <!-- user account dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-user" style="opacity:0.9;"></i>
+          </a>
+          <ul class="dropdown-menu user-menu">
+            <li><span class='loggedinuser'></span></li>
+            <li class="divider"></li>
+            <li><a href='http://interactivepython.org/runestone/admin/index'>Instructor's Page</a></li>
+            <li class="divider"></li>
+            <li><a href="http://interactivepython.org/runestone/default/user/profile" id="profilelink">Edit Profile</a></li>
+            <li><a href="http://interactivepython.org/runestone/default/user/change_password" id="passwordlink">Change Password</a></li>
+            <li><a href="http://interactivepython.org/runestone/default/user/register" id="registerlink">Register</a></li>
+            <li class='loginout'><a href='#'>Login</a></li> <!-- correct link populated by addNavbarLoginLink() -->
+          </ul>
+        </li>
+        <!-- end user account dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        <!-- help menu dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-question-sign" style="opacity:0.9;"></i>
+          </a>
+          <ul class="dropdown-menu user-menu">
+            <li><a href='/runestone/static/template/navhelp.html'>Navigation Help</a></li>
+            <li><a href='/runestone/static/overview/instructor.html'>Help for Instructors</a></li>            
+            <li class="divider"></li>
+            <li><a href='http://runestoneinteractive.org'>About Runestone</a></li>
+            <li><a href='https://github.com/bnmnetp/runestone/issues/new'>Report A Problem</a></li>
+          </ul>
+        </li>
+        <!-- end help menu dropdown -->
+
+        <li class="divider-vertical"></li>
+
+      </ul>
+
+      <ul class="nav navbar-nav">
+        <li class="divider-vertical"></li>
+        
+          <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"><ul>
+<li><a class="reference internal" href="#">Lab 04: Ciclos, Listas y strings</a><ul>
+<li><a class="reference internal" href="#lab-practicando-ciclos-en-listas-y-strings">Lab: Practicando ciclos en listas y strings</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+          <li class="divider-vertical"></li>
+        
+        
+          
+  <li id="relations-prev" title="Previous Chapter - Lab 03: Operadores lógicos y funciones" data-toggle="tooltip">
+    <a href="logica_fun.html" >
+      <i class='glyphicon glyphicon-backward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  
+    <li class="divider-vertical"></li>
+  
+
+<script type="text/javascript">
+  opts = {'placement':'bottom',
+          'selector': '',
+          'delay': { show: 100, hide: 50}
+         };
+
+  $('#relations-prev').tooltip(opts);
+  $('#relations-next').tooltip(opts);
+</script>
+        
+        
+          <li></li>
+        
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+
+<div class="container">
+  
+  <div class="section" id="lab-04-ciclos-listas-y-strings">
+<h1>Lab 04: Ciclos, Listas y strings<a class="headerlink" href="#lab-04-ciclos-listas-y-strings" title="Permalink to this headline">¶</a></h1>
+<p>Con lo aprendido, nos toca aprender sobre estructuras de control y su utilidad en la programacion diaria. Este laboratorio tiene como propósito instruir al estudiante en los diferentes ciclos y sus ventajas, como tambien su interacción con tipos de datos como strings y listas. Siga las instrucciones paso por paso y no salte secciones. Recuerde que para su laboratorio, debe tener el &#8220;template&#8221; provisto por el profesor y usar comentarios en su programa.</p>
+<p><strong>Objetivos</strong></p>
+<p>En este laboratorio los estudiantes:</p>
+<ul>
+<li><p class="first">Entenderán el concepto de estructura de control</p>
+</li>
+<li><p class="first">Aprenderán como hacer ciclos en Python:</p>
+<blockquote>
+<div><ul class="simple">
+<li>for</li>
+<li>while</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p class="first">Entenderán los cuatro componentes basicos de una estructura de control</p>
+</li>
+<li><p class="first">Aprenderán a manipular por medio de ciclos en Python:</p>
+<blockquote>
+<div><ul class="simple">
+<li>Listas</li>
+<li>strings</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p class="first">Practicarán ciclos en Python</p>
+</li>
+<li><p class="first">Reeforzarán lo aprendido en laboratorios anteriores</p>
+</li>
+</ul>
+<p><strong>Estructuras de control</strong></p>
+<p>Las <strong>estructuras de control</strong> o estructuras de repetición se usan para causar que una o mas instrucciones se ejecuten repetidamente. En Python, tenemos dos estructuras: <em>while</em> y <em>for</em>. Le decimos a <em>while</em> y <em>for</em> ciclos (de la palabra en ingles &#8220;loop&#8221;). A continuación, se provee como se escribe un <em>for</em> y <em>while</em>:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="c"># El while se usa hasta conseguir que la condicion es cierta</span>
+<span class="c"># o para correr codigo infinitamente.</span>
+<span class="k">while</span> <span class="n">condicion</span> <span class="n">es</span> <span class="n">cierta</span><span class="p">:</span>
+    <span class="n">instruccion</span>
+    <span class="n">instruccion</span>
+    <span class="o">.</span>
+    <span class="o">.</span>
+    <span class="n">instruccion</span>
+
+<span class="c"># El for se usa para iterar sobre algo,</span>
+<span class="c"># como una lista y un string</span>
+<span class="k">for</span> <span class="n">indice</span> <span class="ow">in</span> <span class="n">lista</span><span class="p">:</span>
+    <span class="n">instruccion</span>
+    <span class="n">instruccion</span>
+    <span class="o">.</span>
+    <span class="o">.</span>
+    <span class="n">instruccion</span>
+</pre></div>
+</div>
+<p>¿Cuál es la diferencia entre <em>while</em> y <em>for</em>? La diferencia es en como se utilizan. Un <strong>while</strong> es un ciclo controlado por una condición. En otras palabras, el while se ejecuta hasta que esta condición no es cierta. Un <strong>for</strong> es un ciclo controlado por un contador. En otras palabras, se ejecuta el for cierta cantidades de veces. De la definición, usted debe saber cuando usar un while y cuando un for. Por ejemplo, para verificar datos de entrada del usuario (&#8220;input&#8221;) usted usuaría un while. Si quiere iterar sobre una lista de numeros para sacar el máximo, utilizaría un for.</p>
+<p>Vea el siguiente código, donde se escriben un while y dos for para imprimir enteros:</p>
+
+<div id="while_y_for" lang="python" >
+
+<br/>
+<div id="while_y_for_code_div" style="display: block">
+<textarea cols="50" rows="12" id="while_y_for_code" class="active_code", prefixcode="undefined" lang="python">
+x = 0
+# el while no incrementa solo
+# en este caso incrementa por 2
+while x <= 6:
+    print x
+    x = x + 2 # cambie a x + 1 para incrementar por 1
+
+print ()
+# el for itera la lista range. Por
+# default la lista se incrementa por 1
+for i in range(0,7):
+    print i
+
+print ()
+# el for itera la lista range, esta vez
+# incrementando por 2.
+for j in range(0,7,2):
+    print j
+
+print ()
+# Vea lo que imprime range()
+print( range(0,7) )
+# Luego de correr el programa, descomente la sigiente linea de
+# codigo para que vea lo que imprime range incrementado por 2
+#print( range(0,7,2) )
+</textarea>
+</div>
+<p class="ac_caption"><span class="ac_caption_text"> (while_y_for)</span> </p>
+
+<button class='btn btn-success' id="while_y_for_runb" onclick="runit('while_y_for',this, undefined);">Run</button>
+
+<div id="cont"></div>
+
+<button class="ac_opt btn btn-default" style="display: inline-block" id="while_y_for_saveb" onclick="saveEditor('while_y_for');">Save</button>
+<button class="ac_opt btn btn-default" style="display: inline-block" id="while_y_for_loadb" onclick="requestCode('while_y_for');">Load</button>
+
+<script>
+if ('block' == 'none') {
+    // a hack to preserve the inline-block display style. Toggle() will use display: block
+    // (instead of inline-block) if the previous display style was 'none'
+    $('#while_y_for_saveb').toggle();
+    $('#while_y_for_loadb').toggle();
+}
+</script>
+
+
+<div style="text-align: center">
+<canvas id="while_y_for_canvas" class="ac-canvas" height="400" width="400" style="border-style: solid; display: none; text-align: center"></canvas>
+</div>
+<pre id="while_y_for_suffix" style="display:none">
+</pre>
+<pre id="while_y_for_pre" class="active_out">
+
+</pre>
+
+
+</div>
+
+<p><strong>Explicación de código:</strong> En el while, la condición que lo controla es <tt class="docutils literal"><span class="pre">x</span> <span class="pre">&lt;=</span> <span class="pre">6</span></tt> lo cual nos dice  que la <em>condicion de terminación</em> (cuando no ejecuta el ciclo) es cuando <tt class="docutils literal"><span class="pre">x</span> <span class="pre">&gt;</span> <span class="pre">6</span></tt>. Osea, cuando <tt class="docutils literal"><span class="pre">x</span> <span class="pre">==</span> <span class="pre">7</span></tt> este código no se ejecutará mas. En el primer for, se crea una lista de enteros del 0 hasta el 10 con la función <tt class="docutils literal"><span class="pre">range(start,to,by)</span></tt>, donde el parámetro <tt class="docutils literal"><span class="pre">start</span></tt> (0 en nuestro caso) es donde empieza, <tt class="docutils literal"><span class="pre">to</span></tt> donde termina y <tt class="docutils literal"><span class="pre">by</span></tt> por cuanto incrementa (por default incrementa por uno). Vea que <tt class="docutils literal"><span class="pre">to</span></tt> no incluye el valor del extremo derecho, osea que <tt class="docutils literal"><span class="pre">range()</span></tt>. O sea que, en nuestro ejemplo, no se incluye el <tt class="docutils literal"><span class="pre">7</span></tt>. Luego, se itera por la lista, imprimiendo cada número entero contenido en la lista. El segundo for hace lo mismo, pero solo imprime los números pares desde el 0 hasta el 6, ya que se incrementa por dos. En general, un for y un while pueden intercambiarse para hacer el mismo código, aunque generalmente sera más fácil escribirlo en uno que en otro.</p>
+<p>Es importante recalcar que los ciclos tienen cuatro componentes básicos:</p>
+<blockquote>
+<div><ul class="simple">
+<li><em>Inicialización:</em> inicializar la variable que itera. En Python, se hace automaticamente.</li>
+<li><em>Condición de repetición:</em> hasta donde se ejecuta el ciclo. Por ejemplo <tt class="docutils literal"><span class="pre">for</span> <span class="pre">i</span> <span class="pre">in</span> <span class="pre">range(0,3)</span></tt> se ejecutará siempre y cuando <tt class="docutils literal"><span class="pre">i</span></tt> sea 0,1 y 2.</li>
+<li><em>Ejecutar el cuerpo del ciclo:</em> ejecutar las instrucciones que usted desea dentro del ciclo.</li>
+<li><em>Actualizar:</em> actualizar la variable que itera para continuar el ciclo. Por ejemplo, esto es el parametro <tt class="docutils literal"><span class="pre">by</span></tt> de la función <tt class="docutils literal"><span class="pre">range()</span></tt>.</li>
+</ul>
+</div></blockquote>
+<p><strong>Concatenando strings</strong></p>
+<p>Antes de seguir, discutiremos brevemente como concatenar strings. El operador <tt class="docutils literal"><span class="pre">+</span></tt> cumple con este propósito. Dado dos strings, <tt class="docutils literal"><span class="pre">s1</span></tt> y <tt class="docutils literal"><span class="pre">s2</span></tt>, <tt class="docutils literal"><span class="pre">s1</span> <span class="pre">+</span> <span class="pre">s2</span></tt> concatena ambos strings. Por ejemplo:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">s1</span> <span class="o">=</span> <span class="s">&quot;Hello&quot;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">s2</span> <span class="o">=</span> <span class="s">&quot;World&quot;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">s1</span> <span class="o">+</span> <span class="n">s2</span>
+<span class="go">&quot;HelloWorld&quot;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">s2</span> <span class="o">+</span> <span class="n">s1</span>
+<span class="go">&quot;WorldHello&quot;</span>
+</pre></div>
+</div>
+<p>Vea que concatenar no es commutativo: <tt class="docutils literal"><span class="pre">s2</span> <span class="pre">+</span> <span class="pre">s1</span></tt> no es igual a <tt class="docutils literal"><span class="pre">s1</span> <span class="pre">+</span> <span class="pre">s2</span></tt>. Haga pruebas para que se de cuenta de que esto es cierto.</p>
+<p><strong>Iterando strings y listas</strong></p>
+<p>Como los strings y las listas son objetos finitos (se puede saber su tamaño) es preferible usar el ciclo for para iterarlos (aunque por supuesto, se puede hacer un while). La función <tt class="docutils literal"><span class="pre">len(objeto)</span></tt> devuelve el tamaño del objeto. Por ejemplo, si el string s es <tt class="docutils literal"><span class="pre">s</span> <span class="pre">=</span> <span class="pre">&quot;letra&quot;</span></tt>, <tt class="docutils literal"><span class="pre">len(s)</span></tt> devolvera <tt class="docutils literal"><span class="pre">5</span></tt> pues <tt class="docutils literal"><span class="pre">s</span></tt> tiene 5 caracteres. Hay varias maneras de iterar sobre los strings y las listas. Sin embargo, dependiendo de lo que queremos hacer con un ciclo utilizaremos una u otra forma. Veremos dos formas: iterando sobre la lista e iterando sobre numeros para accesar la lista. La mejor manera de entender esto es con un ejemplo para listas y otro para string (siga el código linea por linea haciendo click en &#8220;forward&#8221;):</p>
+
+<div id="for_en_lista"></div>
+<p class="cl_caption"><span class="cl_caption_text"> (for_en_lista)</span> </p>
+<script type="text/javascript">
+var for_en_lista_trace = {"code": "L = [3,-10,5,-20] # lista\nsum = 0\nfor i in L:\n    sum = sum + i\n\nsum2 = 0\nfor j in range(0,len(L)):\n    sum2 = sum2 + L[j]", "trace": [{"ordered_globals": [], "stdout": "", "func_name": "<module>", "stack_to_render": [], "globals": {}, "heap": {}, "line": 1, "event": "step_line"}, {"ordered_globals": ["L"], "stdout": "", "func_name": "<module>", "stack_to_render": [], "globals": {"L": ["REF", 1]}, "heap": {"1": ["LIST", 3, -10, 5, -20]}, "line": 2, "event": "step_line"}, {"ordered_globals": ["L", "sum"], "stdout": "", "func_name": "<module>", "stack_to_render": [], "globals": {"sum": 0, "L": ["REF", 1]}, "heap": {"1": ["LIST", 3, -10, 5, -20]}, "line": 3, "event": "step_line"}, {"ordered_globals": ["L", "sum", "i"], "stdout": "", "func_name": "<module>", "stack_to_render": [], "globals": {"i": 3, "sum": 0, "L": ["REF", 1]}, "heap": {"1": ["LIST", 3, -10, 5, -20]}, "line": 4, "event": "step_line"}, {"ordered_globals": ["L", "sum", "i"], "stdout": "", "func_name": "<module>", "stack_to_render": [], "globals": {"i": 3, "sum": 3, "L": ["REF", 1]}, "heap": {"1": ["LIST", 3, -10, 5, -20]}, "line": 3, "event": "step_line"}, {"ordered_globals": ["L", "sum", "i"], "stdout": "", "func_name": "<module>", "stack_to_render": [], "globals": {"i": -10, "sum": 3, "L": ["REF", 1]}, "heap": {"1": ["LIST", 3, -10, 5, -20]}, "line": 4, "event": "step_line"}, {"ordered_globals": ["L", "sum", "i"], "stdout": "", "func_name": "<module>", "stack_to_render": [], "globals": {"i": -10, "sum": -7, "L": ["REF", 1]}, "heap": {"1": ["LIST", 3, -10, 5, -20]}, "line": 3, "event": "step_line"}, {"ordered_globals": ["L", "sum", "i"], "stdout": "", "func_name": "<module>", "stack_to_render": [], "globals": {"i": 5, "sum": -7, "L": ["REF", 1]}, "heap": {"1": ["LIST", 3, -10, 5, -20]}, "line": 4, "event": "step_line"}, {"ordered_globals": ["L", "sum", "i"], "stdout": "", "func_name": "<module>", "stack_to_render": [], "globals": {"i": 5, "sum": -2, "L": ["REF", 1]}, "heap": {"1": ["LIST", 3, -10, 5, -20]}, "line": 3, "event": "step_line"}, {"ordered_globals": ["L", "sum", "i"], "stdout": "", "func_name": "<module>", "stack_to_render": [], "globals": {"i": -20, "sum": -2, "L": ["REF", 1]}, "heap": {"1": ["LIST", 3, -10, 5, -20]}, "line": 4, "event": "step_line"}, {"ordered_globals": ["L", "sum", "i"], "stdout": "", "func_name": "<module>", "stack_to_render": [], "globals": {"i": -20, "sum": -22, "L": ["REF", 1]}, "heap": {"1": ["LIST", 3, -10, 5, -20]}, "line": 3, "event": "step_line"}, {"ordered_globals": ["L", "sum", "i"], "stdout": "", "func_name": "<module>", "stack_to_render": [], "globals": {"i": -20, "sum": -22, "L": ["REF", 1]}, "heap": {"1": ["LIST", 3, -10, 5, -20]}, "line": 6, "event": "step_line"}, {"ordered_globals": ["L", "sum", "i", "sum2"], "stdout": "", "func_name": "<module>", "stack_to_render": [], "globals": {"i": -20, "sum": -22, "L": ["REF", 1], "sum2": 0}, "heap": {"1": ["LIST", 3, -10, 5, -20]}, "line": 7, "event": "step_line"}, {"ordered_globals": ["L", "sum", "i", "sum2", "j"], "stdout": "", "func_name": "<module>", "stack_to_render": [], "globals": {"i": -20, "sum": -22, "j": 0, "L": ["REF", 1], "sum2": 0}, "heap": {"1": ["LIST", 3, -10, 5, -20]}, "line": 8, "event": "step_line"}, {"ordered_globals": ["L", "sum", "i", "sum2", "j"], "stdout": "", "func_name": "<module>", "stack_to_render": [], "globals": {"i": -20, "sum": -22, "j": 0, "L": ["REF", 1], "sum2": 3}, "heap": {"1": ["LIST", 3, -10, 5, -20]}, "line": 7, "event": "step_line"}, {"ordered_globals": ["L", "sum", "i", "sum2", "j"], "stdout": "", "func_name": "<module>", "stack_to_render": [], "globals": {"i": -20, "sum": -22, "j": 1, "L": ["REF", 1], "sum2": 3}, "heap": {"1": ["LIST", 3, -10, 5, -20]}, "line": 8, "event": "step_line"}, {"ordered_globals": ["L", "sum", "i", "sum2", "j"], "stdout": "", "func_name": "<module>", "stack_to_render": [], "globals": {"i": -20, "sum": -22, "j": 1, "L": ["REF", 1], "sum2": -7}, "heap": {"1": ["LIST", 3, -10, 5, -20]}, "line": 7, "event": "step_line"}, {"ordered_globals": ["L", "sum", "i", "sum2", "j"], "stdout": "", "func_name": "<module>", "stack_to_render": [], "globals": {"i": -20, "sum": -22, "j": 2, "L": ["REF", 1], "sum2": -7}, "heap": {"1": ["LIST", 3, -10, 5, -20]}, "line": 8, "event": "step_line"}, {"ordered_globals": ["L", "sum", "i", "sum2", "j"], "stdout": "", "func_name": "<module>", "stack_to_render": [], "globals": {"i": -20, "sum": -22, "j": 2, "L": ["REF", 1], "sum2": -2}, "heap": {"1": ["LIST", 3, -10, 5, -20]}, "line": 7, "event": "step_line"}, {"ordered_globals": ["L", "sum", "i", "sum2", "j"], "stdout": "", "func_name": "<module>", "stack_to_render": [], "globals": {"i": -20, "sum": -22, "j": 3, "L": ["REF", 1], "sum2": -2}, "heap": {"1": ["LIST", 3, -10, 5, -20]}, "line": 8, "event": "step_line"}, {"ordered_globals": ["L", "sum", "i", "sum2", "j"], "stdout": "", "func_name": "<module>", "stack_to_render": [], "globals": {"i": -20, "sum": -22, "j": 3, "L": ["REF", 1], "sum2": -22}, "heap": {"1": ["LIST", 3, -10, 5, -20]}, "line": 7, "event": "step_line"}, {"ordered_globals": ["L", "sum", "i", "sum2", "j"], "stdout": "", "func_name": "<module>", "stack_to_render": [], "globals": {"i": -20, "sum": -22, "j": 3, "L": ["REF", 1], "sum2": -22}, "heap": {"1": ["LIST", 3, -10, 5, -20]}, "line": 7, "event": "return"}]};
+var for_en_lista_vis;
+
+$(document).ready(function() {
+    for_en_lista_vis = new ExecutionVisualizer('for_en_lista',for_en_lista_trace,
+                                {embeddedMode: true,
+                                verticalStack: true,
+                                heightChangeCallback: redrawAllVisualizerArrows,
+                                codeDivWidth: 500
+                                });
+    attachLoggers(for_en_lista_vis,'for_en_lista');
+    allVisualizers.push(for_en_lista_vis);
+
+});
+
+$(document).ready(function() {
+    $("#for_en_lista_tracecheck").click(function() {
+        logBookEvent({'event':'codelens', 'act': 'check', 'div_id':'for_en_lista'});
+    });
+});
+
+if (allVisualizers === undefined) {
+   var allVisualizers = [];
+}
+
+
+$(window).resize(function() {
+    for_en_lista_vis.redrawConnectors();
+});
+</script>
+<p>En el primer for, <tt class="docutils literal"><span class="pre">i</span></tt> accesa los elementos de la lista <tt class="docutils literal"><span class="pre">L</span></tt> directamente, por eso acumulamos la suma con <tt class="docutils literal"><span class="pre">sum</span> <span class="pre">=</span> <span class="pre">sum</span> <span class="pre">+</span> <span class="pre">i</span></tt>. En el segundo ciclo, <tt class="docutils literal"><span class="pre">j</span></tt> itera sobre los elementos de la lista que devuelve <tt class="docutils literal"><span class="pre">range(0,len(L))</span></tt> que es la lista <tt class="docutils literal"><span class="pre">[0,1,2,3]</span></tt>. Recuerde que las listas empiezan desde <tt class="docutils literal"><span class="pre">0</span></tt>, asi que como <tt class="docutils literal"><span class="pre">range()</span></tt> no incluye el valor extremo derecho, iteramos de manera correcta. El operador <tt class="docutils literal"><span class="pre">L[j]</span></tt> donde <tt class="docutils literal"><span class="pre">L</span></tt> es una lista o string accesa el elemento j de la lista. Por ende, <tt class="docutils literal"><span class="pre">L[0]</span></tt> es <tt class="docutils literal"><span class="pre">3</span></tt>, <tt class="docutils literal"><span class="pre">L[1]</span></tt> es <tt class="docutils literal"><span class="pre">-10</span></tt> y asi sucesivamente. De esta manera, ambos ciclos hacen lo mismo, sumar los elementos en la lista <tt class="docutils literal"><span class="pre">L</span></tt>.</p>
+
+<div id="for_en_string"></div>
+<p class="cl_caption"><span class="cl_caption_text"> (for_en_string)</span> </p>
+<script type="text/javascript">
+var for_en_string_trace = {"code": "s = \"cosa\" # string\nconcat = \"\"\nfor i in s:\n    concat = concat + i\n\nconcat2 = \"\"\nfor j in range(0,len(s)):\n    concat2 = concat + s[j]", "trace": [{"ordered_globals": [], "stdout": "", "func_name": "<module>", "stack_to_render": [], "globals": {}, "heap": {}, "line": 1, "event": "step_line"}, {"ordered_globals": ["s"], "stdout": "", "func_name": "<module>", "stack_to_render": [], "globals": {"s": "cosa"}, "heap": {}, "line": 2, "event": "step_line"}, {"ordered_globals": ["s", "concat"], "stdout": "", "func_name": "<module>", "stack_to_render": [], "globals": {"s": "cosa", "concat": ""}, "heap": {}, "line": 3, "event": "step_line"}, {"ordered_globals": ["s", "concat", "i"], "stdout": "", "func_name": "<module>", "stack_to_render": [], "globals": {"i": "c", "s": "cosa", "concat": ""}, "heap": {}, "line": 4, "event": "step_line"}, {"ordered_globals": ["s", "concat", "i"], "stdout": "", "func_name": "<module>", "stack_to_render": [], "globals": {"i": "c", "s": "cosa", "concat": "c"}, "heap": {}, "line": 3, "event": "step_line"}, {"ordered_globals": ["s", "concat", "i"], "stdout": "", "func_name": "<module>", "stack_to_render": [], "globals": {"i": "o", "s": "cosa", "concat": "c"}, "heap": {}, "line": 4, "event": "step_line"}, {"ordered_globals": ["s", "concat", "i"], "stdout": "", "func_name": "<module>", "stack_to_render": [], "globals": {"i": "o", "s": "cosa", "concat": "co"}, "heap": {}, "line": 3, "event": "step_line"}, {"ordered_globals": ["s", "concat", "i"], "stdout": "", "func_name": "<module>", "stack_to_render": [], "globals": {"i": "s", "s": "cosa", "concat": "co"}, "heap": {}, "line": 4, "event": "step_line"}, {"ordered_globals": ["s", "concat", "i"], "stdout": "", "func_name": "<module>", "stack_to_render": [], "globals": {"i": "s", "s": "cosa", "concat": "cos"}, "heap": {}, "line": 3, "event": "step_line"}, {"ordered_globals": ["s", "concat", "i"], "stdout": "", "func_name": "<module>", "stack_to_render": [], "globals": {"i": "a", "s": "cosa", "concat": "cos"}, "heap": {}, "line": 4, "event": "step_line"}, {"ordered_globals": ["s", "concat", "i"], "stdout": "", "func_name": "<module>", "stack_to_render": [], "globals": {"i": "a", "s": "cosa", "concat": "cosa"}, "heap": {}, "line": 3, "event": "step_line"}, {"ordered_globals": ["s", "concat", "i"], "stdout": "", "func_name": "<module>", "stack_to_render": [], "globals": {"i": "a", "s": "cosa", "concat": "cosa"}, "heap": {}, "line": 6, "event": "step_line"}, {"ordered_globals": ["s", "concat", "i", "concat2"], "stdout": "", "func_name": "<module>", "stack_to_render": [], "globals": {"i": "a", "s": "cosa", "concat2": "", "concat": "cosa"}, "heap": {}, "line": 7, "event": "step_line"}, {"ordered_globals": ["s", "concat", "i", "concat2", "j"], "stdout": "", "func_name": "<module>", "stack_to_render": [], "globals": {"i": "a", "s": "cosa", "j": 0, "concat2": "", "concat": "cosa"}, "heap": {}, "line": 8, "event": "step_line"}, {"ordered_globals": ["s", "concat", "i", "concat2", "j"], "stdout": "", "func_name": "<module>", "stack_to_render": [], "globals": {"i": "a", "s": "cosa", "j": 0, "concat2": "cosac", "concat": "cosa"}, "heap": {}, "line": 7, "event": "step_line"}, {"ordered_globals": ["s", "concat", "i", "concat2", "j"], "stdout": "", "func_name": "<module>", "stack_to_render": [], "globals": {"i": "a", "s": "cosa", "j": 1, "concat2": "cosac", "concat": "cosa"}, "heap": {}, "line": 8, "event": "step_line"}, {"ordered_globals": ["s", "concat", "i", "concat2", "j"], "stdout": "", "func_name": "<module>", "stack_to_render": [], "globals": {"i": "a", "s": "cosa", "j": 1, "concat2": "cosao", "concat": "cosa"}, "heap": {}, "line": 7, "event": "step_line"}, {"ordered_globals": ["s", "concat", "i", "concat2", "j"], "stdout": "", "func_name": "<module>", "stack_to_render": [], "globals": {"i": "a", "s": "cosa", "j": 2, "concat2": "cosao", "concat": "cosa"}, "heap": {}, "line": 8, "event": "step_line"}, {"ordered_globals": ["s", "concat", "i", "concat2", "j"], "stdout": "", "func_name": "<module>", "stack_to_render": [], "globals": {"i": "a", "s": "cosa", "j": 2, "concat2": "cosas", "concat": "cosa"}, "heap": {}, "line": 7, "event": "step_line"}, {"ordered_globals": ["s", "concat", "i", "concat2", "j"], "stdout": "", "func_name": "<module>", "stack_to_render": [], "globals": {"i": "a", "s": "cosa", "j": 3, "concat2": "cosas", "concat": "cosa"}, "heap": {}, "line": 8, "event": "step_line"}, {"ordered_globals": ["s", "concat", "i", "concat2", "j"], "stdout": "", "func_name": "<module>", "stack_to_render": [], "globals": {"i": "a", "s": "cosa", "j": 3, "concat2": "cosaa", "concat": "cosa"}, "heap": {}, "line": 7, "event": "step_line"}, {"ordered_globals": ["s", "concat", "i", "concat2", "j"], "stdout": "", "func_name": "<module>", "stack_to_render": [], "globals": {"i": "a", "s": "cosa", "j": 3, "concat2": "cosaa", "concat": "cosa"}, "heap": {}, "line": 7, "event": "return"}]};
+var for_en_string_vis;
+
+$(document).ready(function() {
+    for_en_string_vis = new ExecutionVisualizer('for_en_string',for_en_string_trace,
+                                {embeddedMode: true,
+                                verticalStack: true,
+                                heightChangeCallback: redrawAllVisualizerArrows,
+                                codeDivWidth: 500
+                                });
+    attachLoggers(for_en_string_vis,'for_en_string');
+    allVisualizers.push(for_en_string_vis);
+
+});
+
+$(document).ready(function() {
+    $("#for_en_string_tracecheck").click(function() {
+        logBookEvent({'event':'codelens', 'act': 'check', 'div_id':'for_en_string'});
+    });
+});
+
+if (allVisualizers === undefined) {
+   var allVisualizers = [];
+}
+
+
+$(window).resize(function() {
+    for_en_string_vis.redrawConnectors();
+});
+</script>
+<p>Vea la similitud con el código anterior. Este, en vez de sumar, concatena los caractéres del string <tt class="docutils literal"><span class="pre">s</span></tt> en la variable <tt class="docutils literal"><span class="pre">concat</span></tt>. En el primer for, <tt class="docutils literal"><span class="pre">i</span></tt> accesa lo elemetos (los caractéres) del string <tt class="docutils literal"><span class="pre">s</span></tt>.  Por eso, <tt class="docutils literal"><span class="pre">concat</span> <span class="pre">=</span> <span class="pre">concat</span> <span class="pre">+</span> <span class="pre">i</span></tt> funciona. En el segundo for, <tt class="docutils literal"><span class="pre">j</span></tt> itera sobre la lista <tt class="docutils literal"><span class="pre">[0,1,2,3]</span></tt>, por eso podemos accesar los elementos con <tt class="docutils literal"><span class="pre">s[j]</span></tt>.</p>
+<p><strong>Ejemplos de ciclos con funciones</strong></p>
+<p>En este laboratorio, usted escribirá funciones que contienen adentro ciclos. Por esto, en esta sección se da un ejemplo sencillo con código para que usted pueda hacer el laboratorio. Tambien se muestra como llamar la función con diferentes parámetros.</p>
+<p>Digamos que usted quiere, dado una lista <tt class="docutils literal"><span class="pre">L</span></tt> que contiene números, encontrar el elemento máximo de la lista. Como ya sabemos como iterar en una lista, es cuestión de ver como encontrar el máximo. La forma correcta es asumir que el primer elemento de la lista es el máximo e ir comparando, uno a uno, con los demás elementos e ir guardando el máximo correcto. ¡Espere! ¿Qué ocurre si la lista es vacia? entonces, antes de iterar, debemos simplemente salir y no devolver nada. Vea la implementación:</p>
+
+<div id="funcion_max" lang="python" >
+
+<br/>
+<div id="funcion_max_code_div" style="display: block">
+<textarea cols="50" rows="12" id="funcion_max_code" class="active_code", prefixcode="undefined" lang="python">
+def find_max(L):
+
+    # si la lista esta vacia
+    if len(L) == 0:
+        return  # No regrese nada, equivalente a return None
+                # la funcion sale, y no sejecuta lo que sigue
+
+    # No esta vacia: Asuma que el primer elemento es el maximo
+    max = L[0]
+
+    # Empezamos a comparar con el segundo elemento
+    # Por eso emepzamos en 1
+    for i in range(1,len(L)):
+        # Si el maximo que lleva es menor
+        # que el elemento a comparar (L[i])
+        if max < L[i]:
+            max = L[i]  # su maximo ahora es este elemento
+    return max
+
+# Llame el codigo con caso de lista
+# vacia, un solo elemento y varios elementos
+L = []
+print(find_max(L))
+
+L = [1]
+print(find_max(L))
+
+L = [-1, 20, 500, -500,10]
+print(find_max(L))
+</textarea>
+</div>
+<p class="ac_caption"><span class="ac_caption_text"> (funcion_max)</span> </p>
+
+<button class='btn btn-success' id="funcion_max_runb" onclick="runit('funcion_max',this, undefined);">Run</button>
+
+<div id="cont"></div>
+
+<button class="ac_opt btn btn-default" style="display: inline-block" id="funcion_max_saveb" onclick="saveEditor('funcion_max');">Save</button>
+<button class="ac_opt btn btn-default" style="display: inline-block" id="funcion_max_loadb" onclick="requestCode('funcion_max');">Load</button>
+
+<script>
+if ('block' == 'none') {
+    // a hack to preserve the inline-block display style. Toggle() will use display: block
+    // (instead of inline-block) if the previous display style was 'none'
+    $('#funcion_max_saveb').toggle();
+    $('#funcion_max_loadb').toggle();
+}
+</script>
+
+
+<div style="text-align: center">
+<canvas id="funcion_max_canvas" class="ac-canvas" height="400" width="400" style="border-style: solid; display: none; text-align: center"></canvas>
+</div>
+<pre id="funcion_max_suffix" style="display:none">
+</pre>
+<pre id="funcion_max_pre" class="active_out">
+
+</pre>
+
+
+</div>
+
+<div class="section" id="lab-practicando-ciclos-en-listas-y-strings">
+<h2>Lab: Practicando ciclos en listas y strings<a class="headerlink" href="#lab-practicando-ciclos-en-listas-y-strings" title="Permalink to this headline">¶</a></h2>
+<p>En este laboratorio, usted confeccionará funciones para practicar ciclos en listas y strings. Luego de definir las funciones, debe llamar sus funciones con algunos parámetros para probarlas y verificar que esten bien. Se recomienda que se haga esto por cada función completada, no espere a terminar todo el lab para entonces probar sus funciones. No hay pruebas de verificacion como en el laboratorio 3. Luego de terminar de leer la descripcion de las funciones, vea los &#8220;hints&#8221; para realizar el laboratorio. Estos hints no son la única manera de hacer las funciones pero le da una buena idea de como proceder con cada función. <em>No puede utilizar funciones auxiliares de Python</em>. Esto quiere decir que no puede usar funciones ya hecha para realizar lo asignado. Recuerde, utilice todo lo aprendido sobre ciclos, estructuras de condición, operadores, funciones etc. cuando crea pertinente para realizar el laboratorio.</p>
+<p>En especifico, para el laboratorio:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li>Escriba la función <tt class="docutils literal"><span class="pre">Contar_pares(L)</span></tt>, la cual recibe una lista <tt class="docutils literal"><span class="pre">L</span></tt> que contiene enteros y devuelve la cantidad (un contador) de los enteros pares dentro de la lista. Si la lista esta vacía, devulve 0.</li>
+<li>Escriba la función <tt class="docutils literal"><span class="pre">Sumar_impares(L)</span></tt>, la cual recibe una lista <tt class="docutils literal"><span class="pre">L</span></tt> que contiene enteros y devuelve la suma de todos los enteros impares dentro de la lista. Si la lista esta vacía, devuelve 0.</li>
+<li>Escriba la función <tt class="docutils literal"><span class="pre">Replica_n(s1,s2,n)</span></tt> la cual dado el string <tt class="docutils literal"><span class="pre">s1</span></tt>, el string <tt class="docutils literal"><span class="pre">s2</span></tt> y un entero n, concatena <tt class="docutils literal"><span class="pre">s1</span></tt> y <tt class="docutils literal"><span class="pre">s2</span></tt> n veces y devuelve este string (vea ejemplo abajo).</li>
+<li>Escriba la función <tt class="docutils literal"><span class="pre">Contar_letra(s1,el)</span></tt> la cual dado un string <tt class="docutils literal"><span class="pre">s1</span></tt> y una letra <tt class="docutils literal"><span class="pre">el</span></tt>, devuelve la cantidad de veces que aparece la letra en el string <tt class="docutils literal"><span class="pre">s1</span></tt>. Si el string es vacio, devuelve 0.</li>
+<li>Escriba cada función con casos para demostrar que son correctas.</li>
+</ol>
+</div></blockquote>
+<p>En la función tres, si <tt class="docutils literal"><span class="pre">s1</span> <span class="pre">=</span> <span class="pre">&quot;sub&quot;</span></tt>, <tt class="docutils literal"><span class="pre">s2</span> <span class="pre">=</span> <span class="pre">raya</span></tt> y <tt class="docutils literal"><span class="pre">n</span> <span class="pre">=</span> <span class="pre">3</span></tt>, la llamada <tt class="docutils literal"><span class="pre">Replica_n(s1,s2,n)</span></tt> devuelve el string <tt class="docutils literal"><span class="pre">&quot;subrayasubrayasubraya&quot;</span></tt>. Si las listas o los strings como parametros estan vacios, debe devolver <tt class="docutils literal"><span class="pre">0</span></tt> o un string vacio, dependiendo de lo que pida la función. Algunos hints (número indica del punto del cual se habla):</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li>Recuerde que un numero es par si el residuo al dividirlo por <tt class="docutils literal"><span class="pre">2</span></tt> es <tt class="docutils literal"><span class="pre">0</span></tt> (operador de modulo, <tt class="docutils literal"><span class="pre">%</span></tt>).</li>
+<li>Si no es par, es impar.</li>
+<li>Repase como concatenar strings y cuantas veces debe iterar para hacer esta función.</li>
+<li>Repase como iterar un string.</li>
+<li>Cada vez que termine una función, escriba pruebas para probar su código. Asi, si encuentra errores puede volver a la función y ver omo arreglarla.</li>
+</ol>
+</div></blockquote>
+<p>Utilice el siguiente espacio para codificar su laboratorio:</p>
+
+<div id="units1" lang="python" >
+
+<br/>
+<div id="units1_code_div" style="display: block">
+<textarea cols="50" rows="12" id="units1_code" class="active_code", prefixcode="undefined" lang="python">
+# Escriba cada funcion segun las instrucciones
+# Debe llamar sus funciones con distitos
+# parametros para probarlas
+
+def Contar_pares(L):
+    return
+
+def Sumar_impares(L):
+    return
+
+def Replica_n(s1,s2,n):
+    return
+
+def Contar_letra(s1,el):
+    return
+
+# llame sus funciones aqui
+</textarea>
+</div>
+<p class="ac_caption"><span class="ac_caption_text"> (units1)</span> </p>
+
+<button class='btn btn-success' id="units1_runb" onclick="runit('units1',this, undefined);">Run</button>
+
+<div id="cont"></div>
+
+<button class="ac_opt btn btn-default" style="display: inline-block" id="units1_saveb" onclick="saveEditor('units1');">Save</button>
+<button class="ac_opt btn btn-default" style="display: inline-block" id="units1_loadb" onclick="requestCode('units1');">Load</button>
+
+<script>
+if ('block' == 'none') {
+    // a hack to preserve the inline-block display style. Toggle() will use display: block
+    // (instead of inline-block) if the previous display style was 'none'
+    $('#units1_saveb').toggle();
+    $('#units1_loadb').toggle();
+}
+</script>
+
+
+<div style="text-align: center">
+<canvas id="units1_canvas" class="ac-canvas" height="400" width="400" style="border-style: solid; display: none; text-align: center"></canvas>
+</div>
+<pre id="units1_suffix" style="display:none">
+</pre>
+<pre id="units1_pre" class="active_out">
+
+</pre>
+
+
+</div>
+
+<p><strong>Para Entregar</strong>: Luego de terminar su laboratorio, haga &#8220;copy/paste&#8221; de su código en un file. Incluya el template como el profesor discutió en clase. Guarde el file con el nombre <em>lab4.py</em>. Ingrese a la clase registrada en <a class="reference external" href="http://moodle.ccom.uprrp.edu/">moodle</a> y haga &#8220;upload&#8221; de su file en el tab correspondiente. Luego de entregar el lab, favor de llenar este <a class="reference external" href="http://goo.gl/forms/Riw5VPx2uQ">cuestionario</a>. De surgir alguna duda con respecto al lab, puede enviar preguntas a <a class="reference external" href="https://piazza.com/class/i5szw5xlczl2du">Piazza</a>.</p>
+<p><strong>Fecha de Entrega:</strong> Abril 10 de marzo del 2015, antes de las 11:55pm en moodle.</p>
+<p><strong>Científico día del Día</strong>: <em>George Bool</em>. Matemático Ingles, filósofo y lógico. Trabajo en los campos de ecuaciones diferenciales y lógica algebraica. Inventor de lo que se conoce hoy en día como la algebra booleana. Puede leer más en <a class="reference external" href="http://en.wikipedia.org/wiki/George_Boole">Wikipedia</a>.</p>
+</div>
+</div>
+
+
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <span id='numuserspan'></span> readers online now | <span class='loggedinuser'></span> | <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2015, Edwardo S. Rivera.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.2.3.
+    </p>
+  </div>
+</footer>
+
+<script type="text/javascript" charset="utf-8">
+    $(document).ready(addUserToFooter);
+    $(document).ready(addNavbarLoginLink);
+    $(document).ready(createEditors);
+    $(document).ready(getNumUsers);
+    $(document).ready(getOnlineUsers);
+    $(document).ready(createScratchActivecode());
+    $(document).ready(styleUnittestResults());
+</script>
+
+<script type="text/javascript">
+  // add the video play button overlay image
+  $(".video-play-overlay").each(function() {
+    $(this).css('background-image', "url(\'../_static/play_overlay_icon.png\')")
+    });
+
+  // This function is needed to allow the dropdown search bar to work;
+  // The default behaviour is that the dropdown menu closes when something in
+  // it (like the search bar) is clicked
+  $(function() {
+    // Fix input element click problem
+    $('.dropdown input, .dropdown label').click(function(e) {
+      e.stopPropagation();
+      });
+  });
+
+  // style codelens buttons (doing it here because PyTutor is a submodule owned by someone else
+  $(function() {
+    $(".ExecutionVisualizer").each(function() {
+      $(this).find("#jmpFirstInstr").addClass('btn btn-default');
+      $(this).find("#jmpStepBack").addClass('btn btn-danger');
+      $(this).find("#jmpStepFwd").addClass('btn btn-success');
+      $(this).find("#jmpLastInstr").addClass('btn btn-default');
+      });
+  });
+
+</script>
+
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-32029811-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+  </body>
+</html>
