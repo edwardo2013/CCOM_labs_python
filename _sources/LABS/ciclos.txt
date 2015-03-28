@@ -164,7 +164,7 @@ Digamos que usted quiere, dado una lista ``L`` que contiene números, encontrar 
                 max = L[i]  # su maximo ahora es este elemento
         return max
 
-    # Llame el codigo con caso de lista
+    # Llame la funcion con caso de lista
     # vacia, un solo elemento y varios elementos
     L = []
     print(find_max(L))
@@ -199,7 +199,7 @@ En la función tres, si ``s1 = "sub"``, ``s2 = raya`` y ``n = 3``, la llamada ``
   
 Utilice el siguiente espacio para codificar su laboratorio:
   
-.. activecode:: units1
+.. activecode:: lab_4
 
     # Escriba cada funcion segun las instrucciones
     # Debe llamar sus funciones con distitos
