@@ -1,5 +1,5 @@
 ================================
-Lab 04: Ciclos, Listas y trings 
+Lab 04: Ciclos, Listas y Strings 
 ================================
 
 Con lo aprendido, nos toca aprender sobre estructuras de control y su utilidad en la programacion diaria. Este laboratorio tiene como propósito instruir al estudiante en los diferentes ciclos y sus ventajas, como tambien su interacción con tipos de datos como strings y listas. Siga las instrucciones paso por paso y no salte secciones. Recuerde que para su laboratorio, debe tener el "template" provisto por el profesor y usar comentarios en su programa.
