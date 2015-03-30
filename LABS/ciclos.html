@@ -284,7 +284,7 @@
   
   <div class="section" id="lab-04-ciclos-listas-y-strings">
 <h1>Lab 04: Ciclos, Listas y Strings<a class="headerlink" href="#lab-04-ciclos-listas-y-strings" title="Permalink to this headline">¶</a></h1>
-<p>Con lo aprendido, nos toca aprender sobre estructuras de control y su utilidad en la programacion diaria. Este laboratorio tiene como propósito instruir al estudiante en los diferentes ciclos y sus ventajas, como tambien su interacción con tipos de datos como strings y listas. Siga las instrucciones paso por paso y no salte secciones. Recuerde que para su laboratorio, debe tener el &#8220;template&#8221; provisto por el profesor y usar comentarios en su programa.</p>
+<p>Con lo aprendido, nos toca aprender sobre estructuras de control y su utilidad en la programación diaria. Este laboratorio tiene como propósito instruir al estudiante en los diferentes ciclos y sus ventajas, como tambien su interacción con tipos de datos como strings y listas. Siga las instrucciones paso por paso y no salte secciones. Recuerde que para su laboratorio, debe tener el &#8220;template&#8221; provisto por el profesor y usar comentarios en su programa.</p>
 <p><strong>Objetivos</strong></p>
 <p>En este laboratorio los estudiantes:</p>
 <ul>
@@ -298,7 +298,7 @@
 </ul>
 </div></blockquote>
 </li>
-<li><p class="first">Entenderán los cuatro componentes basicos de una estructura de control</p>
+<li><p class="first">Entenderán los cuatro componentes básicos de una estructura de control</p>
 </li>
 <li><p class="first">Aprenderán a manipular por medio de ciclos en Python:</p>
 <blockquote>
@@ -314,9 +314,9 @@
 </li>
 </ul>
 <p><strong>Estructuras de control</strong></p>
-<p>Las <strong>estructuras de control</strong> o estructuras de repetición se usan para causar que una o mas instrucciones se ejecuten repetidamente. En Python, tenemos dos estructuras: <em>while</em> y <em>for</em>. Le decimos a <em>while</em> y <em>for</em> ciclos (de la palabra en ingles &#8220;loop&#8221;). A continuación, se provee como se escribe un <em>for</em> y <em>while</em>:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="c"># El while se usa hasta conseguir que la condicion es cierta</span>
-<span class="c"># o para correr codigo infinitamente.</span>
+<p>Las <strong>estructuras de control</strong> o estructuras de repetición se usan para causar que una o mas instrucciones se ejecuten repetidamente. En Python, tenemos dos estructuras: <em>while</em> y <em>for</em>. Le decimos a <em>while</em> y <em>for</em> ciclos (de la palabra en inglés &#8220;loop&#8221;). A continuación, se provee como se escribe un <em>for</em> y <em>while</em>:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="c"># El while se usa hasta conseguir que la condición es cierta</span>
+<span class="c"># o para correr código infinitamente.</span>
 <span class="k">while</span> <span class="n">condicion</span> <span class="n">es</span> <span class="n">cierta</span><span class="p">:</span>
     <span class="n">instruccion</span>
     <span class="n">instruccion</span>
@@ -400,12 +400,12 @@ if ('block' == 'none') {
 
 </div>
 
-<p><strong>Explicación de código:</strong> En el while, la condición que lo controla es <tt class="docutils literal"><span class="pre">x</span> <span class="pre">&lt;=</span> <span class="pre">6</span></tt> lo cual nos dice  que la <em>condicion de terminación</em> (cuando no ejecuta el ciclo) es cuando <tt class="docutils literal"><span class="pre">x</span> <span class="pre">&gt;</span> <span class="pre">6</span></tt>. Osea, cuando <tt class="docutils literal"><span class="pre">x</span> <span class="pre">==</span> <span class="pre">7</span></tt> este código no se ejecutará mas. En el primer for, se crea una lista de enteros del 0 hasta el 10 con la función <tt class="docutils literal"><span class="pre">range(start,to,by)</span></tt>, donde el parámetro <tt class="docutils literal"><span class="pre">start</span></tt> (0 en nuestro caso) es donde empieza, <tt class="docutils literal"><span class="pre">to</span></tt> donde termina y <tt class="docutils literal"><span class="pre">by</span></tt> por cuanto incrementa (por default incrementa por uno). Vea que <tt class="docutils literal"><span class="pre">to</span></tt> no incluye el valor del extremo derecho, osea que <tt class="docutils literal"><span class="pre">range()</span></tt>. O sea que, en nuestro ejemplo, no se incluye el <tt class="docutils literal"><span class="pre">7</span></tt>. Luego, se itera por la lista, imprimiendo cada número entero contenido en la lista. El segundo for hace lo mismo, pero solo imprime los números pares desde el 0 hasta el 6, ya que se incrementa por dos. En general, un for y un while pueden intercambiarse para hacer el mismo código, aunque generalmente sera más fácil escribirlo en uno que en otro.</p>
+<p><strong>Explicación del código:</strong> En el while, la condición que lo controla es <tt class="docutils literal"><span class="pre">x</span> <span class="pre">&lt;=</span> <span class="pre">6</span></tt> lo cual nos dice  que la <em>condición de terminación</em> (cuando no ejecuta el ciclo) es cuando <tt class="docutils literal"><span class="pre">x</span> <span class="pre">&gt;</span> <span class="pre">6</span></tt>. Osea, cuando <tt class="docutils literal"><span class="pre">x</span> <span class="pre">==</span> <span class="pre">7</span></tt> este código no se ejecutará mas. En el primer for, se crea una lista de enteros del <tt class="docutils literal"><span class="pre">0</span></tt> hasta el <tt class="docutils literal"><span class="pre">6</span></tt> con la función <tt class="docutils literal"><span class="pre">range(start,to,by)</span></tt>, donde el parámetro <tt class="docutils literal"><span class="pre">start</span></tt> (0 en nuestro caso) es donde empieza, <tt class="docutils literal"><span class="pre">to</span></tt> donde termina y <tt class="docutils literal"><span class="pre">by</span></tt> por cuanto incrementa (por default incrementa por uno). Vea que <tt class="docutils literal"><span class="pre">to</span></tt> no incluye el valor del extremo derecho, osea que <tt class="docutils literal"><span class="pre">range()</span></tt>. O sea que, en nuestro ejemplo, no se incluye el <tt class="docutils literal"><span class="pre">7</span></tt>. Luego, se itera por la lista, imprimiendo cada número entero contenido en la lista. El segundo for hace lo mismo, pero solo imprime los números pares desde el <tt class="docutils literal"><span class="pre">0</span></tt> hasta el <tt class="docutils literal"><span class="pre">6</span></tt>, ya que se incrementa por dos. En general, un for y un while pueden intercambiarse para hacer el mismo código, aunque generalmente sera más fácil escribirlo en uno que en otro.</p>
 <p>Es importante recalcar que los ciclos tienen cuatro componentes básicos:</p>
 <blockquote>
 <div><ul class="simple">
 <li><em>Inicialización:</em> inicializar la variable que itera. En Python, se hace automaticamente.</li>
-<li><em>Condición de repetición:</em> hasta donde se ejecuta el ciclo. Por ejemplo <tt class="docutils literal"><span class="pre">for</span> <span class="pre">i</span> <span class="pre">in</span> <span class="pre">range(0,3)</span></tt> se ejecutará siempre y cuando <tt class="docutils literal"><span class="pre">i</span></tt> sea 0,1 y 2.</li>
+<li><em>Condición de repetición:</em> hasta donde se ejecuta el ciclo. Por ejemplo <tt class="docutils literal"><span class="pre">for</span> <span class="pre">i</span> <span class="pre">in</span> <span class="pre">range(0,3)</span></tt> se ejecutará siempre y cuando <tt class="docutils literal"><span class="pre">i</span></tt> sea <tt class="docutils literal"><span class="pre">0</span></tt>, <tt class="docutils literal"><span class="pre">1</span></tt> y <tt class="docutils literal"><span class="pre">2</span></tt>.</li>
 <li><em>Ejecutar el cuerpo del ciclo:</em> ejecutar las instrucciones que usted desea dentro del ciclo.</li>
 <li><em>Actualizar:</em> actualizar la variable que itera para continuar el ciclo. Por ejemplo, esto es el parametro <tt class="docutils literal"><span class="pre">by</span></tt> de la función <tt class="docutils literal"><span class="pre">range()</span></tt>.</li>
 </ul>
@@ -457,7 +457,7 @@ $(window).resize(function() {
     for_en_lista_vis.redrawConnectors();
 });
 </script>
-<p>En el primer for, <tt class="docutils literal"><span class="pre">i</span></tt> accesa los elementos de la lista <tt class="docutils literal"><span class="pre">L</span></tt> directamente, por eso acumulamos la suma con <tt class="docutils literal"><span class="pre">sum</span> <span class="pre">=</span> <span class="pre">sum</span> <span class="pre">+</span> <span class="pre">i</span></tt>. En el segundo ciclo, <tt class="docutils literal"><span class="pre">j</span></tt> itera sobre los elementos de la lista que devuelve <tt class="docutils literal"><span class="pre">range(0,len(L))</span></tt> que es la lista <tt class="docutils literal"><span class="pre">[0,1,2,3]</span></tt>. Recuerde que las listas empiezan desde <tt class="docutils literal"><span class="pre">0</span></tt>, asi que como <tt class="docutils literal"><span class="pre">range()</span></tt> no incluye el valor extremo derecho, iteramos de manera correcta. El operador <tt class="docutils literal"><span class="pre">L[j]</span></tt> donde <tt class="docutils literal"><span class="pre">L</span></tt> es una lista o string accesa el elemento j de la lista. Por ende, <tt class="docutils literal"><span class="pre">L[0]</span></tt> es <tt class="docutils literal"><span class="pre">3</span></tt>, <tt class="docutils literal"><span class="pre">L[1]</span></tt> es <tt class="docutils literal"><span class="pre">-10</span></tt> y asi sucesivamente. De esta manera, ambos ciclos hacen lo mismo, sumar los elementos en la lista <tt class="docutils literal"><span class="pre">L</span></tt>.</p>
+<p>En el primer for, <tt class="docutils literal"><span class="pre">i</span></tt> accesa los elementos de la lista <tt class="docutils literal"><span class="pre">L</span></tt> directamente, por eso acumulamos la suma con <tt class="docutils literal"><span class="pre">sum</span> <span class="pre">=</span> <span class="pre">sum</span> <span class="pre">+</span> <span class="pre">i</span></tt>. En el segundo ciclo, <tt class="docutils literal"><span class="pre">j</span></tt> itera sobre los elementos de la lista que devuelve <tt class="docutils literal"><span class="pre">range(0,len(L))</span></tt> que es la lista <tt class="docutils literal"><span class="pre">[0,1,2,3]</span></tt>. Recuerde que las listas empiezan desde <tt class="docutils literal"><span class="pre">0</span></tt>, asi que como <tt class="docutils literal"><span class="pre">range()</span></tt> no incluye el valor extremo derecho, iteramos de manera correcta. El operador <tt class="docutils literal"><span class="pre">L[j]</span></tt> donde <tt class="docutils literal"><span class="pre">L</span></tt> es una lista o string accesa el elemento j de la lista. Por ende, <tt class="docutils literal"><span class="pre">L[0]</span></tt> es <tt class="docutils literal"><span class="pre">3</span></tt>, <tt class="docutils literal"><span class="pre">L[1]</span></tt> es <tt class="docutils literal"><span class="pre">-10</span></tt> y asi sucesivamente. De esta manera, ambos ciclos hacen lo mismo, sumar los números en la lista <tt class="docutils literal"><span class="pre">L</span></tt>.</p>
 
 <div id="for_en_string"></div>
 <p class="cl_caption"><span class="cl_caption_text"> (for_en_string)</span> </p>
@@ -507,13 +507,13 @@ def find_max(L):
     # si la lista esta vacia
     if len(L) == 0:
         return  # No regrese nada, equivalente a return None
-                # la funcion sale, y no sejecuta lo que sigue
+                # la funcion sale, y no se ejecuta lo que sigue
 
     # No esta vacia: Asuma que el primer elemento es el maximo
     max = L[0]
 
     # Empezamos a comparar con el segundo elemento
-    # Por eso emepzamos en 1
+    # Por eso empezamos en 1
     for i in range(1,len(L)):
         # Si el maximo que lleva es menor
         # que el elemento a comparar (L[i])
@@ -564,6 +564,7 @@ if ('block' == 'none') {
 
 </div>
 
+<p>Vea que tambien podemos usar <tt class="docutils literal"><span class="pre">for</span> <span class="pre">i</span> <span class="pre">in</span> <span class="pre">L</span></tt>, aunque entonces volveremos a comparar el primer elemento consigo mismo. Cambie el for y el cuerpo del ciclo usando esta manera para que vea que tambien funciona.</p>
 <div class="section" id="lab-practicando-ciclos-en-listas-y-strings">
 <h2>Lab: Practicando ciclos en listas y strings<a class="headerlink" href="#lab-practicando-ciclos-en-listas-y-strings" title="Permalink to this headline">¶</a></h2>
 <p>En este laboratorio, usted confeccionará funciones para practicar ciclos en listas y strings. Luego de definir las funciones, debe llamar sus funciones con algunos parámetros para probarlas y verificar que esten bien. Se recomienda que se haga esto por cada función completada, no espere a terminar todo el lab para entonces probar sus funciones. No hay pruebas de verificacion como en el laboratorio 3. Luego de terminar de leer la descripcion de las funciones, vea los &#8220;hints&#8221; para realizar el laboratorio. Estos hints no son la única manera de hacer las funciones pero le da una buena idea de como proceder con cada función. <em>No puede utilizar funciones auxiliares de Python</em>. Esto quiere decir que no puede usar funciones ya hecha para realizar lo asignado. Recuerde, utilice todo lo aprendido sobre ciclos, estructuras de condición, operadores, funciones etc. cuando crea pertinente para realizar el laboratorio.</p>
@@ -571,20 +572,20 @@ if ('block' == 'none') {
 <blockquote>
 <div><ol class="arabic simple">
 <li>Escriba la función <tt class="docutils literal"><span class="pre">Contar_pares(L)</span></tt>, la cual recibe una lista <tt class="docutils literal"><span class="pre">L</span></tt> que contiene enteros y devuelve la cantidad (un contador) de los enteros pares dentro de la lista. Si la lista esta vacía, devulve 0.</li>
-<li>Escriba la función <tt class="docutils literal"><span class="pre">Sumar_impares(L)</span></tt>, la cual recibe una lista <tt class="docutils literal"><span class="pre">L</span></tt> que contiene enteros y devuelve la suma de todos los enteros impares dentro de la lista. Si la lista esta vacía, devuelve 0.</li>
+<li>Escriba la función <tt class="docutils literal"><span class="pre">Sumar_impares(L)</span></tt>, la cual recibe una lista <tt class="docutils literal"><span class="pre">L</span></tt> que contiene enteros y devuelve la suma de todos los enteros impares dentro de la lista. Si la lista esta vacía, devuelve <tt class="docutils literal"><span class="pre">0</span></tt>.</li>
 <li>Escriba la función <tt class="docutils literal"><span class="pre">Replica_n(s1,s2,n)</span></tt> la cual dado el string <tt class="docutils literal"><span class="pre">s1</span></tt>, el string <tt class="docutils literal"><span class="pre">s2</span></tt> y un entero n, concatena <tt class="docutils literal"><span class="pre">s1</span></tt> y <tt class="docutils literal"><span class="pre">s2</span></tt> n veces y devuelve este string (vea ejemplo abajo).</li>
-<li>Escriba la función <tt class="docutils literal"><span class="pre">Contar_letra(s1,el)</span></tt> la cual dado un string <tt class="docutils literal"><span class="pre">s1</span></tt> y una letra <tt class="docutils literal"><span class="pre">el</span></tt>, devuelve la cantidad de veces que aparece la letra en el string <tt class="docutils literal"><span class="pre">s1</span></tt>. Si el string es vacio, devuelve 0.</li>
+<li>Escriba la función <tt class="docutils literal"><span class="pre">Contar_letra(s1,el)</span></tt> la cual dado un string <tt class="docutils literal"><span class="pre">s1</span></tt> y una letra <tt class="docutils literal"><span class="pre">el</span></tt>, devuelve la cantidad de veces que aparece la letra en el string <tt class="docutils literal"><span class="pre">s1</span></tt>. Si el string es vacio, devuelve <tt class="docutils literal"><span class="pre">0</span></tt>.</li>
 <li>Escriba cada función con casos para demostrar que son correctas.</li>
 </ol>
 </div></blockquote>
 <p>En la función tres, si <tt class="docutils literal"><span class="pre">s1</span> <span class="pre">=</span> <span class="pre">&quot;sub&quot;</span></tt>, <tt class="docutils literal"><span class="pre">s2</span> <span class="pre">=</span> <span class="pre">raya</span></tt> y <tt class="docutils literal"><span class="pre">n</span> <span class="pre">=</span> <span class="pre">3</span></tt>, la llamada <tt class="docutils literal"><span class="pre">Replica_n(s1,s2,n)</span></tt> devuelve el string <tt class="docutils literal"><span class="pre">&quot;subrayasubrayasubraya&quot;</span></tt>. Si las listas o los strings como parametros estan vacios, debe devolver <tt class="docutils literal"><span class="pre">0</span></tt> o un string vacio, dependiendo de lo que pida la función. Algunos hints (número indica del punto del cual se habla):</p>
 <blockquote>
 <div><ol class="arabic simple">
-<li>Recuerde que un numero es par si el residuo al dividirlo por <tt class="docutils literal"><span class="pre">2</span></tt> es <tt class="docutils literal"><span class="pre">0</span></tt> (operador de modulo, <tt class="docutils literal"><span class="pre">%</span></tt>).</li>
+<li>Un número es par si el residuo al dividirlo por <tt class="docutils literal"><span class="pre">2</span></tt> es <tt class="docutils literal"><span class="pre">0</span></tt> (operador de modulo, <tt class="docutils literal"><span class="pre">%</span></tt>).</li>
 <li>Si no es par, es impar.</li>
 <li>Repase como concatenar strings y cuantas veces debe iterar para hacer esta función.</li>
 <li>Repase como iterar un string.</li>
-<li>Cada vez que termine una función, escriba pruebas para probar su código. Asi, si encuentra errores puede volver a la función y ver omo arreglarla.</li>
+<li>Cada vez que termine una función, escriba pruebas para probar su código. Asi, si encuentra errores puede volver a la función y ver como arreglarla.</li>
 </ol>
 </div></blockquote>
 <p>Utilice el siguiente espacio para codificar su laboratorio:</p>

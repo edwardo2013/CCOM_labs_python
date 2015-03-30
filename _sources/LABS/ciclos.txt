@@ -2,7 +2,7 @@
 Lab 04: Ciclos, Listas y Strings 
 ================================
 
-Con lo aprendido, nos toca aprender sobre estructuras de control y su utilidad en la programacion diaria. Este laboratorio tiene como propósito instruir al estudiante en los diferentes ciclos y sus ventajas, como tambien su interacción con tipos de datos como strings y listas. Siga las instrucciones paso por paso y no salte secciones. Recuerde que para su laboratorio, debe tener el "template" provisto por el profesor y usar comentarios en su programa.
+Con lo aprendido, nos toca aprender sobre estructuras de control y su utilidad en la programación diaria. Este laboratorio tiene como propósito instruir al estudiante en los diferentes ciclos y sus ventajas, como tambien su interacción con tipos de datos como strings y listas. Siga las instrucciones paso por paso y no salte secciones. Recuerde que para su laboratorio, debe tener el "template" provisto por el profesor y usar comentarios en su programa.
 
 **Objetivos**
 
@@ -14,7 +14,7 @@ En este laboratorio los estudiantes:
     * for
     * while
 
-* Entenderán los cuatro componentes basicos de una estructura de control
+* Entenderán los cuatro componentes básicos de una estructura de control
 * Aprenderán a manipular por medio de ciclos en Python:
 
     * Listas
@@ -26,12 +26,12 @@ En este laboratorio los estudiantes:
 
 **Estructuras de control**
 
-Las **estructuras de control** o estructuras de repetición se usan para causar que una o mas instrucciones se ejecuten repetidamente. En Python, tenemos dos estructuras: *while* y *for*. Le decimos a *while* y *for* ciclos (de la palabra en ingles "loop"). A continuación, se provee como se escribe un *for* y *while*:
+Las **estructuras de control** o estructuras de repetición se usan para causar que una o mas instrucciones se ejecuten repetidamente. En Python, tenemos dos estructuras: *while* y *for*. Le decimos a *while* y *for* ciclos (de la palabra en inglés "loop"). A continuación, se provee como se escribe un *for* y *while*:
 
 .. code-block:: python
 
-    # El while se usa hasta conseguir que la condicion es cierta
-    # o para correr codigo infinitamente.
+    # El while se usa hasta conseguir que la condición es cierta
+    # o para correr código infinitamente.
     while condicion es cierta:
         instruccion
         instruccion
@@ -81,13 +81,13 @@ Vea el siguiente código, donde se escriben un while y dos for para imprimir ent
     #print( range(0,7,2) )
     
     
-**Explicación de código:** En el while, la condición que lo controla es ``x <= 6`` lo cual nos dice  que la *condicion de terminación* (cuando no ejecuta el ciclo) es cuando ``x > 6``. Osea, cuando ``x == 7`` este código no se ejecutará mas. En el primer for, se crea una lista de enteros del 0 hasta el 10 con la función ``range(start,to,by)``, donde el parámetro ``start`` (0 en nuestro caso) es donde empieza, ``to`` donde termina y ``by`` por cuanto incrementa (por default incrementa por uno). Vea que ``to`` no incluye el valor del extremo derecho, osea que ``range()``. O sea que, en nuestro ejemplo, no se incluye el ``7``. Luego, se itera por la lista, imprimiendo cada número entero contenido en la lista. El segundo for hace lo mismo, pero solo imprime los números pares desde el 0 hasta el 6, ya que se incrementa por dos. En general, un for y un while pueden intercambiarse para hacer el mismo código, aunque generalmente sera más fácil escribirlo en uno que en otro.
+**Explicación del código:** En el while, la condición que lo controla es ``x <= 6`` lo cual nos dice  que la *condición de terminación* (cuando no ejecuta el ciclo) es cuando ``x > 6``. Osea, cuando ``x == 7`` este código no se ejecutará mas. En el primer for, se crea una lista de enteros del ``0`` hasta el ``6`` con la función ``range(start,to,by)``, donde el parámetro ``start`` (0 en nuestro caso) es donde empieza, ``to`` donde termina y ``by`` por cuanto incrementa (por default incrementa por uno). Vea que ``to`` no incluye el valor del extremo derecho, osea que ``range()``. O sea que, en nuestro ejemplo, no se incluye el ``7``. Luego, se itera por la lista, imprimiendo cada número entero contenido en la lista. El segundo for hace lo mismo, pero solo imprime los números pares desde el ``0`` hasta el ``6``, ya que se incrementa por dos. En general, un for y un while pueden intercambiarse para hacer el mismo código, aunque generalmente sera más fácil escribirlo en uno que en otro.
     
 Es importante recalcar que los ciclos tienen cuatro componentes básicos:
 
     * *Inicialización:* inicializar la variable que itera. En Python, se hace automaticamente.
-    * *Condición de repetición:* hasta donde se ejecuta el ciclo. Por ejemplo ``for i in range(0,3)`` se ejecutará siempre y cuando ``i`` sea 0,1 y 2. 
-    * *Ejecutar el cuerpo del ciclo:* ejecutar las instrucciones que usted desea dentro del ciclo. 
+    * *Condición de repetición:* hasta donde se ejecuta el ciclo. Por ejemplo ``for i in range(0,3)`` se ejecutará siempre y cuando ``i`` sea ``0``, ``1`` y ``2``. 
+    * *Ejecutar el cuerpo del ciclo:* ejecutar las instrucciones que usted desea dentro del ciclo.
     * *Actualizar:* actualizar la variable que itera para continuar el ciclo. Por ejemplo, esto es el parametro ``by`` de la función ``range()``.              
 
 **Concatenando strings**
@@ -121,7 +121,8 @@ Como los strings y las listas son objetos finitos (se puede saber su tamaño) es
     for j in range(0,len(L)):
         sum2 = sum2 + L[j] 
 
-En el primer for, ``i`` accesa los elementos de la lista ``L`` directamente, por eso acumulamos la suma con ``sum = sum + i``. En el segundo ciclo, ``j`` itera sobre los elementos de la lista que devuelve ``range(0,len(L))`` que es la lista ``[0,1,2,3]``. Recuerde que las listas empiezan desde ``0``, asi que como ``range()`` no incluye el valor extremo derecho, iteramos de manera correcta. El operador ``L[j]`` donde ``L`` es una lista o string accesa el elemento j de la lista. Por ende, ``L[0]`` es ``3``, ``L[1]`` es ``-10`` y asi sucesivamente. De esta manera, ambos ciclos hacen lo mismo, sumar los elementos en la lista ``L``.
+En el primer for, ``i`` accesa los elementos de la lista ``L`` directamente, por eso acumulamos la suma con ``sum = sum + i``. En el segundo ciclo, ``j`` itera sobre los elementos de la lista que devuelve ``range(0,len(L))`` que es la lista ``[0,1,2,3]``. Recuerde que las listas empiezan desde ``0``, asi que como ``range()`` no incluye el valor extremo derecho, iteramos de manera correcta. El operador ``L[j]`` donde ``L`` es una lista o string accesa el elemento j de la lista. Por ende, ``L[0]`` es ``3``, ``L[1]`` es ``-10`` y asi sucesivamente. De esta manera, ambos ciclos hacen lo mismo, sumar los números en la lista ``L``.
+
 
 .. codelens:: for_en_string
 
@@ -150,13 +151,13 @@ Digamos que usted quiere, dado una lista ``L`` que contiene números, encontrar 
         # si la lista esta vacia
         if len(L) == 0:
             return  # No regrese nada, equivalente a return None
-                    # la funcion sale, y no sejecuta lo que sigue
+                    # la funcion sale, y no se ejecuta lo que sigue
 
         # No esta vacia: Asuma que el primer elemento es el maximo
         max = L[0]
         
         # Empezamos a comparar con el segundo elemento
-        # Por eso emepzamos en 1
+        # Por eso empezamos en 1
         for i in range(1,len(L)):
             # Si el maximo que lleva es menor
             # que el elemento a comparar (L[i])
@@ -175,6 +176,7 @@ Digamos que usted quiere, dado una lista ``L`` que contiene números, encontrar 
     L = [-1, 20, 500, -500,10]
     print(find_max(L))
 
+Vea que tambien podemos usar ``for i in L``, aunque entonces volveremos a comparar el primer elemento consigo mismo. Cambie el for y el cuerpo del ciclo usando esta manera para que vea que tambien funciona. 
 
 Lab: Practicando ciclos en listas y strings
 -------------------------------------------
@@ -184,18 +186,18 @@ En este laboratorio, usted confeccionará funciones para practicar ciclos en lis
 En especifico, para el laboratorio:
 
     1. Escriba la función ``Contar_pares(L)``, la cual recibe una lista ``L`` que contiene enteros y devuelve la cantidad (un contador) de los enteros pares dentro de la lista. Si la lista esta vacía, devulve 0. 
-    2. Escriba la función ``Sumar_impares(L)``, la cual recibe una lista ``L`` que contiene enteros y devuelve la suma de todos los enteros impares dentro de la lista. Si la lista esta vacía, devuelve 0.
+    2. Escriba la función ``Sumar_impares(L)``, la cual recibe una lista ``L`` que contiene enteros y devuelve la suma de todos los enteros impares dentro de la lista. Si la lista esta vacía, devuelve ``0``.
     3. Escriba la función ``Replica_n(s1,s2,n)`` la cual dado el string ``s1``, el string ``s2`` y un entero n, concatena ``s1`` y ``s2`` n veces y devuelve este string (vea ejemplo abajo).  
-    4. Escriba la función ``Contar_letra(s1,el)`` la cual dado un string ``s1`` y una letra ``el``, devuelve la cantidad de veces que aparece la letra en el string ``s1``. Si el string es vacio, devuelve 0.  
+    4. Escriba la función ``Contar_letra(s1,el)`` la cual dado un string ``s1`` y una letra ``el``, devuelve la cantidad de veces que aparece la letra en el string ``s1``. Si el string es vacio, devuelve ``0``.  
     5. Escriba cada función con casos para demostrar que son correctas.
 
 En la función tres, si ``s1 = "sub"``, ``s2 = raya`` y ``n = 3``, la llamada ``Replica_n(s1,s2,n)`` devuelve el string ``"subrayasubrayasubraya"``. Si las listas o los strings como parametros estan vacios, debe devolver ``0`` o un string vacio, dependiendo de lo que pida la función. Algunos hints (número indica del punto del cual se habla):
 
-    1. Recuerde que un numero es par si el residuo al dividirlo por ``2`` es ``0`` (operador de modulo, ``%``).
+    1. Un número es par si el residuo al dividirlo por ``2`` es ``0`` (operador de modulo, ``%``).
     2. Si no es par, es impar.
     3. Repase como concatenar strings y cuantas veces debe iterar para hacer esta función.
-    4. Repase como iterar un string. 
-    5. Cada vez que termine una función, escriba pruebas para probar su código. Asi, si encuentra errores puede volver a la función y ver omo arreglarla.
+    4. Repase como iterar un string.
+    5. Cada vez que termine una función, escriba pruebas para probar su código. Asi, si encuentra errores puede volver a la función y ver como arreglarla.
   
 Utilice el siguiente espacio para codificar su laboratorio:
   
