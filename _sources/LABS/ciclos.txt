@@ -20,6 +20,7 @@ En este laboratorio los estudiantes:
     * Listas
     * strings
 
+* Aprenderán a concatenar strings
 * Practicarán ciclos en Python
 * Reeforzarán lo aprendido en laboratorios anteriores
 
@@ -133,7 +134,7 @@ En el primer for, ``i`` accesa los elementos de la lista ``L`` directamente, por
     
     concat2 = ""
     for j in range(0,len(s)):
-        concat2 = concat + s[j]
+        concat2 = concat2 + s[j]
 
  
 Vea la similitud con el código anterior. Este, en vez de sumar, concatena los caractéres del string ``s`` en la variable ``concat``. En el primer for, ``i`` accesa lo elemetos (los caractéres) del string ``s``.  Por eso, ``concat = concat + i`` funciona. En el segundo for, ``j`` itera sobre la lista ``[0,1,2,3]``, por eso podemos accesar los elementos con ``s[j]``.
@@ -187,7 +188,7 @@ En especifico, para el laboratorio:
 
     1. Escriba la función ``Contar_pares(L)``, la cual recibe una lista ``L`` que contiene enteros y devuelve la cantidad (un contador) de los enteros pares dentro de la lista. Si la lista esta vacía, devulve 0. 
     2. Escriba la función ``Sumar_impares(L)``, la cual recibe una lista ``L`` que contiene enteros y devuelve la suma de todos los enteros impares dentro de la lista. Si la lista esta vacía, devuelve ``0``.
-    3. Escriba la función ``Replica_n(s1,s2,n)`` la cual dado el string ``s1``, el string ``s2`` y un entero n, concatena ``s1`` y ``s2`` n veces y devuelve este string (vea ejemplo abajo).  
+    3. Escriba la función ``Replica_n(s1,s2,n)`` la cual dado el string ``s1``, el string ``s2`` y un entero ``n``, concatena ``s1`` y ``s2`` ``n`` veces y devuelve este string (vea ejemplo abajo).  
     4. Escriba la función ``Contar_letra(s1,el)`` la cual dado un string ``s1`` y una letra ``el``, devuelve la cantidad de veces que aparece la letra en el string ``s1``. Si el string es vacio, devuelve ``0``.  
     5. Escriba cada función con casos para demostrar que son correctas.
 
@@ -223,6 +224,6 @@ Utilice el siguiente espacio para codificar su laboratorio:
       
 **Para Entregar**: Luego de terminar su laboratorio, haga "copy/paste" de su código en un file. Incluya el template como el profesor discutió en clase. Guarde el file con el nombre *lab4.py*. Ingrese a la clase registrada en `moodle <http://moodle.ccom.uprrp.edu/>`_ y haga "upload" de su file en el tab correspondiente. Luego de entregar el lab, favor de llenar este `cuestionario <http://goo.gl/forms/Riw5VPx2uQ>`_. De surgir alguna duda con respecto al lab, puede enviar preguntas a `Piazza <https://piazza.com/class/i5szw5xlczl2du>`_.
 
-**Fecha de Entrega:** Abril 10 de marzo del 2015, antes de las 11:55pm en moodle.      
+**Fecha de Entrega:** Abril 11 de marzo del 2015, antes de las 11:55pm en moodle.      
 
 **Científico día del Día**: *George Bool*. Matemático Ingles, filósofo y lógico. Trabajo en los campos de ecuaciones diferenciales y lógica algebraica. Inventor de lo que se conoce hoy en día como la algebra booleana. Puede leer más en `Wikipedia <http://en.wikipedia.org/wiki/George_Boole>`_.  
