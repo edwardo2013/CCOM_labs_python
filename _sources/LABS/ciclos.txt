@@ -224,6 +224,6 @@ Utilice el siguiente espacio para codificar su laboratorio:
       
 **Para Entregar**: Luego de terminar su laboratorio, haga "copy/paste" de su código en un file. Incluya el template como el profesor discutió en clase. Guarde el file con el nombre *lab4.py*. Ingrese a la clase registrada en `moodle <http://moodle.ccom.uprrp.edu/>`_ y haga "upload" de su file en el tab correspondiente. Luego de entregar el lab, favor de llenar este `cuestionario <http://goo.gl/forms/Riw5VPx2uQ>`_. De surgir alguna duda con respecto al lab, puede enviar preguntas a `Piazza <https://piazza.com/class/i5szw5xlczl2du>`_.
 
-**Fecha de Entrega:** Abril 11 de marzo del 2015, antes de las 11:55pm en moodle.      
+**Fecha de Entrega:** Sábado 11 de abril del 2015, antes de las 11:55pm en moodle.      
 
 **Científico día del Día**: *George Bool*. Matemático Ingles, filósofo y lógico. Trabajo en los campos de ecuaciones diferenciales y lógica algebraica. Inventor de lo que se conoce hoy en día como la algebra booleana. Puede leer más en `Wikipedia <http://en.wikipedia.org/wiki/George_Boole>`_.  
