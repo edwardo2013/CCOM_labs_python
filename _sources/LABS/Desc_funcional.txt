@@ -1,0 +1,270 @@
+===============================================
+Lab 05: Programación modular y listas paralelas 
+===============================================
+
+Ya que sabemos estructuras de desición, ciclos y funciones, es hora de hacer un programa completo, dividiendo tareas por funciones. Este laboratorio tiene como propósito instruir al estudiante en como se pueden dividir tareas para ejecutar un programa utlizando funciones e introduce el concepto de listas paralelas y su importancia. Se llevara de la mano al estudiante con un ejemplo de un programa. Siga las instrucciones paso por paso y no salte secciones. Recuerde que para su laboratorio, debe tener el "template" provisto por el profesor y usar comentarios en su programa.
+
+
+**Objetivos**
+
+En este laboratorio los estudiantes:
+     
+* Reenforzarán el concepto de programacion modular y su importancia
+* Reenforzarán la interaccion ente funciones y listas
+* Entenderán el concepto de listas paralelas y su importancia
+* Aplicarán los conceptos antes mencionados en el laboratorio
+* Reenforzarán funciones, listas, ciclos entre otros conceptos
+
+**Repasando programación modular**
+
+Como habiamos discutido en el laboratorio 3, **programación modular** (o descomposición modular) consiste en dividir un en indepedientes subprogramas (funciones) para que cada subprograma ejecute una parte del código. En otras palabras, consiste en dividir el código tal que las funciones hagan una tarea específica y que las funciones interactuen entre sí para completar un programa. Seguiremos esta estructura:
+
+.. code-block:: python
+
+    def tarea1(param1,param2, etc. ):
+        instruccion
+        .
+        .
+        return valor_si_es_necesario
+
+    def tarea2(param1,param2, etc. ):
+        instruccion
+        .
+        .
+        return valor_si_es_necesario  
+    .
+    .
+    .
+    
+    # main llama las funciones con los
+    # parametros necesarios
+    def main():
+        tarea1(param1,param2,etc.)
+        tarea2(param1,param2,etc.)
+        .
+        .
+    # main corre el programa
+    main()
+          
+En esta estructura, cada función hace una tarea y devuelve un solo valor. La función ``main()`` se encarga de llamar las funciones en el orden correcto para que se ejecute el programa. 
+
+**Listas y funciones**
+
+En este laboratorio usaremos Listas dentro de funciones, asi que repasaremos esto y aprenderemos algunas cosas nuevas. Primero empezaremos con Listas. Para crear una lista, podemos hacer ``L = []`` y utilizar ``L.append()`` para ir insertando elementos, pero si queremos crear una lista de ``5`` elementos podemos hacer la siguiente instrucción:
+
+.. code-block:: python
+    
+    >>> L = [0] * 5 # crea lista de 5 elem con ceros
+    >>> L
+    [0,0,0,0,0]
+
+    >>> L[0] = 3   # Listas son mutables: cambian
+    >>> L
+    [3,0,0,0,0]
+    >>> len(L)     # tamano de la lista
+    5
+    
+En general, la instruccion ``L = [0] * n`` crea un lista con n elementos, todos inicializados a cero. Note que las listas son **mutables:** Se puede cambiar su contenido (esto es importante para funciones). Como recordatorio, ``len(L)`` devuelve la cantidad de elementos que hay en la lista. En este `link <https://docs.python.org/3.3/tutorial/datastructures.html>`_ puede encontrar documentación de metodos como ``L.index()`` que nos serán útiles para el laboratorio. 
+
+Ahora, hay que tener cuidado con funciones que usan listas como parametro, ya que las listas son mutables (cambian) y las funciones reciben *parámetros por referencia:* la dirección en memoria de donde esta la lista. En otras palabras, cuando usted pasa una lista como parámetro a una función, se pasa su dirección, y por ende, los cambios que se le hagan en la función se veran reflejados en la lista. Aunque en el laboratorio evitaremos esto, es importante entender porque ocurre esto. Estudie y corra el siguiente ejemplo:
+
+
+.. activecode:: listas_y_funciones
+
+    def alterar(Lista, x):
+    # x es un numero, asi que los cambios dentro de la funcion no lo afectan
+        x = 10
+        Lista[0] = 3 # La lista se ve afectada por la funcion
+        return
+      
+    def main():
+        Milista = [0] * 3 # inicializar lista
+        mi_x = 4            
+        print("Antes de entrar a la funcion Milista es",Milista)
+        print("Antes de entrar a la funcion mi_x es",mi_x)
+        alterar(Milista,mi_x)
+        print("Despues de entrar a la funcion Milista es",Milista)
+        print("Despues de entrar a la funcion mi_x es",mi_x)
+
+    main()        
+
+Como vemos, la función ``alterar()`` altera la lista ``Milista``, donde el primer elemento ahora es ``3``. Esto ocurre porque cuando se pasa ``Milista`` a la función recibe la dirección de esta y no crea una copia nueva. Si quiere crear una copia nueva, puede usar ``nuevalista = [] + viejalista`` y los cambios que se hagan a nuevalista no se verán reflejados en la viejalista.
+
+
+**Listas paralelas**
+
+Un *"record"* es un conjunto de campos relacionados, donde un campo es alguna información. En este laboratorio usaremos **listas paralelas:** dos o mas listas que representan "records". Cada lista es del mismo tipo de dato: entero, string, etc. y tienen el mismo tamaño. Cada posición en la lista representa un record. Por ejemplo, digamos que usted quiere guardar el nombre de una persona y cuanto dinero gana por hora. Usted puede hacer esto con listas paralelas: una que guarde el nombre de todos las personas y otra que guarde el salario por hora:
+
+.. activecode:: listas_paralelas
+    
+    nombres = ["Yadiel","Raymond","Alexandra","Martha"]
+    salario = [7.50, 8.00, 9.00, 12.00]
+    size = len(nombres) # listas paralelas del mismo tamano
+    
+    # imprima la informacion
+    for i in range(0,size):
+        print (nombres[i],"gana", salario[i], "por hora") 
+
+Vea que la información se asocia por la posición ``i``, Yadiel - 7.50, Raymond - 8.00 y así sucesivamente.
+
+**Sacando nómina de una compañía**
+
+En esta sección, discutiremos un programa que utiliza listas paralelas para que se sienta más comodo haciendo el laboratorio. Suponga que usted es dueño de una compañía de cinco empleados: Yadiel, Raymond, Alexandra, Martha y Roxanna los cuales trabajan veinte horas por día. Usted quiere, luego de insertar el salario por hora de cada uno, ver cuanto gana cada uno en la semana. Además, quiere ver cuanto es la nómina de la semana. 
+
+Para estructurar este programa usando programación modular, primero debemos saber lo que tenemos. De esta descripción, tenemos tres listas paralelas: ``empleados``: nombres de los empleados, ``salario_hora``: el salario por hora de cada empleado y ``salario_semanal``: cuanto gana cada empleado en la semana. También tenemos la variable ``HORAS_SEMANALES = 20`` que son las horas que trabaja cada empleado.
+
+Ahora, para dividir el programa en funciones, tenemos que preguntarnos cuales son las tareas que se pueden dividir. Los nombres son dados, asi que podemos declarar esta lista global para que todo el programa la accese. Es importante preguntarse que recibe cada función y que devuelve. Tenemos las siguientes tareas, que se traducen, cada una, a una función:
+
+    1. Pedir el salario por hora de cada empleado - ``salario_por_hora()``. Devuele la lista ``salario_hora``. No recibe nada.
+    2. Calcular el salario por semana de cada empleado - ``salario_por_semana(salario)``. Recibe la lista salario_hora. Devuelve la lista salario_semanal. 
+    3. Calcular la nómina - ``nomina(salario_sem)``. Recibe la lista salario_semanal y regresa la nómina semanal (suma de las nominas semanales).
+    4. Desplegar los resultados - ``Desplegar(salario,salario_sem,nomina)``. Dado las listas y la nómina, desplegar los resultados.
+    5. Control del programa - ``main()``. Se encargará de llamar las funciones en el orden correcto.
+
+    
+Aunque no tenemos exactamente el código, tenemos la estructura del mismo. Discutiremos las funciones una a una. Al final, se incluye el código entero para que lo vea corriendo. Primero, se incluyen las variables globales:
+
+.. code-block:: python
+
+    empleados = ["Yadiel","Raymond","Alexandra","Martha","Roxanna"]
+    HORAS_SEMANALES = 20
+    TAMANO = len(empleados)    # Tamano de todas las listas
+
+Es posible (y mejor programa) pedir tambien el nombre de los empleados pero para simplificar el laboratorio, asumimos que ya los tenemos.
+
+*salario_por_hora():* Tenemos que crear la lista salario_hora y llenarla con la informacion que inserte el usuario, por cada empleado:
+
+.. code-block:: python
+    
+    def salario_por_hora():
+        salario_hora = [0] * TAMANO # Cree la lista
+            
+        for i in range(0,TAMANO):
+            print("Inserte el salario por hora de", empleados[i],":") 
+            salario_hora[i] =  float(input("")) # guarde la informacion
+        return salario_hora
+
+*salario_por_semana(salario):* Recibe la lista salario_hora (calculado por la función salario_por_hora) y devuelve la lista salario_semanal. Para hacer esto, debemos multiplicar cada salario por hora por las ``HORAS_SEMANALES`` trabajadas:
+
+.. code-block:: python
+    
+    def salario_por_semana(sal_hora):
+        salario_semanal = [0] * TAMANO # Cree la lista
+        
+        for i in range(0,TAMANO): 
+            salario_semanal[i] = sal_hora[i] * HORAS_SEMANALES  # guarde la informacion
+        return salario_semanal
+
+
+*nomina(salario_sem):* Recibe la lista salario_semanal (calculado por la función salario_por_semana) y devuelve la nómina semanal. La nómina es simplemente la suma de todos los salarios semanales:
+
+.. code-block:: python
+
+    def nomina(salario_sem):
+        nomina = 0
+        
+        for i in salario_sem: # tambien puede usar range  
+            nomina = nomina + i
+        return nomina    
+       
+*Desplegar(sal_h,sal_sem,nomina):* Recibe la lista salario_por_hora, la lista salario_semanal y la nomina para desplegar la información. No regresa nada:
+
+.. code-block:: python
+
+    def Desplegar(sal_h,sal_sem,nomina):
+        nomina = 0
+        
+        for i in range(0,TAMANO): # tambien puede usar range  
+            print (empleados[i],"gana por hora",sal_h[i],"y por semana",sal_sem[i])
+        
+        print("La nomina es:", nomina)
+ 
+*main():* Se encarga de llamar a todas las funciones para ejecutar el programa. Primero pedimos el salario por hora, luego calculamos el salario semanal (que depende del salario por hora). Al tener el salario semanal, calculamos la nómina (suma de los salarios semanales) y luego, desplegamos la información calculada:  
+
+.. code-block:: python
+
+    def main():
+        sal_hora = salario_por_hora()          # Pida y guarde el salario por hora
+        sal_sem = salario_por_semana(sal_hora) # Calcule el salario semanal y guardelo
+        minomina = nomina(sal_sem)             # Calcule la nomina
+        Desplegar(sal_hora,sal_sem,minomina)   # Despliegue la informacion 
+ 
+Ahora tenemos todas las partes para hacer el programa. Se incluye todo el código, al final se llama ``main()`` para que se ejecute el código:
+
+.. activecode:: programa_nomina
+
+    empleados = ["Yadiel","Raymond","Alexandra","Martha","Roxanna"]
+    HORAS_SEMANALES = 20
+    TAMANO = len(empleados)    # Tamano de todas las listas
+
+    def salario_por_hora():
+        salario_hora = [0] * TAMANO # Cree la lista
+	        
+        for i in range(0,TAMANO):
+            print("Inserte el salario por hora de", empleados[i],":") 
+            salario_hora[i] =  float(input("")) # guarde la informacion
+        return salario_hora
+
+    def salario_por_semana(sal_hora):
+        salario_semanal = [0] * TAMANO # Cree la lista
+	    
+        for i in range(0,TAMANO): 
+            salario_semanal[i] = sal_hora[i] * HORAS_SEMANALES  # guarde la informacion
+
+        return salario_semanal
+
+    def nomina(salario_sem):
+        nomina = 0
+        for i in salario_sem: # tambien puede usar range  
+            nomina = nomina + i
+            
+        return nomina
+
+    def Desplegar(salario_h,salario_sem,nomina):
+    
+        for i in range(0,TAMANO): # tambien puede usar range  
+            print (empleados[i],"gana por hora",salario_h[i],"y por semana",salario_sem[i])	    
+            
+        print("La nomina es:", nomina)
+
+    def main():
+        sal_hora = salario_por_hora()           # Pida y guarde el salario por hora
+        sal_sem = salario_por_semana(sal_hora)  # Calcule el salario semanal y guardelo
+        minomina = nomina(sal_sem)              # Calcule la nomina
+        Desplegar(sal_hora,sal_sem,minomina)    # Despliegue la informacion 
+
+    # Llame a main para ejecutar el programa
+    main()    
+
+
+Lab: Estadísticas de precipitaciones  
+------------------------------------
+
+En ese laboratorio, usted hará un programa usando listas paralelas, parecido al discutido en la sección anterior. Usted diseñará un programa que permite al usuario introducir la precipitación total para cada uno de 12 meses en una lista. El programa debe calcular y mostrar la precipitación total para el año, la precipitación mensual promedio, y el mes de mayor cantidad. Asuma que tiene una lista global llamada ``meces`` la cual tiene los doce meces del año (como empleados).
+
+Su programa debe tener al menos las siguientes funciones:
+
+    1. ``leer_precipitacion()`` - Lee las 12 precipitaciones y los guarda en una lista, una por cada mes. Devuelve la lista. Debe decirle al usuario que mes esta insertando (en la sección anterior, sería el nombre del empleado). 
+    2. ``precipitacion_total(prec)`` - Devuelve la suma de todas las precipitaciones. Recibe la lista de las 12 precipitaciones ``prec``.
+    3. ``promedio_prec(algo)`` - Devuelve la precipitación mensual promedio. Puede recibir la lista ``prec`` o la suma de todas las precipitaciones (usted decide, ambas funcionan).
+    4. ``mes_maximo()`` - Devuelve el nombre del mes donde hubo mas precipitación. Recibe la lista ``prec``. 
+    5. ``Desplegar(prec,total,promedio,mes_max)`` - Recibe la informacion y la despliega con mensajes para el usuario.
+    6. ``main()`` - Control, llama las funciones en el orden correcto para ejecutar el programa.
+    
+Se recomienda que cada vez que haga una función, la pruebe y luego continúe con las demás. *Hint sobre mes_maximo:* Puede crear codigo para buscar el maximo de la lista (o usar la función ``max(L)`` que trae Python`` y luego usar ``L.index(numero_max)`` para que le de la posición donde esta el número maximo. Puede encontrar mas informacion `aqui <https://docs.python.org/3.3/tutorial/datastructures.html>`_.  Puede usar el siguiente espacio para hacer su laboratorio:
+
+.. activecode:: Lab_4
+
+    # Lista global de meces
+    meces = ["enero","febrero","marzo","abril","mayo","junio","julio","agosto","septiembre","noviembre","diciembre"]
+    TAMANO = len(meces) # tamano de lista meces y de lista prec, es 12
+
+    # Puede seguir su codigo aqui
+
+
+**Para Entregar**: Luego de terminar su laboratorio, haga "copy/paste" de su código en un file. Incluya el template como el profesor discutió en clase. Guarde el file con el nombre *lab5.py*. Ingrese a la clase registrada en `moodle <http://moodle.ccom.uprrp.edu/>`_ y haga "upload" de su file en el tab correspondiente. Luego de entregar el lab, favor de llenar este `cuestionario <http://goo.gl/forms/QKBJcyc8Jm>`_. De surgir alguna duda con respecto al lab, puede enviar preguntas a `Piazza <https://piazza.com/class/i5szw5xlczl2du>`_.  
+
+**Fecha de Entrega:** Viernes 15 de mayo del 2015, antes de las 11:55pm en moodle.
+
+**Científico del día**: *Donald Knuth*. Matemático y Científico de Cómputos, profesor emeritus de La Universidad de Standford. Se le conoce como el padre del análisis de algortimos. Contribuyó en el desarrollo de análisis rigurosos de complejidad computacional de algoritmos y systematizó técnicas matemáticas para este propósito. Author de *The Art of Computer Porgramming*. Puede leer más en `Wikipedia <http://en.wikipedia.org/wiki/Donald_Knuth>`_.
+

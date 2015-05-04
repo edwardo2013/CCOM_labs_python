@@ -24,3 +24,4 @@ Introducción a Python
     LABS/Est_control_rel_op.rst
     LABS/logica_fun.rst
     LABS/ciclos.rst
+    LABS/Desc_funcional.rst

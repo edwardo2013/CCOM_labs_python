@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Lab 05: Programación modular y listas paralelas &mdash; &lt;CCOM 3030 Python Labs&gt;</title>
+    
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/video.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/poll.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/tabbedstuff.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/css/pytutor.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/css/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/codemirror.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/activecode.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/parsons.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/lib/prettify.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/jquery-ui-1.10.3.custom.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/user-highlights.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/runestone-custom-sphinx-bootstrap.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/poll.js"></script>
+    <script type="text/javascript" src="../_static/js/d3.v2.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery.ba-bbq.min.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery.jsPlumb-1.3.10-all-min.js"></script>
+    <script type="text/javascript" src="../_static/js/pytutor.js"></script>
+    <script type="text/javascript" src="../_static/jquery.highlight.js"></script>
+    <script type="text/javascript" src="../_static/bookfuncs.js"></script>
+    <script type="text/javascript" src="../_static/codemirror.js"></script>
+    <script type="text/javascript" src="../_static/python.js"></script>
+    <script type="text/javascript" src="../_static/javascript.js"></script>
+    <script type="text/javascript" src="../_static/activecode.js"></script>
+    <script type="text/javascript" src="../_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../_static/assess.js"></script>
+    <script type="text/javascript" src="../_static/animationbase.js"></script>
+    <script type="text/javascript" src="../_static/lib/jquery.min.js"></script>
+    <script type="text/javascript" src="../_static/lib/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../_static/lib/prettify.js"></script>
+    <script type="text/javascript" src="../_static/lib/underscore-min.js"></script>
+    <script type="text/javascript" src="../_static/lib/lis.js"></script>
+    <script type="text/javascript" src="../_static/parsons.js"></script>
+    <script type="text/javascript" src="../_static/parsons-noconflict.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <script type="text/javascript" src="../_static/waypoints.min.js"></script>
+    <script type="text/javascript" src="../_static/rangy-core.js"></script>
+    <script type="text/javascript" src="../_static/rangy-textrange.js"></script>
+    <script type="text/javascript" src="../_static/rangy-cssclassapplier.js"></script>
+    <script type="text/javascript" src="../_static/user-highlights.js"></script>
+    <script type="text/javascript" src="../_static/jquery.idle-timer.js"></script>
+    <script type="text/javascript" src="../_static/processing-1.4.1.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.hotkey.js"></script>
+    <link rel="top" title="&lt;CCOM 3030 Python Labs&gt;" href="../index.html" />
+    <link rel="prev" title="Lab 04: Ciclos, Listas y Strings" href="ciclos.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+<script type="text/javascript">
+  eBookConfig = {};
+  eBookConfig.host = 'http://interactivepython.org' ? 'http://interactivepython.org' : 'http://127.0.0.1:8000';
+  eBookConfig.app = eBookConfig.host+'/runestone';
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.course = 'template';
+  eBookConfig.logLevel = 10;
+  eBookConfig.loginRequired = false
+  eBookConfig.build_info = "";
+  eBookConfig.isLoggedIn = false;
+</script>
+
+<div id="fb-root"></div>
+<script>
+  (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&status=0";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+</script>
+
+
+  </head>
+  <body>
+
+
+<!-- Begin navbar -->
+<div id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+      <button type='button' class='navbar-toggle' data-toggle="collapse" data-target=".navbar-ex1-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <div>
+        <a class="brand-logo" style='background: transparent url("../_static/img/logo_small.png") no-repeat 0px 0px;' href="/runestone/default/user/login">&nbsp; </a>
+        <a class="navbar-brand" href="../index.html">CCOM3030 Python Labs</a>
+      </div>
+    </div>
+
+    <div class="navbar-collapse collapse navbar-ex1-collapse">
+
+      <ul class="nav navbar-nav navbar-right">
+
+        <li class="divider-vertical"></li>
+
+        <!-- social media dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-share-alt" style="opacity: 0.9"></i>
+          </a>
+          <ul class="dropdown-menu social-menu">
+              <li>
+                <div>
+                  <b>Runestone in social media:</b>
+                </div>
+                <a href="https://twitter.com/iRunestone" class="twitter-follow-button" data-show-count="true">Follow @iRunestone</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+                <div class="fb-like" data-href="https://www.facebook.com/RunestoneInteractive" data-send="false" data-layout="button_count" data-width="300" data-show-faces="false" data-font="arial"></div>
+              </li>
+
+              <li class="divider"></li>
+              <li>
+                <div>
+                  <b>Help support us:</b>
+                </div>
+                <div class="gittip">
+                  <iframe style="border:0;"
+                    src="https://www.gittip.com/bnmnetp/widget.html"
+                    width="48pt" height="22pt" class="gittip-button">
+                  </iframe>
+                </div>
+              </li>
+          </ul>
+        </li>
+        <!-- end social media dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        <!-- search dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-search" style='opacity:0.9;'></i>
+          </a>
+          <ul class='dropdown-menu'>
+            
+                <li><a href='../index.html'>Table of Contents</a></li>
+            
+            <li><a href='/runestone/static/template/genindex.html'>Book Index</a></li>
+            <li class="divider"></li>
+            <li id="scratch_ac_link"><a href="javascript:toggleScratchActivecode()">Scratch ActiveCode</a></li>
+            <li class="divider"></li>
+            <li style="width: 240px;">
+              <form class="navbar-search" style="margin:10px;" action="../search.html" method="get">
+                <div class="input-group">
+                  <input type="text" class="form-control" name="q" placeholder="Search this book" />
+                  <span class="input-group-btn">
+                    <button class="btn btn-primary" style="margin:0;" type="submit">
+                      <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                  </span>
+                </div><!-- /input-group -->
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+            </li>
+          </ul>
+        </li>
+        <!-- end search dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        <!-- user account dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-user" style="opacity:0.9;"></i>
+          </a>
+          <ul class="dropdown-menu user-menu">
+            <li><span class='loggedinuser'></span></li>
+            <li class="divider"></li>
+            <li><a href='http://interactivepython.org/runestone/admin/index'>Instructor's Page</a></li>
+            <li class="divider"></li>
+            <li><a href="http://interactivepython.org/runestone/default/user/profile" id="profilelink">Edit Profile</a></li>
+            <li><a href="http://interactivepython.org/runestone/default/user/change_password" id="passwordlink">Change Password</a></li>
+            <li><a href="http://interactivepython.org/runestone/default/user/register" id="registerlink">Register</a></li>
+            <li class='loginout'><a href='#'>Login</a></li> <!-- correct link populated by addNavbarLoginLink() -->
+          </ul>
+        </li>
+        <!-- end user account dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        <!-- help menu dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-question-sign" style="opacity:0.9;"></i>
+          </a>
+          <ul class="dropdown-menu user-menu">
+            <li><a href='/runestone/static/template/navhelp.html'>Navigation Help</a></li>
+            <li><a href='/runestone/static/overview/instructor.html'>Help for Instructors</a></li>            
+            <li class="divider"></li>
+            <li><a href='http://runestoneinteractive.org'>About Runestone</a></li>
+            <li><a href='https://github.com/bnmnetp/runestone/issues/new'>Report A Problem</a></li>
+          </ul>
+        </li>
+        <!-- end help menu dropdown -->
+
+        <li class="divider-vertical"></li>
+
+      </ul>
+
+      <ul class="nav navbar-nav">
+        <li class="divider-vertical"></li>
+        
+          <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"><ul>
+<li><a class="reference internal" href="#">Lab 05: Programación modular y listas paralelas</a><ul>
+<li><a class="reference internal" href="#lab-estadisticas-de-precipitaciones">Lab: Estadísticas de precipitaciones</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+          <li class="divider-vertical"></li>
+        
+        
+          
+  <li id="relations-prev" title="Previous Chapter - Lab 04: Ciclos, Listas y Strings" data-toggle="tooltip">
+    <a href="ciclos.html" >
+      <i class='glyphicon glyphicon-backward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  
+    <li class="divider-vertical"></li>
+  
+
+<script type="text/javascript">
+  opts = {'placement':'bottom',
+          'selector': '',
+          'delay': { show: 100, hide: 50}
+         };
+
+  $('#relations-prev').tooltip(opts);
+  $('#relations-next').tooltip(opts);
+</script>
+        
+        
+          <li></li>
+        
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+
+<div class="container">
+  
+  <div class="section" id="lab-05-programacion-modular-y-listas-paralelas">
+<h1>Lab 05: Programación modular y listas paralelas<a class="headerlink" href="#lab-05-programacion-modular-y-listas-paralelas" title="Permalink to this headline">¶</a></h1>
+<p>Ya que sabemos estructuras de desición, ciclos y funciones, es hora de hacer un programa completo, dividiendo tareas por funciones. Este laboratorio tiene como propósito instruir al estudiante en como se pueden dividir tareas para ejecutar un programa utlizando funciones e introduce el concepto de listas paralelas y su importancia. Se llevara de la mano al estudiante con un ejemplo de un programa. Siga las instrucciones paso por paso y no salte secciones. Recuerde que para su laboratorio, debe tener el &#8220;template&#8221; provisto por el profesor y usar comentarios en su programa.</p>
+<p><strong>Objetivos</strong></p>
+<p>En este laboratorio los estudiantes:</p>
+<ul class="simple">
+<li>Reenforzarán el concepto de programacion modular y su importancia</li>
+<li>Reenforzarán la interaccion ente funciones y listas</li>
+<li>Entenderán el concepto de listas paralelas y su importancia</li>
+<li>Aplicarán los conceptos antes mencionados en el laboratorio</li>
+<li>Reenforzarán funciones, listas, ciclos entre otros conceptos</li>
+</ul>
+<p><strong>Repasando programación modular</strong></p>
+<p>Como habiamos discutido en el laboratorio 3, <strong>programación modular</strong> (o descomposición modular) consiste en dividir un en indepedientes subprogramas (funciones) para que cada subprograma ejecute una parte del código. En otras palabras, consiste en dividir el código tal que las funciones hagan una tarea específica y que las funciones interactuen entre sí para completar un programa. Seguiremos esta estructura:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="k">def</span> <span class="nf">tarea1</span><span class="p">(</span><span class="n">param1</span><span class="p">,</span><span class="n">param2</span><span class="p">,</span> <span class="n">etc</span><span class="o">.</span> <span class="p">):</span>
+    <span class="n">instruccion</span>
+    <span class="o">.</span>
+    <span class="o">.</span>
+    <span class="k">return</span> <span class="n">valor_si_es_necesario</span>
+
+<span class="k">def</span> <span class="nf">tarea2</span><span class="p">(</span><span class="n">param1</span><span class="p">,</span><span class="n">param2</span><span class="p">,</span> <span class="n">etc</span><span class="o">.</span> <span class="p">):</span>
+    <span class="n">instruccion</span>
+    <span class="o">.</span>
+    <span class="o">.</span>
+    <span class="k">return</span> <span class="n">valor_si_es_necesario</span>
+<span class="o">.</span>
+<span class="o">.</span>
+<span class="o">.</span>
+
+<span class="c"># main llama las funciones con los</span>
+<span class="c"># parametros necesarios</span>
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">tarea1</span><span class="p">(</span><span class="n">param1</span><span class="p">,</span><span class="n">param2</span><span class="p">,</span><span class="n">etc</span><span class="o">.</span><span class="p">)</span>
+    <span class="n">tarea2</span><span class="p">(</span><span class="n">param1</span><span class="p">,</span><span class="n">param2</span><span class="p">,</span><span class="n">etc</span><span class="o">.</span><span class="p">)</span>
+    <span class="o">.</span>
+    <span class="o">.</span>
+<span class="c"># main corre el programa</span>
+<span class="n">main</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>En esta estructura, cada función hace una tarea y devuelve un solo valor. La función <tt class="docutils literal"><span class="pre">main()</span></tt> se encarga de llamar las funciones en el orden correcto para que se ejecute el programa.</p>
+<p><strong>Listas y funciones</strong></p>
+<p>En este laboratorio usaremos Listas dentro de funciones, asi que repasaremos esto y aprenderemos algunas cosas nuevas. Primero empezaremos con Listas. Para crear una lista, podemos hacer <tt class="docutils literal"><span class="pre">L</span> <span class="pre">=</span> <span class="pre">[]</span></tt> y utilizar <tt class="docutils literal"><span class="pre">L.append()</span></tt> para ir insertando elementos, pero si queremos crear una lista de <tt class="docutils literal"><span class="pre">5</span></tt> elementos podemos hacer la siguiente instrucción:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">L</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="mi">5</span> <span class="c"># crea lista de 5 elem con ceros</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">L</span>
+<span class="go">[0,0,0,0,0]</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="n">L</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">3</span>   <span class="c"># Listas son mutables: cambian</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">L</span>
+<span class="go">[3,0,0,0,0]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">len</span><span class="p">(</span><span class="n">L</span><span class="p">)</span>     <span class="c"># tamano de la lista</span>
+<span class="go">5</span>
+</pre></div>
+</div>
+<p>En general, la instruccion <tt class="docutils literal"><span class="pre">L</span> <span class="pre">=</span> <span class="pre">[0]</span> <span class="pre">*</span> <span class="pre">n</span></tt> crea un lista con n elementos, todos inicializados a cero. Note que las listas son <strong>mutables:</strong> Se puede cambiar su contenido (esto es importante para funciones). Como recordatorio, <tt class="docutils literal"><span class="pre">len(L)</span></tt> devuelve la cantidad de elementos que hay en la lista. En este <a class="reference external" href="https://docs.python.org/3.3/tutorial/datastructures.html">link</a> puede encontrar documentación de metodos como <tt class="docutils literal"><span class="pre">L.index()</span></tt> que nos serán útiles para el laboratorio.</p>
+<p>Ahora, hay que tener cuidado con funciones que usan listas como parametro, ya que las listas son mutables (cambian) y las funciones reciben <em>parámetros por referencia:</em> la dirección en memoria de donde esta la lista. En otras palabras, cuando usted pasa una lista como parámetro a una función, se pasa su dirección, y por ende, los cambios que se le hagan en la función se veran reflejados en la lista. Aunque en el laboratorio evitaremos esto, es importante entender porque ocurre esto. Estudie y corra el siguiente ejemplo:</p>
+
+<div id="listas_y_funciones" lang="python" >
+
+<br/>
+<div id="listas_y_funciones_code_div" style="display: block">
+<textarea cols="50" rows="12" id="listas_y_funciones_code" class="active_code", prefixcode="undefined" lang="python">
+def alterar(Lista, x):
+# x es un numero, asi que los cambios dentro de la funcion no lo afectan
+    x = 10
+    Lista[0] = 3 # La lista se ve afectada por la funcion
+    return
+
+def main():
+    Milista = [0] * 3 # inicializar lista
+    mi_x = 4
+    print("Antes de entrar a la funcion Milista es",Milista)
+    print("Antes de entrar a la funcion mi_x es",mi_x)
+    alterar(Milista,mi_x)
+    print("Despues de entrar a la funcion Milista es",Milista)
+    print("Despues de entrar a la funcion mi_x es",mi_x)
+
+main()
+</textarea>
+</div>
+<p class="ac_caption"><span class="ac_caption_text"> (listas_y_funciones)</span> </p>
+
+<button class='btn btn-success' id="listas_y_funciones_runb" onclick="runit('listas_y_funciones',this, undefined);">Run</button>
+
+<div id="cont"></div>
+
+<button class="ac_opt btn btn-default" style="display: inline-block" id="listas_y_funciones_saveb" onclick="saveEditor('listas_y_funciones');">Save</button>
+<button class="ac_opt btn btn-default" style="display: inline-block" id="listas_y_funciones_loadb" onclick="requestCode('listas_y_funciones');">Load</button>
+
+<script>
+if ('block' == 'none') {
+    // a hack to preserve the inline-block display style. Toggle() will use display: block
+    // (instead of inline-block) if the previous display style was 'none'
+    $('#listas_y_funciones_saveb').toggle();
+    $('#listas_y_funciones_loadb').toggle();
+}
+</script>
+
+
+<div style="text-align: center">
+<canvas id="listas_y_funciones_canvas" class="ac-canvas" height="400" width="400" style="border-style: solid; display: none; text-align: center"></canvas>
+</div>
+<pre id="listas_y_funciones_suffix" style="display:none">
+</pre>
+<pre id="listas_y_funciones_pre" class="active_out">
+
+</pre>
+
+
+</div>
+
+<p>Como vemos, la función <tt class="docutils literal"><span class="pre">alterar()</span></tt> altera la lista <tt class="docutils literal"><span class="pre">Milista</span></tt>, donde el primer elemento ahora es <tt class="docutils literal"><span class="pre">3</span></tt>. Esto ocurre porque cuando se pasa <tt class="docutils literal"><span class="pre">Milista</span></tt> a la función recibe la dirección de esta y no crea una copia nueva. Si quiere crear una copia nueva, puede usar <tt class="docutils literal"><span class="pre">nuevalista</span> <span class="pre">=</span> <span class="pre">[]</span> <span class="pre">+</span> <span class="pre">viejalista</span></tt> y los cambios que se hagan a nuevalista no se verán reflejados en la viejalista.</p>
+<p><strong>Listas paralelas</strong></p>
+<p>Un <em>&#8220;record&#8221;</em> es un conjunto de campos relacionados, donde un campo es alguna información. En este laboratorio usaremos <strong>listas paralelas:</strong> dos o mas listas que representan &#8220;records&#8221;. Cada lista es del mismo tipo de dato: entero, string, etc. y tienen el mismo tamaño. Cada posición en la lista representa un record. Por ejemplo, digamos que usted quiere guardar el nombre de una persona y cuanto dinero gana por hora. Usted puede hacer esto con listas paralelas: una que guarde el nombre de todos las personas y otra que guarde el salario por hora:</p>
+
+<div id="listas_paralelas" lang="python" >
+
+<br/>
+<div id="listas_paralelas_code_div" style="display: block">
+<textarea cols="50" rows="12" id="listas_paralelas_code" class="active_code", prefixcode="undefined" lang="python">
+nombres = ["Yadiel","Raymond","Alexandra","Martha"]
+salario = [7.50, 8.00, 9.00, 12.00]
+size = len(nombres) # listas paralelas del mismo tamano
+
+# imprima la informacion
+for i in range(0,size):
+    print (nombres[i],"gana", salario[i], "por hora")
+</textarea>
+</div>
+<p class="ac_caption"><span class="ac_caption_text"> (listas_paralelas)</span> </p>
+
+<button class='btn btn-success' id="listas_paralelas_runb" onclick="runit('listas_paralelas',this, undefined);">Run</button>
+
+<div id="cont"></div>
+
+<button class="ac_opt btn btn-default" style="display: inline-block" id="listas_paralelas_saveb" onclick="saveEditor('listas_paralelas');">Save</button>
+<button class="ac_opt btn btn-default" style="display: inline-block" id="listas_paralelas_loadb" onclick="requestCode('listas_paralelas');">Load</button>
+
+<script>
+if ('block' == 'none') {
+    // a hack to preserve the inline-block display style. Toggle() will use display: block
+    // (instead of inline-block) if the previous display style was 'none'
+    $('#listas_paralelas_saveb').toggle();
+    $('#listas_paralelas_loadb').toggle();
+}
+</script>
+
+
+<div style="text-align: center">
+<canvas id="listas_paralelas_canvas" class="ac-canvas" height="400" width="400" style="border-style: solid; display: none; text-align: center"></canvas>
+</div>
+<pre id="listas_paralelas_suffix" style="display:none">
+</pre>
+<pre id="listas_paralelas_pre" class="active_out">
+
+</pre>
+
+
+</div>
+
+<p>Vea que la información se asocia por la posición <tt class="docutils literal"><span class="pre">i</span></tt>, Yadiel - 7.50, Raymond - 8.00 y así sucesivamente.</p>
+<p><strong>Sacando nómina de una compañía</strong></p>
+<p>En esta sección, discutiremos un programa que utiliza listas paralelas para que se sienta más comodo haciendo el laboratorio. Suponga que usted es dueño de una compañía de cinco empleados: Yadiel, Raymond, Alexandra, Martha y Roxanna los cuales trabajan veinte horas por día. Usted quiere, luego de insertar el salario por hora de cada uno, ver cuanto gana cada uno en la semana. Además, quiere ver cuanto es la nómina de la semana.</p>
+<p>Para estructurar este programa usando programación modular, primero debemos saber lo que tenemos. De esta descripción, tenemos tres listas paralelas: <tt class="docutils literal"><span class="pre">empleados</span></tt>: nombres de los empleados, <tt class="docutils literal"><span class="pre">salario_hora</span></tt>: el salario por hora de cada empleado y <tt class="docutils literal"><span class="pre">salario_semanal</span></tt>: cuanto gana cada empleado en la semana. También tenemos la variable <tt class="docutils literal"><span class="pre">HORAS_SEMANALES</span> <span class="pre">=</span> <span class="pre">20</span></tt> que son las horas que trabaja cada empleado.</p>
+<p>Ahora, para dividir el programa en funciones, tenemos que preguntarnos cuales son las tareas que se pueden dividir. Los nombres son dados, asi que podemos declarar esta lista global para que todo el programa la accese. Es importante preguntarse que recibe cada función y que devuelve. Tenemos las siguientes tareas, que se traducen, cada una, a una función:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li>Pedir el salario por hora de cada empleado - <tt class="docutils literal"><span class="pre">salario_por_hora()</span></tt>. Devuele la lista <tt class="docutils literal"><span class="pre">salario_hora</span></tt>. No recibe nada.</li>
+<li>Calcular el salario por semana de cada empleado - <tt class="docutils literal"><span class="pre">salario_por_semana(salario)</span></tt>. Recibe la lista salario_hora. Devuelve la lista salario_semanal.</li>
+<li>Calcular la nómina - <tt class="docutils literal"><span class="pre">nomina(salario_sem)</span></tt>. Recibe la lista salario_semanal y regresa la nómina semanal (suma de las nominas semanales).</li>
+<li>Desplegar los resultados - <tt class="docutils literal"><span class="pre">Desplegar(salario,salario_sem,nomina)</span></tt>. Dado las listas y la nómina, desplegar los resultados.</li>
+<li>Control del programa - <tt class="docutils literal"><span class="pre">main()</span></tt>. Se encargará de llamar las funciones en el orden correcto.</li>
+</ol>
+</div></blockquote>
+<p>Aunque no tenemos exactamente el código, tenemos la estructura del mismo. Discutiremos las funciones una a una. Al final, se incluye el código entero para que lo vea corriendo. Primero, se incluyen las variables globales:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">empleados</span> <span class="o">=</span> <span class="p">[</span><span class="s">&quot;Yadiel&quot;</span><span class="p">,</span><span class="s">&quot;Raymond&quot;</span><span class="p">,</span><span class="s">&quot;Alexandra&quot;</span><span class="p">,</span><span class="s">&quot;Martha&quot;</span><span class="p">,</span><span class="s">&quot;Roxanna&quot;</span><span class="p">]</span>
+<span class="n">HORAS_SEMANALES</span> <span class="o">=</span> <span class="mi">20</span>
+<span class="n">TAMANO</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">empleados</span><span class="p">)</span>    <span class="c"># Tamano de todas las listas</span>
+</pre></div>
+</div>
+<p>Es posible (y mejor programa) pedir tambien el nombre de los empleados pero para simplificar el laboratorio, asumimos que ya los tenemos.</p>
+<p><em>salario_por_hora():</em> Tenemos que crear la lista salario_hora y llenarla con la informacion que inserte el usuario, por cada empleado:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="k">def</span> <span class="nf">salario_por_hora</span><span class="p">():</span>
+    <span class="n">salario_hora</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="n">TAMANO</span> <span class="c"># Cree la lista</span>
+
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">TAMANO</span><span class="p">):</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">&quot;Inserte el salario por hora de&quot;</span><span class="p">,</span> <span class="n">empleados</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="s">&quot;:&quot;</span><span class="p">)</span>
+        <span class="n">salario_hora</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span>  <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s">&quot;&quot;</span><span class="p">))</span> <span class="c"># guarde la informacion</span>
+    <span class="k">return</span> <span class="n">salario_hora</span>
+</pre></div>
+</div>
+<p><em>salario_por_semana(salario):</em> Recibe la lista salario_hora (calculado por la función salario_por_hora) y devuelve la lista salario_semanal. Para hacer esto, debemos multiplicar cada salario por hora por las <tt class="docutils literal"><span class="pre">HORAS_SEMANALES</span></tt> trabajadas:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="k">def</span> <span class="nf">salario_por_semana</span><span class="p">(</span><span class="n">sal_hora</span><span class="p">):</span>
+    <span class="n">salario_semanal</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="n">TAMANO</span> <span class="c"># Cree la lista</span>
+
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">TAMANO</span><span class="p">):</span>
+        <span class="n">salario_semanal</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">sal_hora</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">*</span> <span class="n">HORAS_SEMANALES</span>  <span class="c"># guarde la informacion</span>
+    <span class="k">return</span> <span class="n">salario_semanal</span>
+</pre></div>
+</div>
+<p><em>nomina(salario_sem):</em> Recibe la lista salario_semanal (calculado por la función salario_por_semana) y devuelve la nómina semanal. La nómina es simplemente la suma de todos los salarios semanales:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="k">def</span> <span class="nf">nomina</span><span class="p">(</span><span class="n">salario_sem</span><span class="p">):</span>
+    <span class="n">nomina</span> <span class="o">=</span> <span class="mi">0</span>
+
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">salario_sem</span><span class="p">:</span> <span class="c"># tambien puede usar range</span>
+        <span class="n">nomina</span> <span class="o">=</span> <span class="n">nomina</span> <span class="o">+</span> <span class="n">i</span>
+    <span class="k">return</span> <span class="n">nomina</span>
+</pre></div>
+</div>
+<p><em>Desplegar(sal_h,sal_sem,nomina):</em> Recibe la lista salario_por_hora, la lista salario_semanal y la nomina para desplegar la información. No regresa nada:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="k">def</span> <span class="nf">Desplegar</span><span class="p">(</span><span class="n">sal_h</span><span class="p">,</span><span class="n">sal_sem</span><span class="p">,</span><span class="n">nomina</span><span class="p">):</span>
+    <span class="n">nomina</span> <span class="o">=</span> <span class="mi">0</span>
+
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">TAMANO</span><span class="p">):</span> <span class="c"># tambien puede usar range</span>
+        <span class="k">print</span> <span class="p">(</span><span class="n">empleados</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="s">&quot;gana por hora&quot;</span><span class="p">,</span><span class="n">sal_h</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="s">&quot;y por semana&quot;</span><span class="p">,</span><span class="n">sal_sem</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+
+    <span class="k">print</span><span class="p">(</span><span class="s">&quot;La nomina es:&quot;</span><span class="p">,</span> <span class="n">nomina</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><em>main():</em> Se encarga de llamar a todas las funciones para ejecutar el programa. Primero pedimos el salario por hora, luego calculamos el salario semanal (que depende del salario por hora). Al tener el salario semanal, calculamos la nómina (suma de los salarios semanales) y luego, desplegamos la información calculada:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">sal_hora</span> <span class="o">=</span> <span class="n">salario_por_hora</span><span class="p">()</span>          <span class="c"># Pida y guarde el salario por hora</span>
+    <span class="n">sal_sem</span> <span class="o">=</span> <span class="n">salario_por_semana</span><span class="p">(</span><span class="n">sal_hora</span><span class="p">)</span> <span class="c"># Calcule el salario semanal y guardelo</span>
+    <span class="n">minomina</span> <span class="o">=</span> <span class="n">nomina</span><span class="p">(</span><span class="n">sal_sem</span><span class="p">)</span>             <span class="c"># Calcule la nomina</span>
+    <span class="n">Desplegar</span><span class="p">(</span><span class="n">sal_hora</span><span class="p">,</span><span class="n">sal_sem</span><span class="p">,</span><span class="n">minomina</span><span class="p">)</span>   <span class="c"># Despliegue la informacion</span>
+</pre></div>
+</div>
+<p>Ahora tenemos todas las partes para hacer el programa. Se incluye todo el código, al final se llama <tt class="docutils literal"><span class="pre">main()</span></tt> para que se ejecute el código:</p>
+
+<div id="programa_nomina" lang="python" >
+
+<br/>
+<div id="programa_nomina_code_div" style="display: block">
+<textarea cols="50" rows="12" id="programa_nomina_code" class="active_code", prefixcode="undefined" lang="python">
+empleados = ["Yadiel","Raymond","Alexandra","Martha","Roxanna"]
+HORAS_SEMANALES = 20
+TAMANO = len(empleados)    # Tamano de todas las listas
+
+def salario_por_hora():
+    salario_hora = [0] * TAMANO # Cree la lista
+
+    for i in range(0,TAMANO):
+        print("Inserte el salario por hora de", empleados[i],":")
+        salario_hora[i] =  float(input("")) # guarde la informacion
+    return salario_hora
+
+def salario_por_semana(sal_hora):
+    salario_semanal = [0] * TAMANO # Cree la lista
+
+    for i in range(0,TAMANO):
+        salario_semanal[i] = sal_hora[i] * HORAS_SEMANALES  # guarde la informacion
+
+    return salario_semanal
+
+def nomina(salario_sem):
+    nomina = 0
+    for i in salario_sem: # tambien puede usar range
+        nomina = nomina + i
+
+    return nomina
+
+def Desplegar(salario_h,salario_sem,nomina):
+
+    for i in range(0,TAMANO): # tambien puede usar range
+        print (empleados[i],"gana por hora",salario_h[i],"y por semana",salario_sem[i])
+
+    print("La nomina es:", nomina)
+
+def main():
+    sal_hora = salario_por_hora()           # Pida y guarde el salario por hora
+    sal_sem = salario_por_semana(sal_hora)  # Calcule el salario semanal y guardelo
+    minomina = nomina(sal_sem)              # Calcule la nomina
+    Desplegar(sal_hora,sal_sem,minomina)    # Despliegue la informacion
+
+# Llame a main para ejecutar el programa
+main()
+</textarea>
+</div>
+<p class="ac_caption"><span class="ac_caption_text"> (programa_nomina)</span> </p>
+
+<button class='btn btn-success' id="programa_nomina_runb" onclick="runit('programa_nomina',this, undefined);">Run</button>
+
+<div id="cont"></div>
+
+<button class="ac_opt btn btn-default" style="display: inline-block" id="programa_nomina_saveb" onclick="saveEditor('programa_nomina');">Save</button>
+<button class="ac_opt btn btn-default" style="display: inline-block" id="programa_nomina_loadb" onclick="requestCode('programa_nomina');">Load</button>
+
+<script>
+if ('block' == 'none') {
+    // a hack to preserve the inline-block display style. Toggle() will use display: block
+    // (instead of inline-block) if the previous display style was 'none'
+    $('#programa_nomina_saveb').toggle();
+    $('#programa_nomina_loadb').toggle();
+}
+</script>
+
+
+<div style="text-align: center">
+<canvas id="programa_nomina_canvas" class="ac-canvas" height="400" width="400" style="border-style: solid; display: none; text-align: center"></canvas>
+</div>
+<pre id="programa_nomina_suffix" style="display:none">
+</pre>
+<pre id="programa_nomina_pre" class="active_out">
+
+</pre>
+
+
+</div>
+
+<div class="section" id="lab-estadisticas-de-precipitaciones">
+<h2>Lab: Estadísticas de precipitaciones<a class="headerlink" href="#lab-estadisticas-de-precipitaciones" title="Permalink to this headline">¶</a></h2>
+<p>En ese laboratorio, usted hará un programa usando listas paralelas, parecido al discutido en la sección anterior. Usted diseñará un programa que permite al usuario introducir la precipitación total para cada uno de 12 meses en una lista. El programa debe calcular y mostrar la precipitación total para el año, la precipitación mensual promedio, y el mes de mayor cantidad. Asuma que tiene una lista global llamada <tt class="docutils literal"><span class="pre">meces</span></tt> la cual tiene los doce meces del año (como empleados).</p>
+<p>Su programa debe tener al menos las siguientes funciones:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><tt class="docutils literal"><span class="pre">leer_precipitacion()</span></tt> - Lee las 12 precipitaciones y los guarda en una lista, una por cada mes. Devuelve la lista. Debe decirle al usuario que mes esta insertando (en la sección anterior, sería el nombre del empleado).</li>
+<li><tt class="docutils literal"><span class="pre">precipitacion_total(prec)</span></tt> - Devuelve la suma de todas las precipitaciones. Recibe la lista de las 12 precipitaciones <tt class="docutils literal"><span class="pre">prec</span></tt>.</li>
+<li><tt class="docutils literal"><span class="pre">promedio_prec(algo)</span></tt> - Devuelve la precipitación mensual promedio. Puede recibir la lista <tt class="docutils literal"><span class="pre">prec</span></tt> o la suma de todas las precipitaciones (usted decide, ambas funcionan).</li>
+<li><tt class="docutils literal"><span class="pre">mes_maximo()</span></tt> - Devuelve el nombre del mes donde hubo mas precipitación. Recibe la lista <tt class="docutils literal"><span class="pre">prec</span></tt>.</li>
+<li><tt class="docutils literal"><span class="pre">Desplegar(prec,total,promedio,mes_max)</span></tt> - Recibe la informacion y la despliega con mensajes para el usuario.</li>
+<li><tt class="docutils literal"><span class="pre">main()</span></tt> - Control, llama las funciones en el orden correcto para ejecutar el programa.</li>
+</ol>
+</div></blockquote>
+<p>Se recomienda que cada vez que haga una función, la pruebe y luego continúe con las demás. <em>Hint sobre mes_maximo:</em> Puede crear codigo para buscar el maximo de la lista (o usar la función <tt class="docutils literal"><span class="pre">max(L)</span></tt> que trae Python`` y luego usar <tt class="docutils literal"><span class="pre">L.index(numero_max)</span></tt> para que le de la posición donde esta el número maximo. Puede encontrar mas informacion <a class="reference external" href="https://docs.python.org/3.3/tutorial/datastructures.html">aqui</a>.  Puede usar el siguiente espacio para hacer su laboratorio:</p>
+
+<div id="Lab_4" lang="python" >
+
+<br/>
+<div id="Lab_4_code_div" style="display: block">
+<textarea cols="50" rows="12" id="Lab_4_code" class="active_code", prefixcode="undefined" lang="python">
+# Lista global de meces
+meces = ["enero","febrero","marzo","abril","mayo","junio","julio","agosto","septiembre","noviembre","diciembre"]
+TAMANO = len(meces) # tamano de lista meces y de lista prec, es 12
+
+# Puede seguir su codigo aqui
+</textarea>
+</div>
+<p class="ac_caption"><span class="ac_caption_text"> (Lab_4)</span> </p>
+
+<button class='btn btn-success' id="Lab_4_runb" onclick="runit('Lab_4',this, undefined);">Run</button>
+
+<div id="cont"></div>
+
+<button class="ac_opt btn btn-default" style="display: inline-block" id="Lab_4_saveb" onclick="saveEditor('Lab_4');">Save</button>
+<button class="ac_opt btn btn-default" style="display: inline-block" id="Lab_4_loadb" onclick="requestCode('Lab_4');">Load</button>
+
+<script>
+if ('block' == 'none') {
+    // a hack to preserve the inline-block display style. Toggle() will use display: block
+    // (instead of inline-block) if the previous display style was 'none'
+    $('#Lab_4_saveb').toggle();
+    $('#Lab_4_loadb').toggle();
+}
+</script>
+
+
+<div style="text-align: center">
+<canvas id="Lab_4_canvas" class="ac-canvas" height="400" width="400" style="border-style: solid; display: none; text-align: center"></canvas>
+</div>
+<pre id="Lab_4_suffix" style="display:none">
+</pre>
+<pre id="Lab_4_pre" class="active_out">
+
+</pre>
+
+
+</div>
+
+<p><strong>Para Entregar</strong>: Luego de terminar su laboratorio, haga &#8220;copy/paste&#8221; de su código en un file. Incluya el template como el profesor discutió en clase. Guarde el file con el nombre <em>lab5.py</em>. Ingrese a la clase registrada en <a class="reference external" href="http://moodle.ccom.uprrp.edu/">moodle</a> y haga &#8220;upload&#8221; de su file en el tab correspondiente. Luego de entregar el lab, favor de llenar este <a class="reference external" href="http://goo.gl/forms/QKBJcyc8Jm">cuestionario</a>. De surgir alguna duda con respecto al lab, puede enviar preguntas a <a class="reference external" href="https://piazza.com/class/i5szw5xlczl2du">Piazza</a>.</p>
+<p><strong>Fecha de Entrega:</strong> Viernes 15 de mayo del 2015, antes de las 11:55pm en moodle.</p>
+<p><strong>Científico del día</strong>: <em>Donald Knuth</em>. Matemático y Científico de Cómputos, profesor emeritus de La Universidad de Standford. Se le conoce como el padre del análisis de algortimos. Contribuyó en el desarrollo de análisis rigurosos de complejidad computacional de algoritmos y systematizó técnicas matemáticas para este propósito. Author de <em>The Art of Computer Porgramming</em>. Puede leer más en <a class="reference external" href="http://en.wikipedia.org/wiki/Donald_Knuth">Wikipedia</a>.</p>
+</div>
+</div>
+
+
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <span id='numuserspan'></span> readers online now | <span class='loggedinuser'></span> | <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2015, Edwardo S. Rivera.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.2.3.
+    </p>
+  </div>
+</footer>
+
+<script type="text/javascript" charset="utf-8">
+    $(document).ready(addUserToFooter);
+    $(document).ready(addNavbarLoginLink);
+    $(document).ready(createEditors);
+    $(document).ready(getNumUsers);
+    $(document).ready(getOnlineUsers);
+    $(document).ready(createScratchActivecode());
+    $(document).ready(styleUnittestResults());
+</script>
+
+<script type="text/javascript">
+  // add the video play button overlay image
+  $(".video-play-overlay").each(function() {
+    $(this).css('background-image', "url(\'../_static/play_overlay_icon.png\')")
+    });
+
+  // This function is needed to allow the dropdown search bar to work;
+  // The default behaviour is that the dropdown menu closes when something in
+  // it (like the search bar) is clicked
+  $(function() {
+    // Fix input element click problem
+    $('.dropdown input, .dropdown label').click(function(e) {
+      e.stopPropagation();
+      });
+  });
+
+  // style codelens buttons (doing it here because PyTutor is a submodule owned by someone else
+  $(function() {
+    $(".ExecutionVisualizer").each(function() {
+      $(this).find("#jmpFirstInstr").addClass('btn btn-default');
+      $(this).find("#jmpStepBack").addClass('btn btn-danger');
+      $(this).find("#jmpStepFwd").addClass('btn btn-success');
+      $(this).find("#jmpLastInstr").addClass('btn btn-default');
+      });
+  });
+
+</script>
+
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-32029811-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+  </body>
+</html>
